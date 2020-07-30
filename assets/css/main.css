@@ -134,7 +134,7 @@ input, select, textarea {
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
-				font-size: 30pt;
+				font-size: 15pt;
 			}
 
 		}
@@ -142,7 +142,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			body, input, select, textarea {
-				font-size: 30pt;
+				font-size: 15pt;
 			}
 
 		}
@@ -150,7 +150,7 @@ input, select, textarea {
 		@media screen and (max-width: 360px) {
 
 			body, input, select, textarea {
-				font-size: 30pt;
+				font-size: 15pt;
 			}
 
 		}
@@ -179,7 +179,7 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
-		font-size: 20px;
+		font-size: 20pt;
 		
 	}
 
@@ -208,7 +208,8 @@ input, select, textarea {
 		}
 
 	h1 {
-		font-size: 90px;
+		font-size: 2.5em;
+		line-height: 2;
 		
 	}
 
