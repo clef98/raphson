@@ -107,7 +107,7 @@ input, select, textarea {
 	    margin: 0px;
 	    overflow: hidden;
 	}
- */
+ 
 	body {
 		background-color: #935d8c;
 		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #5f4d93 15%,#193c6d 85%);
@@ -115,7 +115,7 @@ input, select, textarea {
 		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #5f4d93 15%,#193c6d 85%);
 		background-image: url("images/overlay.png"), linear-gradient(45deg, #5f4d93 15%,#193c6d 85%);
 	}
-
+*/
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
