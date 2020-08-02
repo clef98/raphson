@@ -106,7 +106,7 @@ input, select, textarea {
 	    text-align: center;
 	    margin: 0px;
 	    position: relative;
-	 /*   overflow: hidden;*/
+	    overflow: scroll;
 	}
  /*
 	body {
