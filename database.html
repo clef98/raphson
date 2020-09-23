@@ -38,7 +38,7 @@
 								<script>
 								function myFunction() {
 								  var x = document.getElementById("myDIV");
-								  if (x.innerHTML === "") {
+								  if (x.innerHTML === "Code will appear here.") {
 								    x.innerHTML = "% Simulating the 1-D Diffusion equation (Fourier's equation) by the
 ...Finite Difference Method(a time march)
 % Numerical scheme used is a first order upwind in time and a second order
@@ -104,9 +104,9 @@ for it=0:nt
     %{
     u(i)=un(i)+(vis*dt*(un(i+1)-2*un(i)+un(i-1))/(dx*dx));
     %}
-end";"
+end";
 								  } else {
-								    x.innerHTML = "";
+								    x.innerHTML = "Code will appear here.";
 								  }
 								}
 								</script>
