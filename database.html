@@ -49,29 +49,21 @@
 						
 								
 								
-								
-								
+						
+								<!-- When changing name, Change id's too -->
 								
 						<form name="form1" id="form1" action="/action_page.php">
-						  Something: <select name="subject" id="subject">
-						    <option value="" selected="selected">Eric's methods</option>
-						    <option value="" selected="selected">Machine Learning</option>
+						  Something: <select name="subject" id="Something">
+						    <option value="" selected="selected">Select Something</option>
 						  </select>
 						  <br><br>
-						  Algorithm: <select name="topic" id="topic">	    			
-							<option value="" selected="selected">Logistic Regression</option>
-							<option value="" selected="selected">Linear Regression</option>
-							<option value="" selected="selected">Mabye Anomaly Detection</option>
-							<option value="" selected="selected">Suport Vector Machine</option>
-							<option value="" selected="selected">K-Means Clustering</option>
-							<option value="" selected="selected">Neural Network</option>
+						  Algorithm: <select name="topic" id="Algorithm">	    			
+							<option value="" selected="selected">Select Algorithm</option>
 								
 						  </select>
 						  <br><br>
-						  Derative of Theta S: <select name="chapter" id="chapter">
-						    <option value="" selected="selected">Batch Gradient Descent</option>
-						    <option value="" selected="selected">Stochastic Gradient Descent</option>
-						    <option value="" selected="selected">Mini-Batch Gradient Descent</option>
+						  Derative of Theta: <select name="chapter" id="Derative of Theta">
+						    <option value="" selected="selected">Select Derative of Theta</option>
 						  </select>
 						  <br><br>
 						  <input type="submit" value="Submit">
@@ -93,9 +85,9 @@
 							  }
 							}
 							window.onload = function() {
-							  var subjectSel = document.getElementById("subject");
-							  var topicSel = document.getElementById("topic");
-							  var chapterSel = document.getElementById("chapter");
+							  var subjectSel = document.getElementById("Something");
+							  var topicSel = document.getElementById("Algorithm");
+							  var chapterSel = document.getElementById("Derative of Theta");
 							  for (var x in subjectObject) {
 							    subjectSel.options[subjectSel.options.length] = new Option(x, x);
 							  }
