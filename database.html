@@ -47,67 +47,141 @@
 								}
 								</script>
 						
-								
-								
-						
-								<!-- When changing name, Change id's too -->
-								
-						<form name="form1" id="form1" action="/action_page.php">
-						  Something: <select name="subject" id="Something">
-						    <option value="" selected="selected">Select Something</option>
-						  </select>
-						  <br><br>
-						  Algorithm: <select name="topic" id="Algorithm">	    			
-							<option value="" selected="selected">Select Algorithm</option>
-								
-						  </select>
-						  <br><br>
-						  Derative of Theta: <select name="chapter" id="Derative of Theta">
-						    <option value="" selected="selected">Select Derative of Theta</option>
-						  </select>
-						  <br><br>
-						  <input type="submit" value="Submit">
-						</form>
-								
-								
-						<script>
-							var subjectObject = {
-							  "Machine Learning": {
-							    "Linear Regression": ["Mini-Batch Gradient Descent", "Batch Gradient Descent", "Stochastic Gradient Descent"],
-							    "Logistic Regression": ["Mini-Batch Gradient Descent", "Batch Gradient Descent", "Stochastic Gradient Descent"],
-							    "Neural Network": ["Mini-Batch Gradient Descent", "Batch Gradient Descent", "Stochastic Gradient Descent"],
-							    "Support Vector Machine": ["Mini-Batch Gradient Descent", "Batch Gradient Descent", "Stochastic Gradient Descent"],
-							    "K-Means Clustering": ["Mini-Batch Gradient Descent", "Batch Gradient Descent", "Stochastic Gradient Descent"]
-							  },
-							  "Erics": {
-							    "Fill in 1": ["Placeholder 1", "Placeholder 2", "Placeholder 3"],
-							    "Fill in 2": ["Placeholder 4", "Placeholder 5", "Placeholder 6"]
-							  }
-							}
-							window.onload = function() {
-							  var subjectSel = document.getElementById("Something");
-							  var topicSel = document.getElementById("Algorithm");
-							  var chapterSel = document.getElementById("Derative of Theta");
-							  for (var x in subjectObject) {
-							    subjectSel.options[subjectSel.options.length] = new Option(x, x);
-							  }
-							  subjectSel.onchange = function() {
-							    //display correct values
-							    for (var y in subjectObject[this.value]) {
-							      topicSel.options[topicSel.options.length] = new Option(y, y);
+
+
+								<script language="javascript" type="text/javascript">
+							    function urlRedirectTo(obj)
+									{
+										alert('You reached last step and selected '+obj);
+										//if('wordpress_version1' == obj)
+											//window.location = 'https://wordpress.org/download/';
+										//if('wordpress_version2' == obj)
+											//window.location = 'https://wordpress.org/download/';
+									}
+									function dynamicdropdown(listindex)
+							    {
+								document.getElementById("sub_subcategory").length = 0;
+								document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
+								document.getElementById("subcategory").length = 0;
+								switch (listindex)
+								{
+								    case "Php" :
+									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("subcategory").options[1]=new Option("Wordpress","Wordpress");
+									document.getElementById("subcategory").options[2]=new Option("Magento","Magento");
+									break;
+
+								    case "Java" :
+									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("subcategory").options[1]=new Option("Strauts","Strauts");
+									document.getElementById("subcategory").options[2]=new Option("Hibernate","Hibernate");
+									break;
+								    case "Javascript" :
+									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("subcategory").options[1]=new Option("Prototype","Prototype");
+									document.getElementById("subcategory").options[2]=new Option("jQuery","jQuery");
+									break;
+								    case "Dotnet" :
+									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("subcategory").options[1]=new Option("VbScript","VbScript");
+									break;
+								    default:
+									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
+									break;
+								}
+								return true;
 							    }
-							  }
-							  topicSel.onchange = function() {
-							    //display correct values
-							    var z = subjectObject[subjectSel.value][this.value];
-							    for (var i = 0; i < z.length; i++) {
-							      chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+
+							    function dynamicdropdownone(listindex)
+							    {
+								document.getElementById("sub_subcategory").length = 0;
+								switch (listindex)
+								{
+								    case "Wordpress" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("Wordpress Version1","wordpress_version1");
+									document.getElementById("sub_subcategory").options[2]=new Option("Wordpress Version2","wordpress_version2");
+									break;
+
+								    case "Magento" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("Magento Version1","magento_version1");
+									document.getElementById("sub_subcategory").options[2]=new Option("Magento Version2","magento_version2");
+									break;
+								    case "Strauts" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("Strauts Version1","strauts_version1");
+									document.getElementById("sub_subcategory").options[2]=new Option("Strauts Version2","strauts_version2");
+									break;
+
+								    case "Hibernate" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("Hibernate Version1","hibernate_version1");
+									document.getElementById("sub_subcategory").options[2]=new Option("Hibernate Version2","hibernate_version2");
+									break;
+								    case "Prototype" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("Prototype Version1","prototype_version1");
+									document.getElementById("sub_subcategory").options[2]=new Option("Prototype Version2","prototype_version2");
+									break;
+
+								    case "jQuery" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("jQuery Version1","jquery_version1");
+									document.getElementById("sub_subcategory").options[2]=new Option("jQuery Version2","jquery_version2");
+									break;
+								    case "VbScript" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("VbScript Version1","vbscript_version1");
+									document.getElementById("sub_subcategory").options[2]=new Option("VbScript Version2","vbscript_version2");
+									break;
+								    default:
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
+									break;
+								}
+								return true;
 							    }
-							  }
-							}
-						
-							</script>
-						
+						       </script>
+								
+							
+							
+							
+							<div class="category_div" id="category_div">Please specify language:
+							    <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+								<option value="">Select Language</option>
+								<option value="Php">Php</option>
+								<option value="Java">Java</option>
+								<option value="Javascript">Javascript</option>
+								<option value="Dotnet">Dotnet</option>
+							    </select>
+							</div>
+							<div class="sub_category_div" id="sub_category_div">Please select framework:
+							    <script type="text/javascript" language="JavaScript">
+								document.write('<select name="subcategory" id="subcategory" onchange="javascript: dynamicdropdownone(this.options[this.selectedIndex].value);"><option value="">Please select framework</option></select>')
+							    </script>
+							    <noscript>
+								<select name="subcategory" id="subcategory" >
+								    <option value="">Please select framework vesrion</option>
+								</select>
+							    </noscript>
+							</div>
+							<div class="sub_subcategory_div" id="sub_subcategory_div">Please select framework version:
+							    <script type="text/javascript" language="JavaScript">
+								document.write('<select name="sub_subcategory" onchange="javascript: urlRedirectTo(this.options[this.selectedIndex].value);" id="sub_subcategory"><option value="">Please select framework version</option></select>')
+							    </script>
+							    <noscript>
+								<select name="sub_subcategory" id="sub_subcategory" >
+								    <option value="">Please select framework vesrion</option>
+								</select>
+							    </noscript>
+							</div>
+								
+								
+								
+								
+								
+								
+
 
 
 
