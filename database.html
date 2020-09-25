@@ -50,40 +50,26 @@
 
 
 								<script language="javascript" type="text/javascript">
-							    function urlRedirectTo(obj)
-									{
-										alert('You reached last step and selected '+obj);
-										//if('wordpress_version1' == obj)
-											//window.location = 'https://wordpress.org/download/';
-										//if('wordpress_version2' == obj)
-											//window.location = 'https://wordpress.org/download/';
-									}
-									function dynamicdropdown(listindex)
+								
 							    {
 								document.getElementById("sub_subcategory").length = 0;
 								document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
 								document.getElementById("subcategory").length = 0;
 								switch (listindex)
 								{
-								    case "Php" :
+								    case "Machine Learning" :
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("subcategory").options[1]=new Option("Wordpress","Wordpress");
-									document.getElementById("subcategory").options[2]=new Option("Magento","Magento");
+									document.getElementById("subcategory").options[1]=new Option("Neural Network","Neural Network");
+									document.getElementById("subcategory").options[2]=new Option("K-Means Clustering","K-Means Clustering");
+								        document.getElementById("subcategory").options[3]=new Option("Support Vector Machine","Support Vector Machine");
+									document.getElementById("subcategory").options[4]=new Option("Logistic Regression","Logistic Regression");
+									document.getElementById("subcategory").options[5]=new Option("Linear Regression","Linear Regression");
 									break;
 
-								    case "Java" :
+								    case "Eric" :
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("subcategory").options[1]=new Option("Strauts","Strauts");
-									document.getElementById("subcategory").options[2]=new Option("Hibernate","Hibernate");
-									break;
-								    case "Javascript" :
-									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("subcategory").options[1]=new Option("Prototype","Prototype");
-									document.getElementById("subcategory").options[2]=new Option("jQuery","jQuery");
-									break;
-								    case "Dotnet" :
-									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("subcategory").options[1]=new Option("VbScript","VbScript");
+									document.getElementById("subcategory").options[1]=new Option("Random1","Random1");
+									document.getElementById("subcategory").options[2]=new Option("Random2","Random2");
 									break;
 								    default:
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
@@ -97,43 +83,48 @@
 								document.getElementById("sub_subcategory").length = 0;
 								switch (listindex)
 								{
-								    case "Wordpress" :
+								    case "Neural Network" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("sub_subcategory").options[1]=new Option("Wordpress Version1","wordpress_version1");
-									document.getElementById("sub_subcategory").options[2]=new Option("Wordpress Version2","wordpress_version2");
+									document.getElementById("sub_subcategory").options[1]=new Option("Mini-Batch Gradient Descent","mini_batch1");
+									document.getElementById("sub_subcategory").options[2]=new Option("Batch Gradient Descent","batch1");
+									document.getElementById("sub_subcategory").options[2]=new Option("Stochastic Gradient Descent","stochastic1");
 									break;
 
-								    case "Magento" :
+								    case "K-Means Clustering" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("sub_subcategory").options[1]=new Option("Magento Version1","magento_version1");
-									document.getElementById("sub_subcategory").options[2]=new Option("Magento Version2","magento_version2");
+									document.getElementById("sub_subcategory").options[1]=new Option("Mini-Batch Gradient Descent","mini_batch2");
+									document.getElementById("sub_subcategory").options[2]=new Option("Batch Gradient Descent","batch2");
+									document.getElementById("sub_subcategory").options[2]=new Option("Stochastic Gradient Descent","stochastic2");
 									break;
-								    case "Strauts" :
+								    case "Support Vector Machine" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("sub_subcategory").options[1]=new Option("Strauts Version1","strauts_version1");
-									document.getElementById("sub_subcategory").options[2]=new Option("Strauts Version2","strauts_version2");
-									break;
-
-								    case "Hibernate" :
-									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("sub_subcategory").options[1]=new Option("Hibernate Version1","hibernate_version1");
-									document.getElementById("sub_subcategory").options[2]=new Option("Hibernate Version2","hibernate_version2");
-									break;
-								    case "Prototype" :
-									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("sub_subcategory").options[1]=new Option("Prototype Version1","prototype_version1");
-									document.getElementById("sub_subcategory").options[2]=new Option("Prototype Version2","prototype_version2");
+									document.getElementById("sub_subcategory").options[1]=new Option("Mini-Batch Gradient Descent","mini_batch3");
+									document.getElementById("sub_subcategory").options[2]=new Option("Batch Gradient Descent","batch3");
+									document.getElementById("sub_subcategory").options[2]=new Option("Stochastic Gradient Descent","stochastic3");
 									break;
 
-								    case "jQuery" :
+								    case "Logistic Regression" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("sub_subcategory").options[1]=new Option("jQuery Version1","jquery_version1");
-									document.getElementById("sub_subcategory").options[2]=new Option("jQuery Version2","jquery_version2");
+									document.getElementById("sub_subcategory").options[1]=new Option("Mini-Batch Gradient Descent","mini_batch4");
+									document.getElementById("sub_subcategory").options[2]=new Option("Batch Gradient Descent","batch4");
+									document.getElementById("sub_subcategory").options[2]=new Option("Stochastic Gradient Descent","stochastic4");
 									break;
-								    case "VbScript" :
+								    case "Linear Regression" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("sub_subcategory").options[1]=new Option("VbScript Version1","vbscript_version1");
-									document.getElementById("sub_subcategory").options[2]=new Option("VbScript Version2","vbscript_version2");
+									document.getElementById("sub_subcategory").options[1]=new Option("Mini-Batch Gradient Descent","mini_batch5");
+									document.getElementById("sub_subcategory").options[2]=new Option("Batch Gradient Descent","batch5");
+									document.getElementById("sub_subcategory").options[2]=new Option("Stochastic Gradient Descent","stochastic5");
+									break;
+
+								    case "Random1" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("Placement1","Placement1");
+									document.getElementById("sub_subcategory").options[2]=new Option("Placement2","Placement2");
+									break;
+								    case "Random2" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("Placement3","Placement3");
+									document.getElementById("sub_subcategory").options[2]=new Option("Placement4","Placement4");
 									break;
 								    default:
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
@@ -149,10 +140,11 @@
 							<div class="category_div" id="category_div">Please specify language:
 							    <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
 								<option value="">Select Language</option>
-								<option value="Php">Php</option>
-								<option value="Java">Java</option>
-								<option value="Javascript">Javascript</option>
-								<option value="Dotnet">Dotnet</option>
+								<option value="Neural Network">Neural Network</option>
+								<option value="K-Means Clustering">K-Means Clustering</option>
+								<option value="Support Vector Machine">Support Vector Machine</option>
+								<option value="Logistic Regression">Logistic Regression</option>
+								<option value="Linear Regression">Linear Regression</option>
 							    </select>
 							</div>
 							<div class="sub_category_div" id="sub_category_div">Please select framework:
