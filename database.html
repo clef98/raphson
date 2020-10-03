@@ -141,9 +141,54 @@
 							    }
 						       </script>
 								
+						
+								
+								
+						<script>
+						function submittedForm(that)
+							{
+								var MLorMat = documnet.getElementById('category').value;
+								var algorithmType = document.getElementById('subcategory').value;
+								var gradient = document.getElementById('sub_subcatergory').value;
+								
+								if (MLorMat=='Machine Learning'){
+									if(algorithmType=='Neural Network'){
+								
+										if(gradient=='stochastic1'){
+											document.getElementById('displayCode').innerHTML='TEST1';
+											return false;
+													   }
+								
+										else{
+										alert('testzzzzzz');	
+										return false;
+										     }
+								
+								
+								
+								
+													   }
+								
+								
+								
+								
+												}
+				
+								
+								
+								
+								
+							}		
+								
+						</script>
+								
+								
+								
+								
+								
+								
 							
-							
-						<form action="/action_page.php">	
+						<form onsubmit="event.preventDefault();" name="sample" method="POST">	
 							<div class="category_div" id="category_div">Please Select Language:
 							    <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
 								<option value="">Select Language</option>
@@ -174,12 +219,16 @@
 								</select>
 							    </noscript>
 							</div>
-							<input type="submit">
+								<button type="button" id"submit" onclick="submittedForm(this)">Submit</button>
 							
 						</form>
 								
 								
+							<div id="displayCode">
 								
+								
+								
+							</div>
 								
 
 
@@ -188,6 +237,11 @@
 
 						</section>
 						</div>
+								
+								
+								
+								
+								
 							
 								
 								
