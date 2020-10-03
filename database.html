@@ -146,33 +146,38 @@
 								
 						<script>
 						function submittedForm(that)
-							{
+						{
 								var mlOrMat = documnet.getElementById('category').value;
 								var algorithmType = document.getElementById('subcategory').value;
 								var gradient = document.getElementById('sub_subcatergory').value;
 								
-								if (mlOrMat=='Machine Learning'){
-									if(algorithmType=='Neural Network'){
+								if (mlOrMat=='Machine Learning')
+								{
+									if(algorithmType=='Neural Network')
+									{
 								
-										if(gradient=='stochastic1'){
+										if(gradient=='stochastic1')
+										{
 											document.getElementById('displayCode').innerHTML='TEST1';
 											return false;
-													   }
+										} 
 								
-										else{
-										alert('testzzzzzz');	
-										return false;
-										     }
-								
-								
-								
-								
-													   }
+										else 
+										  {
+											alert('testzzzzzz');	
+											return false;
+										     
+										  }
 								
 								
 								
 								
-												}
+									 }
+								
+								
+								
+								
+								}
 				
 								
 								
@@ -219,7 +224,7 @@
 								</select>
 							    </noscript>
 							</div>
-								<button type="button" id"submit" onclick="submittedForm(this)">Submit</button>
+								<button type="button" id="submit" onclick="submittedForm(this)">Submit</button>
 							
 						</form>
 								
