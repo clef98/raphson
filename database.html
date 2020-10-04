@@ -65,12 +65,12 @@
 									document.getElementById("subcategory").options[5]=new Option("Linear Regression","Linear Regression");
 									break;
 							
-
 								    case "Advection" :
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("subcategory").options[1]=new Option("Random1","Random1");
 									document.getElementById("subcategory").options[2]=new Option("Random2","Random2");
 									break;
+								
 								    default:
 									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
 									break;
@@ -96,6 +96,7 @@
 									document.getElementById("sub_subcategory").options[2]=new Option("Batch Gradient Descent","batch2");
 									document.getElementById("sub_subcategory").options[3]=new Option("Stochastic Gradient Descent","stochastic2");
 									break;
+								
 								    case "Support Vector Machine" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select Algorithm","");
 									document.getElementById("sub_subcategory").options[1]=new Option("Mini-Batch Gradient Descent","mini_batch3");
@@ -109,6 +110,7 @@
 									document.getElementById("sub_subcategory").options[2]=new Option("Batch Gradient Descent","batch4");
 									document.getElementById("sub_subcategory").options[3]=new Option("Stochastic Gradient Descent","stochastic4");
 									break;
+								
 								    case "Linear Regression" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select Algorithm","");
 									document.getElementById("sub_subcategory").options[1]=new Option("Mini-Batch Gradient Descent","mini_batch5");
@@ -121,11 +123,13 @@
 									document.getElementById("sub_subcategory").options[1]=new Option("Placement1","Placement1");
 									document.getElementById("sub_subcategory").options[2]=new Option("Placement2","Placement2");
 									break;
+								
 								    case "Random2" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("sub_subcategory").options[1]=new Option("Placement3","Placement3");
 									document.getElementById("sub_subcategory").options[2]=new Option("Placement4","Placement4");
 									break;
+								
 								    default:
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
 									break;
@@ -165,8 +169,7 @@
 											return false;
 										}
 
-									}else */
-									if(secondDropdown =='K-Means Clustering') 
+									}else if(secondDropdown =='K-Means Clustering') 
 									{
 										if(thirdDropdown == 'mini_batch2')
 										{
@@ -187,7 +190,8 @@
 										}
 										
 \
-									}/*else if(secondDropdown =='Support Vector Machine') 
+									}else */
+									if(secondDropdown =='Support Vector Machine') 
 									{
 										alert('it's support vetor machine');	
 										if(thirdDropdown == 'mini_batch3')
@@ -207,7 +211,7 @@
 											alert('please choose a option for the third dropdown');
 											return false;
 										}
-									}*/else
+									}else
 									{
 										alert('inside else');
 									}
