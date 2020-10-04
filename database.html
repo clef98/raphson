@@ -136,8 +136,7 @@
 
 							function submittedForm(that)
 							{
-
-								
+	
 								var firstDropdown = document.getElementById('category').value;
 								var secondDropdown = document.getElementById('subcategory').value;
 								var thirdDropdown = document.getElementById('sub_subcategory').value;
@@ -169,7 +168,6 @@
 
 									}else if(secondDropdown =='K-Means Clustering') 
 									{
-										
 										if(thirdDropdown == 'mini_batch2')
 										{
 											document.getElementById('displayCode').innerHTML ='MINIBATCH+KMEANS+ML';
@@ -189,7 +187,7 @@
 										}
 										
 \
-									}else if(secondDropdown =='Support Vector Machine') 
+									}/*else if(secondDropdown =='Support Vector Machine') 
 									{
 										
 										if(thirdDropdown == 'mini_batch3')
@@ -209,11 +207,10 @@
 											alert('please choose a option for the third dropdown');
 											return false;
 										}
-										
-
-									}
-								
+									}*/
+									
 								}
+								alert('before return false');
 								return false;
 							}	
 								
