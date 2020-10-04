@@ -228,10 +228,27 @@
 											alert('please choose a option for the third dropdown');
 											return false;
 										}
-									}
-								
-								
-									else
+									} else if(secondDropdown =='Linear Regression') 
+									{
+										
+										if(thirdDropdown == 'mini_batch5')
+										{
+											document.getElementById('displayCode').innerHTML ='MINIBATCH+LIN+ML';
+											return false;
+										}else if(thirdDropdown == 'batch5')
+										{
+											document.getElementById('displayCode').innerHTML ='BATCH+LIN+ML';
+											return false;
+										}else if(thirdDropdown == 'stochastic5')
+										{
+											document.getElementById('displayCode').innerHTML ='STOCHASTIC+LIN+ML';
+											return false;
+										}else
+										{
+											alert('please choose a option for the third dropdown');
+											return false;
+										}
+									}else
 									{
 										alert('inside else');
 									}
