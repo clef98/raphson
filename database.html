@@ -188,6 +188,26 @@
 											alert('please choose a option for the third dropdown');
 											return false;
 										}
+									} else if(secondDropdown =='Support Vector Machine') 
+									{
+										
+										if(thirdDropdown == 'mini_batch3')
+										{
+											document.getElementById('displayCode').innerHTML ='MINIBATCH+SVM+ML';
+											return false;
+										}else if(thirdDropdown == 'batch3')
+										{
+											document.getElementById('displayCode').innerHTML ='BATCH+SVM+ML';
+											return false;
+										}else if(thirdDropdown == 'stochastic3')
+										{
+											document.getElementById('displayCode').innerHTML ='STOCHASTIC+SVM+ML';
+											return false;
+										}else
+										{
+											alert('please choose a option for the third dropdown');
+											return false;
+										}
 									}
 								
 								
@@ -212,7 +232,7 @@
 											return false;
 										}
 										
-\
+
 									}else if(secondDropdown =='Neural Network') 
 									{
 										alert('it's support vetor machine');	
