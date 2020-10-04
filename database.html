@@ -150,9 +150,23 @@
 								var thirdDropdown = document.getElementById('sub_subcategory').value;
 
 				
-								alert(firstDropdown)
-								alert(secondDropdown)
-								alert(thirdDropdown)
+							if (firstDropdown =='Machine Learning') 
+								{
+									if(secondDropdown =='Neural Network') 
+									{
+										document.getElementById('displayCode').innerHTML ='Java Hibernate Code BHAHAHHBABHAB..';
+										return false;
+
+									}else if(secondDropdown =='K-Means Clustering')
+									{
+										document.getElementById('displayCode').innerHTML ='Java Strauts Cdoe dudududududu <br> Continute to the 2nd line <br> testing the special characters #{}@== <br> test double quote "text inside double quote "....';
+										return false;
+									} else 
+									{
+										alert('you choose Java but no framework');
+										return false;
+									}
+								}
 								
 								
 								return false;
