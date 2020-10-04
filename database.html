@@ -170,15 +170,57 @@
 	
 								
 
-									}else if(secondDropdown =='K-Means Clustering')
+									}if(secondDropdown =='K-Means Clustering') 
 									{
-										document.getElementById('displayCode').innerHTML ='Java Strauts Cdoe dudududududu <br> Continute to the 2nd line <br> testing the special characters #{}@== <br> test double quote "text inside double quote "....';
-										return false;
-									} else 
+										
+										if(thirdDropdown == 'mini_batch2')
+										{
+											document.getElementById('displayCode').innerHTML ='MINIBATCH+NN+ML';
+											return false;
+										}else if(thirdDropdown == 'batch2')
+										{
+											document.getElementById('displayCode').innerHTML ='BATCH+NN+ML';
+											return false;
+										}else if(thirdDropdown == 'stochastic2')
+										{
+											document.getElementById('displayCode').innerHTML ='STOCHASTIC+NN+ML';
+											return false;
+										}else
+										{
+											alert('please choose a option for the third dropdown')
+											return false;
+										}
+										
+\
+									}if(secondDropdown =='Support Vector Machine') 
 									{
-										alert('you choose Java but no framework');
-										return false;
+										
+										if(thirdDropdown == 'mini_batch3')
+										{
+											document.getElementById('displayCode').innerHTML ='MINIBATCH+NN+ML';
+											return false;
+										}else if(thirdDropdown == 'batch3')
+										{
+											document.getElementById('displayCode').innerHTML ='BATCH+NN+ML';
+											return false;
+										}else if(thirdDropdown == 'stochastic3')
+										{
+											document.getElementById('displayCode').innerHTML ='STOCHASTIC+NN+ML';
+											return false;
+										}else
+										{
+											alert('please choose a option for the third dropdown')
+											return false;
+										}
+										
+\
 									}
+								
+								
+								
+								
+								
+								
 								}
 								
 								
