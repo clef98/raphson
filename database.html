@@ -47,9 +47,9 @@
 								}
 								</script> -->
 						
-								<script language="javascript" type="text/javascript">
+							<script language="javascript" type="text/javascript">
 								
-								function dynamicdropdown(listindex)
+							function dynamicdropdown(listindex)
 							    {
 								document.getElementById("sub_subcategory").length = 0;
 								document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
@@ -143,7 +143,7 @@
 								var thirdDropdown = document.getElementById('sub_subcategory').value;
 
 				
-							if (firstDropdown =='Machine Learning') 
+								if (firstDropdown =='Machine Learning') 
 								{
 									if(secondDropdown =='Neural Network') 
 									{
@@ -162,14 +162,10 @@
 											return false;
 										}else
 										{
-											alert('please choose a option for the third dropdown')
+											alert('please choose a option for the third dropdown');
 											return false;
 										}
-										
-										
-								
-	
-								
+
 
 									}else if(secondDropdown =='K-Means Clustering') 
 									{
@@ -188,7 +184,7 @@
 											return false;
 										}else
 										{
-											alert('please choose a option for the third dropdown')
+											alert('please choose a option for the third dropdown');
 											return false;
 										}
 										
@@ -210,21 +206,14 @@
 											return false;
 										}else
 										{
-											alert('please choose a option for the third dropdown')
+											alert('please choose a option for the third dropdown');
 											return false;
 										}
 										
 
 									}
 								
-								
-								
-								
-								
-								
 								}
-								
-								
 								return false;
 							}	
 								
