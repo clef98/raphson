@@ -208,50 +208,30 @@
 											alert('please choose a option for the third dropdown');
 											return false;
 										}
+									} else if(secondDropdown =='Logistic Regression') 
+									{
+										
+										if(thirdDropdown == 'mini_batch4')
+										{
+											document.getElementById('displayCode').innerHTML ='MINIBATCH+LOG+ML';
+											return false;
+										}else if(thirdDropdown == 'batch4')
+										{
+											document.getElementById('displayCode').innerHTML ='BATCH+LOG+ML';
+											return false;
+										}else if(thirdDropdown == 'stochastic4')
+										{
+											document.getElementById('displayCode').innerHTML ='STOCHASTIC+LOG+ML';
+											return false;
+										}else
+										{
+											alert('please choose a option for the third dropdown');
+											return false;
+										}
 									}
 								
-								/*else if(secondDropdown =='K-Means Clustering') 
-									{
-										if(thirdDropdown == 'mini_batch2')
-										{
-											document.getElementById('displayCode').innerHTML ='MINIBATCH+KMEANS+ML';
-											return false;
-										}else if(thirdDropdown == 'batch2')
-										{
-											document.getElementById('displayCode').innerHTML ='BATCH+KMEANS+ML';
-											return false;
-										}else if(thirdDropdown == 'stochastic2')
-										{
-											document.getElementById('displayCode').innerHTML ='STOCHASTIC+KMEANS+ML';
-											return false;
-										}else
-										{
-											alert('please choose a option for the third dropdown');
-											return false;
-										}
-										
-
-									}else if(secondDropdown =='Neural Network') 
-									{
-										alert('it's support vetor machine');	
-										if(thirdDropdown == 'mini_batch1')
-										{
-											document.getElementById('displayCode').innerHTML ='MINIBATCH+SVM+ML';
-											return false;
-										}else if(thirdDropdown == 'batch1')
-										{
-											document.getElementById('displayCode').innerHTML ='BATCH+SVM+ML';
-											return false;
-										}else if(thirdDropdown == 'stochastic1')
-										{
-											document.getElementById('displayCode').innerHTML ='STOCHASTIC+SVM+ML';
-											return false;
-										}else
-										{
-											alert('please choose a option for the third dropdown');
-											return false;
-										}
-									}*/else
+								
+									else
 									{
 										alert('inside else');
 									}
