@@ -1,0 +1,78 @@
+%{
+Simplified Lotka-Volterra model with an individual Malthusian 
+growth model for a 2 species (prey-predator) system.
+    
+                        dx/dt = ax-bxy
+                        dy/dt = bxy-cy
+    
+The procedure is enlisted below:
+-Catalog of all the rates k(i)for system i (transition of the system 
+ from i to j)
+-Partial sum of the rates, s(j)=sum(k(i),1,j); j=1,2...n
+-Choose a uniform random variable u from (0,1) and find j such that
+ s(j-1)<u*s(n)<=s(j)
+-The system is now in state j 
+-Update all k(i) for state j now
+-Choose a uniform random variable b from (0,1) and calculate the 
+ time step given by dt=-log(b)/s(n)
+-Repeat from step one till the required time span is covered
+
+Perform the Lotka-Volterra Prey-Predator simulation using the 
+above given residence time algorithm of KMC
+%}
+
+%%
+clear
+%Specifying parameters
+Nt=5000;                 %Number of time steps
+alpha=2;                 %Alpha is the rate constant of prey reproduction 
+beta=0.05;               %Beta is the rate constant of prey death and predator reproduction
+gamma=1.5;               %Gamma is the rate constant of predator death
+prey_init=20;            %Initial prey population
+predator_init=40;        %Initial predator population 
+T=zeros(1,Nt+1);         %Pre-allocating T (time array)
+prey=zeros(1,Nt+1);      %Pre-allocating prey
+predator=zeros(1,Nt+1);  %Pre-allocating predator
+x=prey_init; prey(1)=x;
+y=predator_init; predator(1)=y;
+
+%%
+for it=1:Nt
+    k=[alpha*x beta*x*y gamma*y];             %The rates(k) are updated
+    s=cumsum(k);                              %Calculating partial sums
+    u=random('unif',0,1);
+    index=find(s>=s(3)*u);                    %Finding the transition to perform
+    switch index(1)
+        case 1
+            x=x+1;
+        case 2
+            if (x>1)
+                x=x-1;
+                y=y+1;
+            end
+        otherwise
+            if (y>1)
+                y=y-1;
+            end
+    end
+    prey(it+1)=x;                   %Updating prey population
+    predator(it+1)=y;               %Updating predator population
+    dt=-log(1-u)/s(3);              %Calculating time step
+    T(it+1)=T(it)+dt;
+end
+
+%%
+%Setting graphics parameters and plotting 
+plot(T,prey,'Color','r'); hold on     
+plot(T,predator,'Color','k')
+title({['Lotka-Volterra simulation using KMC, number of time steps = ',num2str(Nt)];['Population variation with \alpha = ',num2str(alpha),', \beta = ',num2str(beta),' and \gamma = ',num2str(gamma)];['Initial prey population = ',num2str(prey_init),' and initial predator population = ',num2str(predator_init)]})
+ylabel('Population \rightarrow')
+xlabel('Time \rightarrow')
+legend('Prey population','Predator population')
+hold off
+figure
+%Plotting the phase plane portrait
+plot(prey,predator)                     
+title({['Lotka-Volterra simulation using KMC, number of time steps = ',num2str(Nt)];['Phase plane portrait with \alpha = ',num2str(alpha),', \beta = ',num2str(beta),' and \gamma = ',num2str(gamma)];['Initial prey population = ',num2str(prey_init),' and initial predator population = ',num2str(predator_init)]})
+xlabel('Prey Population \rightarrow')
+ylabel('Predator population \rightarrow')
