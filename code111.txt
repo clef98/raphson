@@ -1,0 +1,1 @@
+You choose Machine Learning; Neurual Network; Mini Batch. PLeas find the code for you below.
