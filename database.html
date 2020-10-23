@@ -19,54 +19,49 @@
 
 	</head>
 	<body class="is-preload">
-
+		<div id="wrapper">
+			<header id="header" class = "alt">
+				<h1>Modeling Database</h1>
+				<p>Page is under construction.</p>
+			</header>
 	
-			<div id="wrapper">
-					<header id="header" class = "alt">
-						<h1>Modeling Database</h1>
-						<p>Page is under construction.</p>
-					</header>
-				
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html"">Home</a></li>
-							<li><a href="database.html">Modeling Database</a></li>
-							<li><a href="algorithms.html">Algorithms</a></li>
-							<li><a href="tutorials.html">Tutorials</a></li>
-							<li><a href="contributors.html">Contributors</a></li>
-						</ul>
-					</nav>
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html"">Home</a></li>
+					<li><a href="database.html">Modeling Database</a></li>
+					<li><a href="algorithms.html">Algorithms</a></li>
+					<li><a href="tutorials.html">Tutorials</a></li>
+					<li><a href="contributors.html">Contributors</a></li>
+				</ul>
+			</nav>
 					
-					<div id="main">
-							<section id="content" class="main">
-								<span class="image main"><img src="images/figure3.jpg" alt="" /></span>
-								<!-- <h2>Magna feugiat lorem</h2>.  
-								<ul class="actions">
-									<li><button onclick="myFunction1()" class="button" >1-D Heat Diffusion</button></li>
-								</ul>
+			<div id="main">
+				<section id="content" class="main">
+					<span class="image main"><img src="images/figure3.jpg" alt="" /></span>
+						<!-- <h2>Magna feugiat lorem</h2>.  
+						<ul class="actions">
+							<li><button onclick="myFunction1()" class="button" >1-D Heat Diffusion</button></li>
+						</ul>
 								
-								<div id="myDIV"></div>
-								<script>
-								function myFunction1() {
-								  var x = document.getElementById("myDIV");
-								  if (x.innerHTML === "Code will appear here.") {
-								    x.innerHTML = "Test";
-								  } else {
-								    x.innerHTML = "Code will appear here.";
-								  }
-								}
-								</script> -->
+						<div id="myDIV"></div>
+						<script>
+						function myFunction1() {
+						  var x = document.getElementById("myDIV");
+						  if (x.innerHTML === "Code will appear here.") {
+						    x.innerHTML = "Test";
+	 					  } else {
+						    x.innerHTML = "Code will appear here.";
+						  }
+						}
+						</script> -->
 						
-							<script language="javascript" type="text/javascript">
-								
-							function dynamicdropdown(listindex)
-							    {
-								document.getElementById("sub_subcategory").length = 0;
-								document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
-								document.getElementById("subcategory").length = 0;
-								switch (listindex)
-								{
-								    case "Machine Learning" :
+						<script language="javascript" type="text/javascript">
+						function dynamicdropdown(listindex) {
+							document.getElementById("sub_subcategory").length = 0;
+							document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
+							document.getElementById("subcategory").length = 0;
+							switch (listindex){
+								case "Machine Learning" :
 									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
 									document.getElementById("subcategory").options[1]=new Option("Neural Network","Neural Network");
 									document.getElementById("subcategory").options[2]=new Option("K-Means Clustering","K-Means Clustering");
@@ -75,24 +70,22 @@
 									document.getElementById("subcategory").options[5]=new Option("Linear Regression","Linear Regression");
 									break;
 							
-								    case "Advection" :
+								 case "Advection" :
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("subcategory").options[1]=new Option("Random1","Random1");
 									document.getElementById("subcategory").options[2]=new Option("Random2","Random2");
 									break;
 								
-								    default:
+								 default:
 									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
 									break;
 								}
 								return true;
 							    }
 
-							    function dynamicdropdownone(listindex)
-							    {
+							    function dynamicdropdownone(listindex) {
 								document.getElementById("sub_subcategory").length = 0;
-								switch (listindex)
-								{
+								switch (listindex){
 								    case "Neural Network" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select Algorithm","");
 									document.getElementById("sub_subcategory").options[1]=new Option("Mini-Batch Gradient Descent","mini_batch1");
@@ -149,141 +142,105 @@
 
 
 							function submittedForm(that){
-								var firstDropdown = document.getElementById('category').value;
-								var secondDropdown = document.getElementById('subcategory').value;
-								var thirdDropdown = document.getElementById('sub_subcategory').value;
+							  var firstDropdown = document.getElementById('category').value;
+							  var secondDropdown = document.getElementById('subcategory').value;
+							  var thirdDropdown = document.getElementById('sub_subcategory').value;
 
-								if (firstDropdown =='Machine Learning'){
-									if(secondDropdown =='Neural Network'){
-										if(thirdDropdown == 'mini_batch1'){
-											//var ranvar ='MINIBATCH+NN+ML';
-											var rawFile = new XMLHttpRequest();
-											//rawFile.open("GET", "file:///C:/Users/shaom/Downloads/testnn.txt", false);
-											rawFile.open("GET", "https://github.com/clef98/raphson/blob/master/README.txt", false);
-											alert("rawFile.readyState is: "+ rawFile.readyState);
+							  if (firstDropdown =='Machine Learning'){
+								if(secondDropdown =='Neural Network'){
+									if(thirdDropdown == 'mini_batch1'){
+										//var ranvar ='MINIBATCH+NN+ML';
+										var rawFile = new XMLHttpRequest();
+										//rawFile.open("GET", "file:///C:/Users/shaom/Downloads/testnn.txt", false);
+										rawFile.open("GET", "https://github.com/clef98/raphson/blob/master/models/CavityFlow.txt", false);
+										alert("rawFile.readyState is: "+ rawFile.readyState);
 											
-											rawFile.onload = function (){
-												alert("inside rawFile.onload() ");
-												var allText = rawFile.responseText;
-												alert(allText);
-											};
-											alert("outside of rawfile.onload() ");
-											rawFile.send(null);
-											return false;
-										}else if(thirdDropdown == 'batch1')
-										{
-											document.getElementById('displayCode').innerHTML ='BATCH+NN+ML';
-											return false;
-										}else if(thirdDropdown == 'stochastic1')
-										{
-											document.getElementById('displayCode').innerHTML ='STOCHASTIC+NN+ML';
-											return false;
-										}else
-										{
-											alert('please choose a option for the third dropdown');
-											return false;
-										}
-									} else if(secondDropdown =='K-Means Clustering') 
-									{
-										
-										if(thirdDropdown == 'mini_batch2')
-										{
-											document.getElementById('displayCode').innerHTML ='MINIBATCH+KMEANS+ML';
-											return false;
-										}else if(thirdDropdown == 'batch2')
-										{
-											document.getElementById('displayCode').innerHTML ='BATCH+KMEANS+ML';
-											return false;
-										}else if(thirdDropdown == 'stochastic2')
-										{
-											document.getElementById('displayCode').innerHTML ='STOCHASTIC+KMEANS+ML';
-											return false;
-										}else
-										{
-											alert('please choose a option for the third dropdown');
-											return false;
-										}
-									} else if(secondDropdown =='Support Vector Machine') 
-									{
-										
-										if(thirdDropdown == 'mini_batch3')
-										{
-											document.getElementById('displayCode').innerHTML ='MINIBATCH+SVM+ML';
-											return false;
-										}else if(thirdDropdown == 'batch3')
-										{
-											document.getElementById('displayCode').innerHTML ='BATCH+SVM+ML';
-											return false;
-										}else if(thirdDropdown == 'stochastic3')
-										{
-											document.getElementById('displayCode').innerHTML ='STOCHASTIC+SVM+ML';
-											return false;
-										}else
-										{
-											alert('please choose a option for the third dropdown');
-											return false;
-										}
-									} else if(secondDropdown =='Logistic Regression') 
-									{
-										
-										if(thirdDropdown == 'mini_batch4')
-										{
-											document.getElementById('displayCode').innerHTML ='MINIBATCH+LOG+ML';
-											return false;
-										}else if(thirdDropdown == 'batch4')
-										{
-											document.getElementById('displayCode').innerHTML ='BATCH+LOG+ML';
-											return false;
-										}else if(thirdDropdown == 'stochastic4')
-										{
-											document.getElementById('displayCode').innerHTML ='STOCHASTIC+LOG+ML';
-											return false;
-										}else
-										{
-											alert('please choose a option for the third dropdown');
-											return false;
-										}
-									} else if(secondDropdown =='Linear Regression') 
-									{
-										
-										if(thirdDropdown == 'mini_batch5')
-										{
-											document.getElementById('displayCode').innerHTML ='MINIBATCH+LIN+ML';
-											return false;
-										}else if(thirdDropdown == 'batch5')
-										{
-											document.getElementById('displayCode').innerHTML ='BATCH+LIN+ML';
-											return false;
-										}else if(thirdDropdown == 'stochastic5')
-										{
-											document.getElementById('displayCode').innerHTML ='STOCHASTIC+LIN+ML';
-											return false;
-										}else
-										{
-											alert('please choose a option for the third dropdown');
-											return false;
-										}
-									}else
-									{
-										alert('please choose a option for the second dropdown');
+										rawFile.onload = function (){
+											alert("inside rawFile.onload() ");
+											var allText = rawFile.responseText;
+											alert(allText);
+										};
+										alert("outside of rawfile.onload() ");
+										rawFile.send(null);
+										return false;
+									}else if(thirdDropdown == 'batch1'){
+										document.getElementById('displayCode').innerHTML ='BATCH+NN+ML';
+										return false;
+									}else if(thirdDropdown == 'stochastic1'){
+										document.getElementById('displayCode').innerHTML ='STOCHASTIC+NN+ML';
+										return false;
+									}else{
+										alert('please choose a option for the third dropdown');
 										return false;
 									}
-																		
+								} else if(secondDropdown =='K-Means Clustering') {
+									if(thirdDropdown == 'mini_batch2'){
+										document.getElementById('displayCode').innerHTML ='MINIBATCH+KMEANS+ML';
+										return false;
+									}else if(thirdDropdown == 'batch2'){
+										document.getElementById('displayCode').innerHTML ='BATCH+KMEANS+ML';
+										return false;
+									}else if(thirdDropdown == 'stochastic2'){
+										document.getElementById('displayCode').innerHTML ='STOCHASTIC+KMEANS+ML';
+										return false;
+									}else{
+										alert('please choose a option for the third dropdown');
+										return false;
+									}
+								} else if(secondDropdown =='Support Vector Machine') {
+									if(thirdDropdown == 'mini_batch3'){
+										document.getElementById('displayCode').innerHTML ='MINIBATCH+SVM+ML';
+										return false;
+									}else if(thirdDropdown == 'batch3'){
+										document.getElementById('displayCode').innerHTML ='BATCH+SVM+ML';
+										return false;
+									}else if(thirdDropdown == 'stochastic3'){
+										document.getElementById('displayCode').innerHTML ='STOCHASTIC+SVM+ML';
+										return false;
+									}else{
+										alert('please choose a option for the third dropdown');
+										return false;
+									}
+								} else if(secondDropdown =='Logistic Regression') {
+									if(thirdDropdown == 'mini_batch4'){
+										document.getElementById('displayCode').innerHTML ='MINIBATCH+LOG+ML';
+										return false;
+									}else if(thirdDropdown == 'batch4'){
+										document.getElementById('displayCode').innerHTML ='BATCH+LOG+ML';
+										return false;
+									}else if(thirdDropdown == 'stochastic4'){
+										document.getElementById('displayCode').innerHTML ='STOCHASTIC+LOG+ML';
+										return false;
+									}else{
+										alert('please choose a option for the third dropdown');
+										return false;
+									}
+								} else if(secondDropdown =='Linear Regression') {
+									if(thirdDropdown == 'mini_batch5'){
+										document.getElementById('displayCode').innerHTML ='MINIBATCH+LIN+ML';
+										return false;
+									}else if(thirdDropdown == 'batch5'){
+										document.getElementById('displayCode').innerHTML ='BATCH+LIN+ML';
+										return false;
+									}else if(thirdDropdown == 'stochastic5'){
+										document.getElementById('displayCode').innerHTML ='STOCHASTIC+LIN+ML';
+										return false;
+									}else{
+										alert('please choose a option for the third dropdown');
+										return false;
+									}
+								}else{
+									alert('please choose a option for the second dropdown');
+									return false;
 								}
-							
-								return false;
-								document.getElementById('output').innerHTML = ranvar
-								
+																		
+							  }
+							  return false;
+							  document.getElementById('output').innerHTML = ranvar
 							}	
 								
 						</script>
-								
-								
-								
-								
-								
-								
-							
+			
 						<form onsubmit="event.preventDefault();" name="sample" method="POST">	
 							<div class="category_div" id="category_div">Please Select Language:
 							    <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
