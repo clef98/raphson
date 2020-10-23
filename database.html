@@ -148,21 +148,14 @@
 							    }
 
 
-							function submittedForm(that)
-							{
-	
+							function submittedForm(that){
 								var firstDropdown = document.getElementById('category').value;
 								var secondDropdown = document.getElementById('subcategory').value;
 								var thirdDropdown = document.getElementById('sub_subcategory').value;
 
-				
-								if (firstDropdown =='Machine Learning') 
-								{
-									if(secondDropdown =='Neural Network') 
-									{
-										
-										if(thirdDropdown == 'mini_batch1')
-										{
+								if (firstDropdown =='Machine Learning'){
+									if(secondDropdown =='Neural Network'){
+										if(thirdDropdown == 'mini_batch1'){
 											//var ranvar ='MINIBATCH+NN+ML';
 											var rawFile = new XMLHttpRequest();
 											//rawFile.open("GET", "file:///C:/Users/shaom/Downloads/testnn.txt", false);
@@ -170,17 +163,12 @@
 											alert("rawFile.readyState is: "+ rawFile.readyState);
 											
 											rawFile.onload = function (){
-												alert("rawFile under onload ");
-												//if(rawFile.readyState === 1) {
-													//if(rawFile.status === 200 || rawFile.status === 0) {
-														var allText = rawFile.responseText;
-														alert(allText);
-													//}
-												//}
+												alert("inside rawFile.onload() ");
+												var allText = rawFile.responseText;
+												alert(allText);
 											};
+											alert("outside of rawfile.onload() ");
 											rawFile.send(null);
-
-
 											return false;
 										}else if(thirdDropdown == 'batch1')
 										{
