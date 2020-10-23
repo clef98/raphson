@@ -145,20 +145,25 @@
 							  var firstDropdown = document.getElementById('category').value;
 							  var secondDropdown = document.getElementById('subcategory').value;
 							  var thirdDropdown = document.getElementById('sub_subcategory').value;
-
+							
+						          var url = "https://github.com/clef98/raphson/blob/master/models/CavityFlow.txt";
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
 									if(thirdDropdown == 'mini_batch1'){
 										//var ranvar ='MINIBATCH+NN+ML';
 										var rawFile = new XMLHttpRequest();
 										//rawFile.open("GET", "file:///C:/Users/shaom/Downloads/testnn.txt", false);
-										rawFile.open("GET", "https://github.com/clef98/raphson/blob/master/models/CavityFlow.txt", false);
+										rawFile.open("GET", url", true);
 										alert("rawFile.readyState is: "+ rawFile.readyState);
 											
 										rawFile.onload = function (){
-											alert("inside rawFile.onload() ");
-											var allText = rawFile.responseText;
-											alert(allText);
+										  alert("fire onload() ");
+					       					  if (rawfile.readyState ===rawfile.DONE){
+					       						if(rawfile.status ===200){
+											   var allText = rawFile.responseText;
+											   alert(allText);
+					       						}
+					       					   }	
 										};
 										alert("outside of rawfile.onload() ");
 										rawFile.send(null);
