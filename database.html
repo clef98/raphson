@@ -146,14 +146,15 @@
 							  var secondDropdown = document.getElementById('subcategory').value;
 							  var thirdDropdown = document.getElementById('sub_subcategory').value;
 							
-						          var url = "https://github.com/clef98/raphson/blob/master/models/CavityFlow.txt";
-						
+						          //var url = "https://github.com/clef98/raphson/blob/master/models/CavityFlow.txt";
+							  var url = "/models/CavityFlow.txt";	
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
 									if(thirdDropdown == 'mini_batch1'){
 										//var ranvar ='MINIBATCH+NN+ML';
 										//return false;
 										jQuery.get(url, function(data) {
+										    alert("calling jQuery.get()"):
 										    alert(data);
 										});
 										return false;
