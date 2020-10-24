@@ -155,8 +155,11 @@
 										//return false;
 						                              /*********** option 2: alert works but text cut after meeting max ********
 										jQuery.get(url, function(data) {
-										    document.getElementById("displayCode") = data;
-										    //alert(data);
+										    //document.getElementById("displayCode") = data;
+										    alert(data);
+										    $(document).ready(function(data){
+				  							  $('#displayCode').text(data);
+										    });
 										});
 										return false;
 										********************************************************/
