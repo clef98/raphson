@@ -153,12 +153,14 @@
 									if(thirdDropdown == 'mini_batch1'){
 										//var ranvar ='MINIBATCH+NN+ML';
 										//return false;
+						                              /*********** option 2: alert works but text cut after meeting max ********
 										jQuery.get(url, function(data) {
 										    alert("calling jQuery.get()");
 										    alert(data);
 										});
 										return false;
-										/***** otpion 1 ***** not working
+										********************************************************/
+										/***** otpion 1 ***** not working ***/
 										var rawFile = new XMLHttpRequest();
 										rawFile.open("GET", url, true);
 										alert("rawFile.readyState is: " + rawFile.readyState);
@@ -172,7 +174,8 @@
 					       					   }	
 										};
 										rawFile.send();
-										**********end option 1*********************/
+									        return false;
+										/**********end option 1*********************/
 										
 									}else if(thirdDropdown == 'batch1'){
 										document.getElementById('displayCode').innerHTML ='BATCH+NN+ML';
