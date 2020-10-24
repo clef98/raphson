@@ -168,6 +168,8 @@
 										alert("outside of rawfile.onload ");
 										//rawFile.send(null);
 										rawFile.send();
+										alert("rawFile.readyState is: " + rawFile.readyState);
+										alert("rawFile.status is: " + rawFile.status);
 										return false;
 									}else if(thirdDropdown == 'batch1'){
 										document.getElementById('displayCode').innerHTML ='BATCH+NN+ML';
