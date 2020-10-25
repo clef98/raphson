@@ -19,7 +19,7 @@
 	</head>
 	<body class="is-preload">
 		<!-- <div id="wrapper"> -->
-		<div id="wrapper" style="background-image: url("images/DataScience03.jpg"); background-size: cover; height:480px; padding-top:80px;">
+		<div id="wrapper" style="background-image: url('images/DataScience03.jpg'); background-size: cover; height:480px; padding-top:80px;">
 			<!-- Add background image --
 			<style>
 			      body {
@@ -168,33 +168,16 @@
 									if(thirdDropdown == 'mini_batch1'){
 										//var ranvar ='MINIBATCH+NN+ML';
 										//return false;
-						                              /*********** option 2: alert works but text cut after meeting max ********/
+						                              /*********** alert has format but text cut after meeting max ********/
 										jQuery.get(url, function(data) {
-									            alert ("jquery get function....");
-										    alert(data);
+									            alert(data);
 										    $(document).ready(function(){
 				  							  $('#displayCode').text(data);
 										    });
 										});
 										return false;
 										/********************************************************/
-										/******* otpion 1 : not working ****************
-										var rawFile = new XMLHttpRequest();
-										rawFile.open("GET", url, true);
-										alert("rawFile.readyState is: " + rawFile.readyState);
-											
-										rawFile.onload = function () {
-										  if (rawfile.readyState === rawfile.DONE) {
-					       						if(rawfile.status === 200) {
-											   var allText = rawFile.responseText;
-											   alert(allText);
-					       						}
-					       					   }	
-										};
-										rawFile.send();
-									        return false;
-										**********end option 1*********************/
-										
+																		
 									}else if(thirdDropdown == 'batch1'){
 										document.getElementById('displayCode').innerHTML ='BATCH+NN+ML';
 										return false;
