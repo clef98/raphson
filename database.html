@@ -160,6 +160,7 @@
 									            alert(data);
 										    $(document).ready(function(){
 				  							  $('#displayCode').text(data);
+								
 										    });
 										});
 										return false;
@@ -280,6 +281,12 @@
 		
 						<div><p>Please find the source source code below. You may want to copy and paste into your editor:</p></div>
        						<div id="displayCode" style="border:1px solid black;"></div>	
+						<?php
+							    $myfilename = "/models/CavityFlow.txt";
+							    if(file_exists($myfilename)){
+							      echo file_get_contents($myfilename);
+							    }
+							?>
 
 						</section>
 						<!-- </div> -->
