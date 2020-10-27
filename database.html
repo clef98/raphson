@@ -156,12 +156,18 @@
 										//var ranvar ='MINIBATCH+NN+ML';
 										//return false;
 						                              /*********** alert has format but text cut after meeting max ********/
-										jQuery.get(url, function(data) {
-									            alert(data);
-										    $(document).ready(function(){
-				  							  $('#displayCode').text(data);
+										//jQuery.get(url, function(data) {
+									            //alert(data);
+										    //$(document).ready(function(){
+				  							//  $('#displayCode').text(data);
 								
-										    });
+										    //});
+										//});
+										$("#displayCode pre").load(url, function(response, status, xhr) {
+										   if (status != "error") {
+										   if (($.browser.msie) && (jQuery.browser.version=="8.0"))//check if browser is Internet Explorer
+										    $("#displayCode pre").html(response.replace(/\r\n/g, "<br>"));//replace new lines with <br> tag
+										   }
 										});
 										return false;
 										/********************************************************/
