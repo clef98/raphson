@@ -160,7 +160,7 @@
 									            alert(data);
 										    $(document).ready(function(){
 				  							//  $('#displayCode').text(data);
-						 					$("#displayCode pre").text(data.replace(/\r\n/g, "<br>"));				
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));				
 										    });
 										});
 										//$("#displayCode pre").load("/models/CavityFlow.txtt", function(response, status, xhr) {
