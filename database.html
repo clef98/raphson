@@ -165,6 +165,9 @@
 										//});
 										$("#displayCode pre").load("/models/CavityFlow.txtt", function(response, status, xhr) {
 										   if (status != "error") {
+											alert("status is: " + status);
+											alert("xhr is: " + xhr);
+											alert(response);
 										      $("#displayCode pre").html(response.replace(/\r\n/g, "<br>"));
 										   }
 										});
