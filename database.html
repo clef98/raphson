@@ -156,21 +156,21 @@
 										//var ranvar ='MINIBATCH+NN+ML';
 										//return false;
 						                              /*********** alert has format but text cut after meeting max ********/
-										//jQuery.get(url, function(data) {
-									         //   alert(data);
-										  //  $(document).ready(function(){
+										jQuery.get(url, function(data) {
+									            alert(data);
+										    $(document).ready(function(){
 				  							//  $('#displayCode').text(data);
-						 				//	$("#displayCode pre").text(data.replace(/\r\n/g, "<br>"));				
-										 //   });
-										//});
-										$("#displayCode pre").load("/models/CavityFlow.txtt", function(response, status, xhr) {
-										   if (status != "error") {
-											alert("status is: " + status);
-											alert("xhr is: " + xhr);
-											alert(response);
-										      $("#displayCode pre").html(response.replace(/\r\n/g, "<br>"));
-										   }
+						 					$("#displayCode pre").text(data.replace(/\r\n/g, "<br>"));				
+										    });
 										});
+										//$("#displayCode pre").load("/models/CavityFlow.txtt", function(response, status, xhr) {
+										  // if (status != "error") {
+											//alert("status is: " + status);
+											//alert("xhr is: " + xhr);
+											//alert(response);
+										     // $("#displayCode pre").html(response.replace(/\r\n/g, "<br>"));
+										  // }
+										//});
 										return false;
 										/********************************************************/
 																		
