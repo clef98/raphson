@@ -158,13 +158,10 @@
 						                              /*********** alert has format but text cut after meeting max ********/
 										jQuery.get(url, function(data) 
 										{
-									            alert(data);
-										   <object class="tablinks" onclick="$(document).ready(function()
+										   $(document).ready(function()
 					       						{
-				  							//  $('#displayCode').text(data);
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));				
-						       					});">
-											Cavity Flow</button>
+						       					});
 										});
 										
 										return false;
