@@ -72,7 +72,7 @@
 									document.getElementById("subcategory").options[5]=new Option("Linear Regression","Linear Regression");
 									break;
 							
-								 case "Transport Phenomena" :
+								case "Transport Phenomena" :
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("subcategory").options[1]=new Option("Fickian Diffusion","Fickian Diffusion");
 									document.getElementById("subcategory").options[2]=new Option("Convection","Convection");
@@ -80,9 +80,13 @@
 									break;
 								case "Fluid Mechanics" :
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("subcategory").options[1]=new Option("Fickian Diffusion","Fickian Diffusion");
-									document.getElementById("subcategory").options[2]=new Option("Convection","Convection");
-									document.getElementById("subcategory").options[3]=new Option("Burgers Equation","Burgers Equation")
+									document.getElementById("subcategory").options[1]=new Option("Cavity Flow","Cavity Flow");
+									document.getElementById("subcategory").options[2]=new Option("Lotka_Volterra","Lotka_Volterra");
+									document.getElementById("subcategory").options[3]=new Option("Poisson","Poisson")
+									break;
+								case "Mathematics" :
+									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("subcategory").options[1]=new Option("Laplace","Laplace");
 									break;
 								
 								 default:
@@ -145,11 +149,17 @@
 									document.getElementById("sub_subcategory").options[3]=new Option("Non Linear","Non Linear");
 									document.getElementById("sub_subcategory").options[4]=new Option("Rayleigh Bernard","Rayleigh Bernard");
 									break;
+						
 								    case "Burgers Equation" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("sub_subcategory").options[1]=new Option("1D","1D");
 									document.getElementById("sub_subcategory").options[2]=new Option("2D","2D");
 									break;
+						
+								    case "Laplace" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("2D","2D");
+									document.getElementById("sub_subcategory").options[2]=new Option("Implicit","Implicit");
 								
 								    default:
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
