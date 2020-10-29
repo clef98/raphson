@@ -175,14 +175,22 @@
 							  var thirdDropdown = document.getElementById('sub_subcategory').value;
 							
 						          //var url = "https://github.com/clef98/raphson/blob/master/models/CavityFlow.txt";
-							  var url = "/models/CavityFlow.txt";	
+							  var urlCavityFlow = "/models/CavityFlow.txt";	
+							  var url =
+							  var url =
+							  var url =
+							  var url =
+							  var url =
+							  var url =
+							  var url =
+							  var url =
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
 									if(thirdDropdown == 'mini_batch1'){
 										//var ranvar ='MINIBATCH+NN+ML';
 										//return false;
 						                              /*********** alert has format but text cut after meeting max ********/
-										jQuery.get(url, function(data) 
+										jQuery.get(urlCavityFlow, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -265,6 +273,16 @@
 								}
 																		
 							  }
+							  if (firstDropdown =='Transport Phenomena'){
+								if(secondDropdown =='Fickian Diffusion'){
+									if(thirdDropdown == 'Explicit Scheme (FTFS)'){
+										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+EXPLICIT';
+										return flase;
+									}else if(thirdDropdown =='Implicit Scheme (BTBS)'){
+										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+IMPLICIT';
+									}
+								}
+							  } 
 							  return false;
 							  document.getElementById('output').innerHTML = ranvar
 							}	
