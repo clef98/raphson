@@ -184,6 +184,10 @@
 							  var urlLin2D = '/models/Linear_Convection_2D.txt';
 							  var url1DConv = '/models/Convection_1D.txt';
 							  var url2DConv = '/models/Convection_2D.txt';
+							  var urlNonLinConv = '/models/NonLinearConvection.txt';
+							  var urlBernard = '/models/RayleighBenardConvection.txt';
+							  var url1DBurg = '/models/Burgers_equation_1D.txt';
+							  var url2DBurg = '/models/Burgers_equation_2D.txt';
 						
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
@@ -344,22 +348,42 @@
 						       					});
 										});
 									}else if(thirdDropdown =='Non Linear'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+NONLIN';
-										return false;
+										jQuery.get(urlNonLinConv, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 									}else if(thirdDropdown =='Rayleigh Bernard'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+BERN';
-										return false;
+										jQuery.get(urlBernard, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 									}else{
 										alert('please choose a option for the third dropdown');
 										return false;
 									}
 								}else if (secondDropdown =='Burgers Equation'){
 									if(thirdDropdown =='1DBURG'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+BURG+L1D';
-										return false;
+										jQuery.get(url1DBurg, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 									}else if(thirdDropdown =='2DBURG'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+BURG+2D';
-										return false;
+										jQuery.get(url2DBurg, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 									}else{
 										alert('please choose a option for the third dropdown');
 										return false;
