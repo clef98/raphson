@@ -188,6 +188,8 @@
 							  var urlBernard = '/models/RayleighBenardConvection.txt';
 							  var url1DBurg = '/models/Burgers_equation_1D.txt';
 							  var url2DBurg = '/models/Burgers_equation_2D.txt';
+							  var urlLotka = '/models/Lotka_Volterra_KMC.txt';
+							  var urlPoisson = '/models/Poisson_equation_2D.txt';
 						
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
@@ -404,11 +406,21 @@
 									});
 										return false;     
 								}else if(secondDropdown =='Lotka Volterra'){
-									document.getElementById('displayCode').innerHTML = 'FLUID+LOTKA';
-									return false;
+									jQuery.get(urlLotka, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 								}else if(secondDropdown =='Poisson'){
-									document.getElementById('displayCode').innerHTML = 'FLUID+POIS';
-									return false;
+									jQuery.get(urlPoisson, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 								}else{
 									alert('please choose a option for the second dropdown');
 									return false;
