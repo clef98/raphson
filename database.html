@@ -314,7 +314,23 @@
 									alert('please choose a option for the second dropdown');
 									return false;
 								}
-							  } 
+						
+							  }else if(firstDropdown =='Fluid Mechanics'){
+								if (secondDropdown == 'Cavity Flow'){
+									document.getElementById('displayCode').innerHTML = 'FLUID+CAVITY';
+									return false;
+								}else if(secondDropdown =='Lotka Volterra'){
+									document.getElementById('displayCode').innerHTML = 'FLUID+LOTKA';
+									return false;
+								}else if(secondDropdown =='Poisson'){
+									document.getElementById('displayCode').innerHTML = 'FLUID+POIS';
+									return false;
+								}else{
+									alert('please chose a option for the second dropdown');
+									return false;
+								}
+							  }
+						
 							  return false;
 							  document.getElementById('output').innerHTML = ranvar
 							}	
