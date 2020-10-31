@@ -272,6 +272,13 @@
 										return flase;
 									}else if(thirdDropdown =='Implicit Scheme (BTBS)'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+IMPLICIT';
+										return false;
+									}else if(thirdDropdown =='Crank-Nicolson (Hybrid)'){
+										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+CRANK';
+										return false;
+									}else if(thirdDropdown =='Analytical'){
+										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+ANALYTIC';
+										return false;
 									}
 								}
 							  } 
