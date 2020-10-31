@@ -177,6 +177,7 @@
 							  var urlFTFS = '/models/Fickain_numerical_explicit_slopemethod_nofluxboundary.txt';
 							  var urlBTBS = '/models/Fickian_numerical_implicit.txt';
 							  var urlCrank = '/models/Fickian_numerical_cranknicoslon.txt';
+							  var urlAnalytical = '/models/Fickian_analytical_homogenousboundary.txt';
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
 									if(thirdDropdown == 'mini_batch1'){
@@ -291,8 +292,13 @@
 						       					});
 										});
 									}else if(thirdDropdown =='Analytical'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+ANALYTIC';
-										return false;
+										jQuery.get(urlAnalytical, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 									}else{
 										alert('please choose a option for the third dropdown');
 										return false;
