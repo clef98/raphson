@@ -176,6 +176,7 @@
 							
 						          //var url = "https://github.com/clef98/raphson/blob/master/models/CavityFlow.txt";
 							  var urlCavityFlow = "/models/CavityFlow.txt";	
+							  var urlFTFS = '/models/Fickain_numerical_explicit_slopemethod_nofluxboundary.txt';
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
 									if(thirdDropdown == 'mini_batch1'){
@@ -263,8 +264,15 @@
 							  }else if (firstDropdown =='Transport Phenomena'){
 								if(secondDropdown =='Fickian Diffusion'){
 									if(thirdDropdown == 'Explicit Scheme (FTFS)'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+EXPLICIT';
-										return flase;
+										jQuery.get(urlFTFS, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										return false;
+						
 									}else if(thirdDropdown =='Implicit Scheme (BTBS)'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+IMPLICIT';
 										return false;
