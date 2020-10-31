@@ -174,9 +174,9 @@
 							  var secondDropdown = document.getElementById('subcategory').value;
 							  var thirdDropdown = document.getElementById('sub_subcategory').value;
 							
-						          //var url = "https://github.com/clef98/raphson/blob/master/models/CavityFlow.txt";
 							  var urlCavityFlow = "/models/CavityFlow.txt";	
 							  var urlFTFS = '/models/Fickain_numerical_explicit_slopemethod_nofluxboundary.txt';
+							  var urlBTBS = '/models/Fickian_numerical_implicit.txt';
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
 									if(thirdDropdown == 'mini_batch1'){
@@ -274,7 +274,13 @@
 										return false;
 						
 									}else if(thirdDropdown =='Implicit Scheme (BTBS)'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+IMPLICIT';
+										jQuery.get(urlBTBS, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 										return false;
 									}else if(thirdDropdown =='Crank-Nicolson (Hybrid)'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+CRANK';
