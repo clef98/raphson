@@ -180,6 +180,8 @@
 							  var urlBTBS = '/models/Fickian_numerical_implicit.txt';
 							  var urlCrank = '/models/Fickian_numerical_cranknicoslon.txt';
 							  var urlAnalytical = '/models/Fickian_analytical_homogenousboundary.txt';
+							  var urlLin1D = '/models/Linear_Convection_1D.txt';
+							  var urlLin2D = '/models/Linear_Convection_2D.txt';
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
 									if(thirdDropdown == 'mini_batch1'){
@@ -307,11 +309,21 @@
 									}
 								}else if (secondDropdown =='Convection'){
 									if(thirdDropdown =='Linear 1D'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+LIN1D';
-										return false;
+										jQuery.get(urlLin1D, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 									}else if(thirdDropdown =='Linear 2D'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+LIN2D';
-										return false;
+										jQuery.get(urlLin2D, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 									}else if(thirdDropdown =='1DCONV'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+1D';
 										return false;
