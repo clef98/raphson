@@ -182,6 +182,9 @@
 							  var urlAnalytical = '/models/Fickian_analytical_homogenousboundary.txt';
 							  var urlLin1D = '/models/Linear_Convection_1D.txt';
 							  var urlLin2D = '/models/Linear_Convection_2D.txt';
+							  var url1DConv = '/models/Convection_1D.txt';
+							  var url2DConv = '/models/Convection_2D.txt';
+						
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
 									if(thirdDropdown == 'mini_batch1'){
@@ -325,11 +328,21 @@
 						       					});
 										});
 									}else if(thirdDropdown =='1DCONV'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+1D';
-										return false;
+										jQuery.get(url1DConv, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 									}else if(thirdDropdown =='2DCONV'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+2D';
-										return false;
+										jQuery.get(url2DConv, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 									}else if(thirdDropdown =='Non Linear'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+NONLIN';
 										return false;
