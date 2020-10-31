@@ -264,8 +264,7 @@
 									return false;
 								}
 																		
-							  }
-							  if (firstDropdown =='Transport Phenomena'){
+							  }else if (firstDropdown =='Transport Phenomena'){
 								if(secondDropdown =='Fickian Diffusion'){
 									if(thirdDropdown == 'Explicit Scheme (FTFS)'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+EXPLICIT';
@@ -283,18 +282,35 @@
 										alert('please choose a option for the third dropdown');
 										return false;
 									}
-								}if (secondDropdown =='Convection'){
+								}else if (secondDropdown =='Convection'){
 									if(thirdDropdown =='Linear 1D'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+LIN1D';
 										return false;
 									}else if(thirdDropdown =='Linear 2D'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+LIN2D';
 										return false;
+									}else if(thirdDropdown =='Non Linear'){
+										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+NONLIN';
+										return false;
+									}else if(thirdDropdown =='Rayleigh Bernard'){
+										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+BERN';
+										return false;
+									}else{
+										alert('please choose a option for the third dropdown');
+										return false;
 									}
-						
-
-						
-								}
+								}else if (secondDropdown =='Burgers Equation'){
+									if(thirdDropdown =='1D'){
+										document.getElementById('displayCode').innerHTML = 'TRANS+BURG+L1D';
+										return false;
+									}else if(thirdDropdown =='2D'){
+										document.getElementById('displayCode').innerHTML = 'TRANS+BURG+2D';
+										return false;
+									}else{
+										alert('please choose a option for the third dropdown');
+										return false;
+									}
+								}	
 							  } 
 							  return false;
 							  document.getElementById('output').innerHTML = ranvar
