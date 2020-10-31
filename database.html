@@ -145,19 +145,21 @@
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("sub_subcategory").options[1]=new Option("Linear 1D","Linear 1D");
 									document.getElementById("sub_subcategory").options[2]=new Option("Linear 2D","Linear 2D");
-									document.getElementById("sub_subcategory").options[3]=new Option("Non Linear","Non Linear");
-									document.getElementById("sub_subcategory").options[4]=new Option("Rayleigh Bernard","Rayleigh Bernard");
+									document.getElementById("sub_subcategory").options[3]=new Option("1D","1DCONV");
+									document.getElementById("sub_subcategory").options[4]=new Option("2D","2DCONV");
+									document.getElementById("sub_subcategory").options[5]=new Option("Non Linear","Non Linear");
+									document.getElementById("sub_subcategory").options[6]=new Option("Rayleigh Bernard","Rayleigh Bernard");
 									break;
 						
 								    case "Burgers Equation" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("sub_subcategory").options[1]=new Option("1D","1D");
-									document.getElementById("sub_subcategory").options[2]=new Option("2D","2D");
+									document.getElementById("sub_subcategory").options[1]=new Option("1D","1DBURG");
+									document.getElementById("sub_subcategory").options[2]=new Option("2D","2DBURG");
 									break;
 						
 								    case "Laplace" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("sub_subcategory").options[1]=new Option("2D","2D");
+									document.getElementById("sub_subcategory").options[1]=new Option("2D","2DLAPLACE");
 									document.getElementById("sub_subcategory").options[2]=new Option("Implicit","Implicit");
 									break;
 								    default:
@@ -310,6 +312,12 @@
 									}else if(thirdDropdown =='Linear 2D'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+LIN2D';
 										return false;
+									}else if(thirdDropdown =='1DCONV'){
+										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+1D';
+										return false;
+									}else if(thirdDropdown =='2DCONV'){
+										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+2D';
+										return false;
 									}else if(thirdDropdown =='Non Linear'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+CONV+NONLIN';
 										return false;
@@ -321,10 +329,10 @@
 										return false;
 									}
 								}else if (secondDropdown =='Burgers Equation'){
-									if(thirdDropdown =='1D'){
+									if(thirdDropdown =='1DBURG'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+BURG+L1D';
 										return false;
-									}else if(thirdDropdown =='2D'){
+									}else if(thirdDropdown =='2DBURG'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+BURG+2D';
 										return false;
 									}else{
@@ -358,7 +366,7 @@
 								}
 							  }else if (firstDropdown =='Mathematics'){
 								if(secondDropdown =='Laplace'){
-									if(thirdDropdown == '2D'){
+									if(thirdDropdown == '2DLAPLACE'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+EXPLICIT';
 										return flase;
 									}else if(thirdDropdown =='Implicit'){
