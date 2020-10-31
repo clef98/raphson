@@ -177,6 +177,7 @@
 							  var urlCavityFlow = "/models/CavityFlow.txt";	
 							  var urlFTFS = '/models/Fickain_numerical_explicit_slopemethod_nofluxboundary.txt';
 							  var urlBTBS = '/models/Fickian_numerical_implicit.txt';
+							  var urlCrank = '/models/Fickian_numerical_cranknicoslon.txt';
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
 									if(thirdDropdown == 'mini_batch1'){
@@ -283,8 +284,13 @@
 										});
 										return false;
 									}else if(thirdDropdown =='Crank-Nicolson (Hybrid)'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+CRANK';
-										return false;
+										jQuery.get(urlCrank, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 									}else if(thirdDropdown =='Analytical'){
 										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+ANALYTIC';
 										return false;
