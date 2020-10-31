@@ -190,6 +190,8 @@
 							  var url2DBurg = '/models/Burgers_equation_2D.txt';
 							  var urlLotka = '/models/Lotka_Volterra_KMC.txt';
 							  var urlPoisson = '/models/Poisson_equation_2D.txt';
+							  var url2DLaplace = '/models/Laplace_equation_2D.txt';
+							  var urlImplicitLaplace = '/models/LaplaceImplicit.txt';
 						
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
@@ -428,11 +430,21 @@
 							  }else if (firstDropdown =='Mathematics'){
 								if(secondDropdown =='Laplace'){
 									if(thirdDropdown == '2DLAPLACE'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+EXPLICIT';
-										return flase;
+										jQuery.get(url2DLaplace, function(data) 
+											{
+										  	 $(document).ready(function()
+					       							{
+						 						$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       						});
+											});
 									}else if(thirdDropdown =='Implicit'){
-										document.getElementById('displayCode').innerHTML = 'TRANS+FICK+IMPLICIT';
-										return false;
+										jQuery.get(urlImplicitLaplace, function(data) 
+											{
+										  	 $(document).ready(function()
+					       							{
+						 						$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       						});
+											});
 									}
 								}
 							  }
