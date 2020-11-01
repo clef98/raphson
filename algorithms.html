@@ -35,15 +35,41 @@
 						</ul>
 					</nav>
 					<div id="main">
-							<section id="content" class="main">
-								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>PLACEHOLDER TEXT</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
-							</section>
+						<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
 
+							<ul id="myMenu">
+							  <li><a href="#">Neural Network</a></li>
+							  <li><a href="#">Linear Regression</a></li>
+							  <li><a href="#">Logisitic Regression</a></li>
+							  <li><a href="#">Convection 1D</a></li>
+							  <li><a href="#">Convection Linear 2D</a></li>
+							  <li><a href="#">Laplace Implicit</a></li>
+							  <li><a href="#">K-Means Clustering</a></li>
+							  <li><a href="#">Burgers 1D</a></li>
+							  <li><a href="#">Fickian Explicit</a></li>
+							</ul>
+
+								
+							<script>	
+								function myFunction() {
+								  // Declare variables
+								  var input, filter, ul, li, a, i;
+								  input = document.getElementById("mySearch");
+								  filter = input.value.toUpperCase();
+								  ul = document.getElementById("myMenu");
+								  li = ul.getElementsByTagName("li");
+
+								  // Loop through all list items, and hide those who don't match the search query
+								  for (i = 0; i < li.length; i++) {
+								    a = li[i].getElementsByTagName("a")[0];
+								    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+								      li[i].style.display = "";
+								    } else {
+								      li[i].style.display = "none";
+								    }
+								  }
+								}
+							</script>
 					</div>
 
 				<footer id="footer">
