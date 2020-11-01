@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -22,7 +23,7 @@
 		<!-- 	<div id="wrapper" style="background-image: url('images/NetWork02.png'); background-size: cover; height:400px; width: 3000px; border: 2px; color: pink; ">	 -->
 			<div id="wrapper">			
 				<header id="header" class="alt">
-						<h1>Neural Network</h1>
+						<h1>Algorithms</h1>
 						<p>Page is under construction.</p>
 					</header>
 			<!-- </div> -->	
@@ -34,10 +35,45 @@
 							<li><a href="contributors.html">Contributors</a></li>
 						</ul>
 					</nav>
-               
 					<div id="main">
-              <h2>PLACEHOLDER</h2>
-              <p>PLACEHOLDER 22222222</p>
+						<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+
+							<ul id="myMenu">
+							  <li><a href="/algorithmPages/NeuralNetwork.html">Neural Network</a></li>
+							  <li><a href="algorithms.html">Linear Regression</a></li>
+							  <li><a href="algorithms.html">Logisitic Regression</a></li>
+							  <li><a href="algorithms.html">Convection 1D</a></li>
+							  <li><a href="algorithms.html">Convection Linear 2D</a></li>
+							  <li><a href="algorithms.html">Laplace Implicit</a></li>
+							  <li><a href="algorithms.html">K-Means Clustering</a></li>
+							  <li><a href="algorithms.html">Burgers 1D</a></li>
+							  <li><a href="algorithms.html">Fickian Explicit</a></li>
+							</ul>
+
+								
+							<script>	
+								function myFunction() {
+								  // Declare variables
+								  var input, filter, ul, li, a, i;
+								  input = document.getElementById("mySearch");
+								  filter = input.value.toUpperCase();
+								  ul = document.getElementById("myMenu");
+								  li = ul.getElementsByTagName("li");
+
+								  // Loop through all list items, and hide those who don't match the search query
+								  for (i = 0; i < li.length; i++) {
+								    a = li[i].getElementsByTagName("a")[0];
+								    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+								      li[i].style.display = "";
+								    } else {
+								      li[i].style.display = "none";
+								    }
+								  }
+								}
+								
+							getElementById('main').innerhtml = input
+								
+							</script>
 					</div>
 
 				<footer id="footer">
