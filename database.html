@@ -61,16 +61,7 @@
 							document.getElementById("sub_subcategory").length = 0;
 							document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
 							document.getElementById("subcategory").length = 0;
-							switch (listindex){
-								case "Machine Learning" :
-									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
-									document.getElementById("subcategory").options[1]=new Option("Neural Network","Neural Network");
-									document.getElementById("subcategory").options[2]=new Option("K-Means Clustering","K-Means Clustering");
-								        document.getElementById("subcategory").options[3]=new Option("Support Vector Machine","Support Vector Machine");
-									document.getElementById("subcategory").options[4]=new Option("Logistic Regression","Logistic Regression");
-									document.getElementById("subcategory").options[5]=new Option("Linear Regression","Linear Regression");
-									break;
-							
+							switch (listindex){					
 								case "Transport Phenomena" :
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("subcategory").options[1]=new Option("Fickian Diffusion","Fickian Diffusion");
@@ -87,8 +78,15 @@
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("subcategory").options[1]=new Option("Laplace","Laplace");
 									break;
-								
-								 default:
+								case "Machine Learning" :
+									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
+									document.getElementById("subcategory").options[1]=new Option("Neural Network","Neural Network");
+									document.getElementById("subcategory").options[2]=new Option("K-Means Clustering","K-Means Clustering");
+								        document.getElementById("subcategory").options[3]=new Option("Support Vector Machine","Support Vector Machine");
+									document.getElementById("subcategory").options[4]=new Option("Logistic Regression","Logistic Regression");
+									document.getElementById("subcategory").options[5]=new Option("Linear Regression","Linear Regression");
+									break;
+								efault:
 									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
 									break;
 								}
