@@ -52,7 +52,8 @@
 		<br>Where m is the number of data points. The goal is to find the &#x3B8<sub>0</sub> and &#x3B8<sub>1</sub> that minimize the cost function. The equation for these &#x3B8's is defined as:
 		<br>$$\theta_0 = \theta_0 - \alpha\frac{1}{m}\sum_{i=1}^m (\frac{\partial}{\partial\theta_0}J(\theta_0, \theta_1) = \theta_0 - \alpha\frac{1}{m}\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})$$ 
 		$$\theta_1 = \theta_1 - \alpha\frac{1}{m}\sum_{i=1}^m (\frac{\partial}{\partial\theta_1}J(\theta_0, \theta_1) = \theta_1 - \alpha\frac{1}{m}\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)}) * x^{(i)}$$ 
-	
+		<br>Repeat untill they converge to a value. If they do not converge but grow, then decrease alpha's value. Once you find out the values of the &#x3B8's,
+		<br>you can directly plug it in to the hypothesis and get your line. You can also scale up by using higher power of x or more parameters or both!
  		 </p>
              <img src="images/LineOfBestFitRaphson.jpg" alt="Line of Best Fit" style="position:absolute; left:1200px; top:620px; height:260px; width:410px;">
 					</div>
