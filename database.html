@@ -348,8 +348,14 @@
 										});
 										return false;
 									}else if(thirdDropdown == 'stochastic5'){
-										document.getElementById('displayCode').innerhtml = '%%Linear Regression with Stochastic Gradient Descent';
-
+										document.getElementById('displayCode').innerHTML = '%%Linear Regression with Stochastic Gradient Descent';
+										jQuery.get(urlLinearReg, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 										return false;
 									}else{
 										alert('please choose a option for the third dropdown');
