@@ -29,7 +29,8 @@ body {
 
 ol, ul {
    list-style: none;
-    margin-top: 30px;
+    margin: 0;
+    padding:0;
 }
 
 ol li {
@@ -39,6 +40,14 @@ ol li {
 ul li {
   margin: 15px;
 }
+.navigation {
+    margin-top: 45px;
+    text-align: left;
+    padding: 5px 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
 
 blockquote, q {
 	quotes: none;
