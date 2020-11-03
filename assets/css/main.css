@@ -179,6 +179,10 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
+	p.ex1 {
+ 		margin: 35px 30px;
+	}
+
 		p.content {
 			-moz-columns: 20em 2;
 			-webkit-columns: 20em 2;
