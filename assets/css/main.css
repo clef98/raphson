@@ -29,6 +29,7 @@ body {
 
 ol, ul {
    list-style: none;
+    margin-top: 30px;
 }
 
 ol li {
@@ -37,7 +38,6 @@ ol li {
 
 ul li {
   margin: 15px;
-  margin-top: 30px;
 }
 
 blockquote, q {
