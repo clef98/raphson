@@ -29,6 +29,7 @@ body {
 
 ol, ul {
 	list-style: none;
+	padding: 10
 	margin-top: 250px; 
 	margin-left:50px;
 }
