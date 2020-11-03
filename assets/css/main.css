@@ -180,7 +180,10 @@ input, select, textarea {
 	}
 
 	p.ex1 {
- 		margin: 35px 30px;
+ 		margin-left: 10%;
+		margin-right: 8%;
+		margin-top: 10%;
+		margin-bottom: 8%;
 	}
 
 		p.content {
