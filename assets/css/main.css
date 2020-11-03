@@ -204,6 +204,11 @@ input, select, textarea {
 		margin-bottom: 2%;
 	}
 
+	div {
+	  margin-top: 2%;
+	  margin-left: 3%;
+	}
+
 		p.content {
 			-moz-columns: 20em 2;
 			-webkit-columns: 20em 2;
