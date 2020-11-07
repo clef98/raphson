@@ -36,7 +36,7 @@ for it=0:nt
     
     for i=1:nx
         u(i)=un(i)-(un(i)*dt*(un(i)-un(im(i)))/dx)+(vis*dt*(un(ip(i))-2*un(i)+un(im(i)))/(dx*dx));
-        if (x(i)==2*pi)   %boundary condition of periodicity
+        if (x(i)==2*pi)   
             u(x(i))=u(1);
         end
     end
