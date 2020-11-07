@@ -45,11 +45,6 @@ for j=3:M
    end
 end
 
-% Create xlabel
 xlabel({'Distance'});
-
-% Create title
 title({'Implicit'});
-
-% Create ylabel
 ylabel({'Concentration'});
