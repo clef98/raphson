@@ -55,7 +55,10 @@
 		<br>This equation is called the cost function which is defined as:
 		<br>$$J(\theta) = -\frac{1}{m} \bigl(\sum_{i=1}^m y^{(i)}logh_\theta(x^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)}))\bigr)$$
 		Note: y = 0 or 1 always.
-		<br>
+		<br>Now, all we have to do is find thetas so that they minimize the cost in order to get the best result.
+		<br>To do this, we have equations that can solve for these thetas:
+		<br>$$\theta_0 = \theta_0 - \alpha\sum_i=1^m (h_\theta(x^{(i)})-y^{(i)})$$
+		$$\theta_j = \theta_j - \alpha\sum_i=1^m (h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}$$
 		
 		
 				
