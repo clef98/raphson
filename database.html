@@ -598,7 +598,11 @@
 						       						});
 											});
 										return false;
-									}else if(secondDropdown =='Poisson'){
+									}else{
+										alert('Please choose a option for the thrid dropdown');
+										return false;
+									}
+								}else if(secondDropdown =='Poisson'){
 									jQuery.get(urlPoisson, function(data) 
 										{
 										   $(document).ready(function()
@@ -607,9 +611,9 @@
 						       					});
 										});
 										return false;
-									}else{
-										alert('Please choose a option for the second dropdown');
-										return false;
+								}else{
+									alert('Please choose a option for the second dropdown)
+									return false;
 								}
 							  }
 							  return false;
