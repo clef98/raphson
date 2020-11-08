@@ -383,7 +383,6 @@
 						       					});
 										});
 										return false;
-						
 									}else if(thirdDropdown =='Implicit Scheme (BTBS)'){
 										jQuery.get(urlBTBS, function(data) 
 										{
@@ -401,6 +400,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else if(thirdDropdown =='Analytical'){
 										jQuery.get(urlAnalytical, function(data) 
 										{
@@ -409,6 +409,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else{
 										alert('Please choose a option for the third dropdown');
 										return false;
@@ -422,6 +423,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else if(thirdDropdown =='Linear 2D'){
 										jQuery.get(urlLin2D, function(data) 
 										{
@@ -430,6 +432,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else if(thirdDropdown =='1DCONV'){
 										jQuery.get(url1DConv, function(data) 
 										{
@@ -438,6 +441,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else if(thirdDropdown =='2DCONV'){
 										jQuery.get(url2DConv, function(data) 
 										{
@@ -446,6 +450,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else if(thirdDropdown =='Nonlinear Beam-Warming'){
 										jQuery.get(urlNonLinConvBeam, function(data) 
 										{
@@ -454,6 +459,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else if(thirdDropdown =='Nonlinear Lax-Friedrichs'){
 										jQuery.get(urlNonLinConvFried, function(data) 
 										{
@@ -462,6 +468,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else if(thirdDropdown =='Nonlinear Lax-Wendroff'){
 										jQuery.get(urlNonLinConvWendroff, function(data) 
 										{
@@ -470,6 +477,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else if(thirdDropdown =='Nonlinear MacCormack'){
 										jQuery.get(urlNonLinConvMacCormack, function(data) 
 										{
@@ -478,6 +486,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else if(thirdDropdown =='Rayleigh Bernard'){
 										jQuery.get(urlBernard, function(data) 
 										{
@@ -486,6 +495,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else{
 										alert('Please choose a option for the third dropdown');
 										return false;
@@ -499,6 +509,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else if(thirdDropdown =='2DBURG'){
 										jQuery.get(url2DBurg, function(data) 
 										{
@@ -507,6 +518,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else{
 										alert('Please choose a option for the third dropdown');
 										return false;
@@ -525,15 +537,16 @@
 						 				$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       				});
 									});
-										return false; 
+									return false; 
 								}else if(secondDropdown =='Richtmyer'){
 									jQuery.get(urlCavityFlowRichtmyer, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
+									{
+									   $(document).ready(function()
+					       					{
+						 				$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       				});
+									});
+									return false;
 								}else if(secondDropdown =='Explicit, Central Difference'){
 									jQuery.get(urlCavityFlowCentral, function(data) 
 										{
@@ -542,6 +555,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+									return false;
 								}else if(secondDropdown =='Explicit, Euler'){
 									jQuery.get(urlCavityFlowEuler, function(data) 
 										{
@@ -550,6 +564,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+									return false;
 								}else if(secondDropdown =='Implicit, Central Difference'){
 									jQuery.get(urlCavityFlowImplicit, function(data) 
 										{
@@ -558,6 +573,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+									return false;
 								}else{
 									alert('Please choose a option for the second dropdown');
 									return false;
@@ -572,6 +588,7 @@
 						 						$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       						});
 											});
+										return false;
 									}else if(thirdDropdown =='Implicit'){
 										jQuery.get(urlImplicitLaplace, function(data) 
 											{
@@ -580,6 +597,7 @@
 						 						$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       						});
 											});
+										return false;
 									}else if(secondDropdown =='Poisson'){
 									jQuery.get(urlPoisson, function(data) 
 										{
@@ -588,6 +606,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else{
 										alert('Please choose a option for the second dropdown');
 										return false;
