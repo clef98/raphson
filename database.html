@@ -182,7 +182,6 @@
 							  var secondDropdown = document.getElementById('subcategory').value;
 							  var thirdDropdown = document.getElementById('sub_subcategory').value;
 							
-							  var urlCavityFlow = "/models/CavityFlow.txt";	
 							  var urlFTFS = '/models/Fickain_numerical_explicit_slopemethod_nofluxboundary.txt';
 							  var urlBTBS = '/models/Fickian_numerical_implicit.txt';
 							  var urlCrank = '/models/Fickian_numerical_cranknicoslon.txt';
@@ -494,16 +493,7 @@
 								}
 						
 							  }else if(firstDropdown =='Fluid Mechanics'){
-								if (secondDropdown == 'Cavity Flow'){
-									jQuery.get(urlCavityFlow, function(data) 
-									{
-									   $(document).ready(function()
-					       					{
-						 				$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       				});
-									});
-										return false;     
-								}else if(secondDropdown =='Poisson'){
+								if (secondDropdown =='Poisson'){
 									jQuery.get(urlPoisson, function(data) 
 										{
 										   $(document).ready(function()
