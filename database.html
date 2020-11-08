@@ -611,7 +611,7 @@
 						<form onsubmit="event.preventDefault();" name="sample" method="POST">	
 							<div class="category_div" id="category_div">Please select subject:
 							    <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
-								<option value="">Subject</option>
+								<option value=""> </option>
 								<option value="Transport Phenomena">Transport Phenomena</option>
 								<option value="Fluid Mechanics">Fluid Mechanics</option>
 								<option value="Mathematics">Mathematics</option>
@@ -621,23 +621,23 @@
 							</div>
 							<div class="sub_category_div" id="sub_category_div">Please select algorithm:
 							    <script type="text/javascript" language="JavaScript">
-								document.write('<select name="subcategory" id="subcategory" onchange="javascript: dynamicdropdownone(this.options[this.selectedIndex].value);"><option value="">Algorithm</option></select>')
+								document.write('<select name="subcategory" id="subcategory" onchange="javascript: dynamicdropdownone(this.options[this.selectedIndex].value);"><option value=""> </option></select>')
 							    </script>
 							    <noscript>
 								<select name="subcategory" id="subcategory" >
-								    <option value="">Algorithm </option>
+								    <option value=""> </option>
 								</select>
 							    </noscript>
 							</div>
 							<div class="sub_subcategory_div" id="sub_subcategory_div">Please select scheme:
 								
 							    <script type="text/javascript" language="JavaScript">
-								document.write('<select name="sub_subcategory" id="sub_subcategory"><option value="">Scheme</option></select>')
+								document.write('<select name="sub_subcategory" id="sub_subcategory"><option value=""> </option></select>')
 							    </script>
 								
 							    <noscript>
 								<select name="sub_subcategory" id="sub_subcategory" >
-								    <option value="">Scheme</option>
+								    <option value=""> </option>
 								</select>
 							    </noscript>
 							</div>
