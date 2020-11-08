@@ -39,10 +39,22 @@
 			<div id="main">
 				<section id="content" class="main">
 					<!-- <span class="image main"><img src="images/DataScience03.jpg" alt="" /></span> -->
-						<!-- <h2>Magna feugiat lorem</h2>.  -->
-
+						<!-- <h2>Magna feugiat lorem</h2>.  
+						<ul class="actions">
+							<li><button onclick="myFunction1()" class="button" >1-D Heat Diffusion</button></li>
+						</ul>
 								
 						<div id="myDIV"></div>
+						<script>
+						function myFunction1() {
+						  var x = document.getElementById("myDIV");
+						  if (x.innerHTML === "Code will appear here.") {
+						    x.innerHTML = "Test";
+	 					  } else {
+						    x.innerHTML = "Code will appear here.";
+						  }
+						}
+						</script> -->
 						
 						<script language="javascript" type="text/javascript">
 						function dynamicdropdown(listindex) {
@@ -54,26 +66,27 @@
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("subcategory").options[1]=new Option("Fickian Diffusion","Fickian Diffusion");
 									document.getElementById("subcategory").options[2]=new Option("Convection","Convection");
+									document.getElementById("subcategory").options[3]=new Option("Burgers Equation","Burgers Equation")
 									break;
 								case "Fluid Mechanics" :
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("subcategory").options[1]=new Option("Cavity Flow","Cavity Flow");
-									document.getElementById("subcategory").options[2]=new Option("Burgers Equation","Burgers Equation");
+									document.getElementById("subcategory").options[2]=new Option("Lotka Volterra","Lotka Volterra");
+									document.getElementById("subcategory").options[3]=new Option("Poisson","Poisson")
 									break;
 								case "Mathematics" :
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("subcategory").options[1]=new Option("Laplace","Laplace");
-									document.getElementById("subcategory").options[2]=new Option("Poisson","Poisson");
 									break;
 								case "Machine Learning" :
 									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
-									document.getElementById("subcategory").options[1]=new Option("Linear Regression","Linear Regression");
-									document.getElementById("subcategory").options[2]=new Option("Logistic Regression","Logistic Regression");
-									document.getElementById("subcategory").options[3]=new Option("Neural Network","Neural Network");
-									document.getElementById("subcategory").options[4]=new Option("K-Means Clustering","K-Means Clustering");
-								        document.getElementById("subcategory").options[5]=new Option("Support Vector Machine","Support Vector Machine");	
+									document.getElementById("subcategory").options[5]=new Option("Linear Regression","Linear Regression");
+									document.getElementById("subcategory").options[4]=new Option("Logistic Regression","Logistic Regression");
+									document.getElementById("subcategory").options[1]=new Option("Neural Network","Neural Network");
+									document.getElementById("subcategory").options[2]=new Option("K-Means Clustering","K-Means Clustering");
+								        document.getElementById("subcategory").options[3]=new Option("Support Vector Machine","Support Vector Machine");	
 									break;
-								default:
+								efault:
 									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
 									break;
 								}
@@ -132,11 +145,8 @@
 									document.getElementById("sub_subcategory").options[2]=new Option("Linear 2D","Linear 2D");
 									document.getElementById("sub_subcategory").options[3]=new Option("1D","1DCONV");
 									document.getElementById("sub_subcategory").options[4]=new Option("2D","2DCONV");
-									document.getElementById("sub_subcategory").options[5]=new Option("Nonlinear Beam-Warming","Nonlinear Beam-Warming");
-									document.getElementById("sub_subcategory").options[6]=new Option("Nonlinear Lax-Friedrichs","Nonlinear Lax-Friedrichs");
-									document.getElementById("sub_subcategory").options[7]=new Option("Nonlinear Lax-Wendroff","Nonlinear Lax-Wendroff");
-									document.getElementById("sub_subcategory").options[8]=new Option("Nonlinear MacCormack","Nonlinear MacCormack");
-									document.getElementById("sub_subcategory").options[9]=new Option("Rayleigh Bernard","Rayleigh Bernard");
+									document.getElementById("sub_subcategory").options[5]=new Option("Non Linear","Non Linear");
+									document.getElementById("sub_subcategory").options[6]=new Option("Rayleigh Bernard","Rayleigh Bernard");
 									break;
 						
 								    case "Burgers Equation" :
@@ -150,16 +160,6 @@
 									document.getElementById("sub_subcategory").options[1]=new Option("2D","2DLAPLACE");
 									document.getElementById("sub_subcategory").options[2]=new Option("Implicit","Implicit");
 									break;
-						
-								    case "Cavity Flow" :
-									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("sub_subcategory").options[1]=new Option("MacCormack","MacCormack");
-									document.getElementById("sub_subcategory").options[3]=new Option("Richtmyer","Richtmyer");
-									document.getElementById("sub_subcategory").options[4]=new Option("Explicit, Central Difference","Explicit, Central Difference");
-									document.getElementById("sub_subcategory").options[5]=new Option("Explicit, Euler","Explicit, Euler");
-									document.getElementById("sub_subcategory").options[6]=new Option("Implicit, Central Difference","Implicit, Central Difference");
-									break;
-						
 								    default:
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
 									break;
@@ -172,12 +172,8 @@
 							  var firstDropdown = document.getElementById('category').value;
 							  var secondDropdown = document.getElementById('subcategory').value;
 							  var thirdDropdown = document.getElementById('sub_subcategory').value;
-						
-							  var urlCavityFlowMacCormack = '/models/CavityFlow_MacCormack.txt';
-							  var urlCavityFlowRichtmyer = '/models/CavityFlow_Richtmyer.txt';
-							  var urlCavityFlowCentral = '/models/CavityFlow_explicit_centraldifference.txt';
-							  var urlCavityFlowEuler = '/models/CavityFlow_expliciteuler.txt';
-							  var urlCavityFlowImplicit = '/models/CavityFlow_implicit_centraldifference.txt';
+							
+							  var urlCavityFlow = "/models/CavityFlow.txt";	
 							  var urlFTFS = '/models/Fickain_numerical_explicit_slopemethod_nofluxboundary.txt';
 							  var urlBTBS = '/models/Fickian_numerical_implicit.txt';
 							  var urlCrank = '/models/Fickian_numerical_cranknicoslon.txt';
@@ -186,10 +182,7 @@
 							  var urlLin2D = '/models/Linear_Convection_2D.txt';
 							  var url1DConv = '/models/Convection_1D.txt';
 							  var url2DConv = '/models/Convection_2D.txt';
-							  var urlNonLinConvBeam = '/models/NonLinearConvection_BeamWarming.txt';
-							  var urlNonLinConvFried = '/models/NonLinearConvection_LaxFriedrichs.txt';
-							  var urlNonLinConvWendroff = '/models/NonLinearConvection_LaxWendroff.txt';
-							  var urlNonLinConvMacCormack = '/models/NonLinearConvection_MacCormack.txt';
+							  var urlNonLinConv = '/models/NonLinearConvection.txt';
 							  var urlBernard = '/models/RayleighBenardConvection.txt';
 							  var url1DBurg = '/models/Burgers_equation_1D.txt';
 							  var url2DBurg = '/models/Burgers_equation_2D.txt';
@@ -383,6 +376,7 @@
 						       					});
 										});
 										return false;
+						
 									}else if(thirdDropdown =='Implicit Scheme (BTBS)'){
 										jQuery.get(urlBTBS, function(data) 
 										{
@@ -400,7 +394,6 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										return false;
 									}else if(thirdDropdown =='Analytical'){
 										jQuery.get(urlAnalytical, function(data) 
 										{
@@ -409,9 +402,8 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										return false;
 									}else{
-										alert('Please choose a option for the third dropdown');
+										alert('please choose a option for the third dropdown');
 										return false;
 									}
 								}else if (secondDropdown =='Convection'){
@@ -423,7 +415,6 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										return false;
 									}else if(thirdDropdown =='Linear 2D'){
 										jQuery.get(urlLin2D, function(data) 
 										{
@@ -432,7 +423,6 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										return false;
 									}else if(thirdDropdown =='1DCONV'){
 										jQuery.get(url1DConv, function(data) 
 										{
@@ -441,7 +431,6 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										return false;
 									}else if(thirdDropdown =='2DCONV'){
 										jQuery.get(url2DConv, function(data) 
 										{
@@ -450,43 +439,14 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										return false;
-									}else if(thirdDropdown =='Nonlinear Beam-Warming'){
-										jQuery.get(urlNonLinConvBeam, function(data) 
+									}else if(thirdDropdown =='Non Linear'){
+										jQuery.get(urlNonLinConv, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										return false;
-									}else if(thirdDropdown =='Nonlinear Lax-Friedrichs'){
-										jQuery.get(urlNonLinConvFried, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
-									}else if(thirdDropdown =='Nonlinear Lax-Wendroff'){
-										jQuery.get(urlNonLinConvWendroff, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
-									}else if(thirdDropdown =='Nonlinear MacCormack'){
-										jQuery.get(urlNonLinConvMacCormack, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
 									}else if(thirdDropdown =='Rayleigh Bernard'){
 										jQuery.get(urlBernard, function(data) 
 										{
@@ -495,9 +455,8 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										return false;
 									}else{
-										alert('Please choose a option for the third dropdown');
+										alert('please choose a option for the third dropdown');
 										return false;
 									}
 								}else if (secondDropdown =='Burgers Equation'){
@@ -509,7 +468,6 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										return false;
 									}else if(thirdDropdown =='2DBURG'){
 										jQuery.get(url2DBurg, function(data) 
 										{
@@ -518,64 +476,43 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										return false;
 									}else{
-										alert('Please choose a option for the third dropdown');
+										alert('please choose a option for the third dropdown');
 										return false;
 									}
 								}else{
-									alert('Please choose a option for the second dropdown');
+									alert('please choose a option for the second dropdown');
 									return false;
 								}
 						
 							  }else if(firstDropdown =='Fluid Mechanics'){
-								if (secondDropdown == 'MacCormack'){
-									jQuery.get(urlCavityFlowMacCormack, function(data) 
+								if (secondDropdown == 'Cavity Flow'){
+									jQuery.get(urlCavityFlow, function(data) 
 									{
 									   $(document).ready(function()
 					       					{
 						 				$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       				});
 									});
-									return false; 
-								}else if(secondDropdown =='Richtmyer'){
-									jQuery.get(urlCavityFlowRichtmyer, function(data) 
-									{
-									   $(document).ready(function()
-					       					{
-						 				$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       				});
-									});
-									return false;
-								}else if(secondDropdown =='Explicit, Central Difference'){
-									jQuery.get(urlCavityFlowCentral, function(data) 
+										return false;     
+								}else if(secondDropdown =='Lotka Volterra'){
+									jQuery.get(urlLotka, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-									return false;
-								}else if(secondDropdown =='Explicit, Euler'){
-									jQuery.get(urlCavityFlowEuler, function(data) 
+								}else if(secondDropdown =='Poisson'){
+									jQuery.get(urlPoisson, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-									return false;
-								}else if(secondDropdown =='Implicit, Central Difference'){
-									jQuery.get(urlCavityFlowImplicit, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-									return false;
 								}else{
-									alert('Please choose a option for the second dropdown');
+									alert('please choose a option for the second dropdown');
 									return false;
 								}
 							  }else if (firstDropdown =='Mathematics'){
@@ -588,7 +525,6 @@
 						 						$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       						});
 											});
-										return false;
 									}else if(thirdDropdown =='Implicit'){
 										jQuery.get(urlImplicitLaplace, function(data) 
 											{
@@ -597,23 +533,7 @@
 						 						$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       						});
 											});
-										return false;
-									}else{
-										alert('Please choose a option for the thrid dropdown');
-										return false;
 									}
-								}else if(secondDropdown =='Poisson'){
-									jQuery.get(urlPoisson, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
-								}else{
-									alert('Please choose a option for the second dropdown)
-									return false;
 								}
 							  }
 							  return false;
@@ -623,9 +543,9 @@
 						</script>
 			
 						<form onsubmit="event.preventDefault();" name="sample" method="POST">	
-							<div class="category_div" id="category_div">Please select subject:
+							<div class="category_div" id="category_div">Please Select Subject:
 							    <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
-								<option value=""> </option>
+								<option value="">Select Subject</option>
 								<option value="Transport Phenomena">Transport Phenomena</option>
 								<option value="Fluid Mechanics">Fluid Mechanics</option>
 								<option value="Mathematics">Mathematics</option>
@@ -633,33 +553,33 @@
 							    </select>
 								
 							</div>
-							<div class="sub_category_div" id="sub_category_div">Please select algorithm:
+							<div class="sub_category_div" id="sub_category_div">Please select Algorithm:
 							    <script type="text/javascript" language="JavaScript">
-								document.write('<select name="subcategory" id="subcategory" onchange="javascript: dynamicdropdownone(this.options[this.selectedIndex].value);"><option value=""> </option></select>')
+								document.write('<select name="subcategory" id="subcategory" onchange="javascript: dynamicdropdownone(this.options[this.selectedIndex].value);"><option value="">Please select Algorithm</option></select>')
 							    </script>
 							    <noscript>
 								<select name="subcategory" id="subcategory" >
-								    <option value=""> </option>
+								    <option value="">Please select Algorithm </option>
 								</select>
 							    </noscript>
 							</div>
 							<div class="sub_subcategory_div" id="sub_subcategory_div">Please select scheme:
 								
 							    <script type="text/javascript" language="JavaScript">
-								document.write('<select name="sub_subcategory" id="sub_subcategory"><option value=""> </option></select>')
+								document.write('<select name="sub_subcategory" id="sub_subcategory"><option value="">Please select scheme</option></select>')
 							    </script>
 								
 							    <noscript>
 								<select name="sub_subcategory" id="sub_subcategory" >
-								    <option value=""> </option>
+								    <option value="">Please select scheme</option>
 								</select>
 							    </noscript>
 							</div>
-								<button type ="button" id ="submit" onclick = "submittedForm(this)">Display Code </button>
+								<button type ="button" id ="submit" onclick = "submittedForm(this)">Show Me the Code </button>
 							
 						</form>
 		
-						<div><p>You may want to copy and paste into your editor:</p></div>
+						<div><p>Please find the source source code below. You may want to copy and paste into your editor:</p></div>
        						<div id="displayCode" style="border:1px solid black;">					
 						<pre>
 						</pre>
@@ -680,6 +600,10 @@
 						<section>
 							<h2>Contact Us</h2>
 							<dl class="alt">
+								<!-- <dt>Address</dt>
+								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+								<dt>Phone</dt>
+								<dd>(000) 000-0000 x 0000</dd> -->
 								<dt>             Email:</dt>
 								<dd><a href="mailto:raphson.team@gmail.com">raphson.team@gmail.com</a></dd>
 							</dl>
