@@ -66,17 +66,16 @@
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("subcategory").options[1]=new Option("Fickian Diffusion","Fickian Diffusion");
 									document.getElementById("subcategory").options[2]=new Option("Convection","Convection");
-									document.getElementById("subcategory").options[3]=new Option("Burgers Equation","Burgers Equation")
 									break;
 								case "Fluid Mechanics" :
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("subcategory").options[1]=new Option("Cavity Flow","Cavity Flow");
-									document.getElementById("subcategory").options[2]=new Option("Lotka Volterra","Lotka Volterra");
-									document.getElementById("subcategory").options[3]=new Option("Poisson","Poisson")
+									document.getElementById("subcategory").options[2]=new Option("Burgers Equation","Burgers Equation")
 									break;
 								case "Mathematics" :
 									document.getElementById("subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("subcategory").options[1]=new Option("Laplace","Laplace");
+									document.getElementById("subcategory").options[2]=new Option("Poisson","Poisson")
 									break;
 								case "Machine Learning" :
 									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
@@ -145,8 +144,11 @@
 									document.getElementById("sub_subcategory").options[2]=new Option("Linear 2D","Linear 2D");
 									document.getElementById("sub_subcategory").options[3]=new Option("1D","1DCONV");
 									document.getElementById("sub_subcategory").options[4]=new Option("2D","2DCONV");
-									document.getElementById("sub_subcategory").options[5]=new Option("Non Linear","Non Linear");
-									document.getElementById("sub_subcategory").options[6]=new Option("Rayleigh Bernard","Rayleigh Bernard");
+									document.getElementById("sub_subcategory").options[5]=new Option("Nonlinear Beam-Warming","Nonlinear Beam-Warming");
+									document.getElementById("sub_subcategory").options[6]=new Option("Nonlinear Lax-Friedrichs","Nonlinear Lax-Friedrichs");
+									document.getElementById("sub_subcategory").options[7]=new Option("Nonlinear Lax-Wendroff","Nonlinear Lax-Wendroff");
+									document.getElementById("sub_subcategory").options[8]=new Option("Nonlinear MacCormack","Nonlinear MacCormack");
+									document.getElementById("sub_subcategory").options[9]=new Option("Rayleigh Bernard","Rayleigh Bernard");
 									break;
 						
 								    case "Burgers Equation" :
@@ -160,6 +162,16 @@
 									document.getElementById("sub_subcategory").options[1]=new Option("2D","2DLAPLACE");
 									document.getElementById("sub_subcategory").options[2]=new Option("Implicit","Implicit");
 									break;
+						
+								    case "Cavity Flow" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("MacCormack","MacCormack");
+									document.getElementById("sub_subcategory").options[3]=new Option("Richtmyer","Richtmyer");
+									document.getElementById("sub_subcategory").options[4]=new Option("Explicit, Central Difference","Explicit, Central Difference");
+									document.getElementById("sub_subcategory").options[5]=new Option("Explicit, Euler","Explicit, Euler");
+									document.getElementById("sub_subcategory").options[6]=new Option("Implicit, Central Difference","Implicit, Central Difference");
+									break;
+						
 								    default:
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
 									break;
@@ -173,7 +185,11 @@
 							  var secondDropdown = document.getElementById('subcategory').value;
 							  var thirdDropdown = document.getElementById('sub_subcategory').value;
 							
-							  var urlCavityFlow = "/models/CavityFlow.txt";	
+							  var urlCavityFlowMacCormack = '/models/CavityFlow_MacCormack.txt';
+							  var urlCavityFlowRichtmyer = '/models/CavityFlow_Richtmyer.txt';
+							  var urlCavityFlowCentral = '/models/CavityFlow_explicit_centraldifference.txt';
+							  var urlCavityFlowEuler = '/models/CavityFlow_expliciteuler.txt';
+							  var urlCavityFlowImplicit = '/models/CavityFlow_implicit_centraldifference.txt';
 							  var urlFTFS = '/models/Fickain_numerical_explicit_slopemethod_nofluxboundary.txt';
 							  var urlBTBS = '/models/Fickian_numerical_implicit.txt';
 							  var urlCrank = '/models/Fickian_numerical_cranknicoslon.txt';
@@ -182,7 +198,10 @@
 							  var urlLin2D = '/models/Linear_Convection_2D.txt';
 							  var url1DConv = '/models/Convection_1D.txt';
 							  var url2DConv = '/models/Convection_2D.txt';
-							  var urlNonLinConv = '/models/NonLinearConvection.txt';
+							  var urlNonLinConvBeam = '/models/NonLinearConvection_BeamWarming.txt';
+							  var urlNonLinConvFried = '/models/NonLinearConvection_LaxFriedrichs.txt';
+							  var urlNonLinConvWendroff = '/models/NonLinearConvection_LaxWendroff.txt';
+							  var urlNonLinConvMacCormack = '/models/NonLinearConvection_MacCormack.txt';
 							  var urlBernard = '/models/RayleighBenardConvection.txt';
 							  var url1DBurg = '/models/Burgers_equation_1D.txt';
 							  var url2DBurg = '/models/Burgers_equation_2D.txt';
@@ -543,7 +562,7 @@
 						</script>
 			
 						<form onsubmit="event.preventDefault();" name="sample" method="POST">	
-							<div class="category_div" id="category_div">Please Select Subject:
+							<div class="category_div" id="category_div">Please select subject:
 							    <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
 								<option value="">Select Subject</option>
 								<option value="Transport Phenomena">Transport Phenomena</option>
@@ -600,10 +619,6 @@
 						<section>
 							<h2>Contact Us</h2>
 							<dl class="alt">
-								<!-- <dt>Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd> -->
 								<dt>             Email:</dt>
 								<dd><a href="mailto:raphson.team@gmail.com">raphson.team@gmail.com</a></dd>
 							</dl>
