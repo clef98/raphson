@@ -458,8 +458,32 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-									}else if(thirdDropdown =='Non Linear'){
-										jQuery.get(urlNonLinConv, function(data) 
+									}else if(thirdDropdown =='Nonlinear Beam-Warming'){
+										jQuery.get(urlNonLinConvBeam, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+									}else if(thirdDropdown =='Nonlinear Lax-Friedrichs'){
+										jQuery.get(urlNonLinConvFried, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+									}else if(thirdDropdown =='Nonlinear Lax-Wendroff'){
+										jQuery.get(urlNonLinConvWendroff, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+									}else if(thirdDropdown =='Nonlinear MacCormack'){
+										jQuery.get(urlNonLinConvMacCormack, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -505,25 +529,41 @@
 								}
 						
 							  }else if(firstDropdown =='Fluid Mechanics'){
-								if (secondDropdown == 'Cavity Flow'){
-									jQuery.get(urlCavityFlow, function(data) 
+								if (secondDropdown == 'MacCormack'){
+									jQuery.get(urlCavityFlowMacCormack, function(data) 
 									{
 									   $(document).ready(function()
 					       					{
 						 				$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       				});
 									});
-										return false;     
-								}else if(secondDropdown =='Lotka Volterra'){
-									jQuery.get(urlLotka, function(data) 
+										return false; 
+								}else if(secondDropdown =='Richtmyer'){
+									jQuery.get(urlCavityFlowRichtmyer, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-								}else if(secondDropdown =='Poisson'){
-									jQuery.get(urlPoisson, function(data) 
+								}else if(secondDropdown =='Explicit, Central Difference'){
+									jQuery.get(urlCavityFlowCentral, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+								}else if(secondDropdown =='Explicit, Euler'){
+									jQuery.get(urlCavityFlowEuler, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+								}else if(secondDropdown =='Implicit, Central Difference'){
+									jQuery.get(urlCavityFlowImplicit, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -552,7 +592,14 @@
 						 						$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       						});
 											});
-									}
+									}else if(secondDropdown =='Poisson'){
+									jQuery.get(urlPoisson, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 								}
 							  }
 							  return false;
