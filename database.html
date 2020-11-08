@@ -495,14 +495,6 @@
 						       				});
 									});
 										return false;     
-								}else if(secondDropdown =='Lotka Volterra'){
-									jQuery.get(urlLotka, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
 								}else if(secondDropdown =='Poisson'){
 									jQuery.get(urlPoisson, function(data) 
 										{
