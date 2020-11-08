@@ -493,14 +493,27 @@
 								}
 						
 							  }else if(firstDropdown =='Fluid Mechanics'){
-								if (secondDropdown =='Poisson'){
-									jQuery.get(urlPoisson, function(data) 
+								else if (secondDropdown =='Burgers Equation'){
+									if(thirdDropdown =='1DBURG'){
+										jQuery.get(url1DBurg, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+									}else if(thirdDropdown =='2DBURG'){
+										jQuery.get(url2DBurg, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+									}else{
+										alert('please choose a option for the third dropdown');
+										return false;
+									}
 								}else{
 									alert('please choose a option for the second dropdown');
 									return false;
