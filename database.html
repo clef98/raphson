@@ -171,7 +171,7 @@
 									break;
 								    case "Poisson" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("sub_subcategory").options[1]=new Option("No further features available","No further features available");
+									document.getElementById("sub_subcategory").options[1]=new Option("2D","2D");
 									break;
 								    default:
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
@@ -546,7 +546,7 @@
 						       						});
 											});
 								}else if(secondDropdown == 'Poisson'){
-									if(thirdDropdown =='No further available features'){
+									if(thirdDropdown =='2D'){
 										jQuery.get(urlPoisson, function(data) 
 										{
 										   $(document).ready(function()
