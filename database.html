@@ -193,7 +193,6 @@
 										return false;     
 							
 								} else if(secondDropdown =='K-Means Clustering') {
-									if(thirdDropdown == 'mini_batch2'){
 										jQuery.get(urlKMeans, function(data) 
 										{
 										   $(document).ready(function()
@@ -202,30 +201,8 @@
 						       					});
 										});
 										return false;
-									}else if(thirdDropdown == 'batch2'){
-										jQuery.get(urlKMeans, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
-									}else if(thirdDropdown == 'stochastic2'){
-										jQuery.get(urlKMeans, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
-									}else{
-										alert('please choose a option for the third dropdown');
-										return false;
-									}
+									
 								} else if(secondDropdown =='Support Vector Machine') {
-									if(thirdDropdown == 'mini_batch3'){
 										jQuery.get(urlSVM, function(data) 
 										{
 										   $(document).ready(function()
@@ -234,30 +211,8 @@
 						       					});
 										});
 										return false;
-									}else if(thirdDropdown == 'batch3'){
-										jQuery.get(urlSVM, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
-									}else if(thirdDropdown == 'stochastic3'){
-										jQuery.get(urlSVM, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
-									}else{
-										alert('please choose a option for the third dropdown');
-										return false;
-									}
+									
 								} else if(secondDropdown =='Logistic Regression') {
-									if(thirdDropdown == 'mini_batch4'){
 										jQuery.get(urlLogisticReg, function(data) 
 										{
 										   $(document).ready(function()
@@ -266,30 +221,8 @@
 						       					});
 										});
 										return false;
-									}else if(thirdDropdown == 'batch4'){
-										jQuery.get(urlLogisticReg, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
-									}else if(thirdDropdown == 'stochastic4'){
-										jQuery.get(urlLogisticReg, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
-									}else{
-										alert('please choose a option for the third dropdown');
-										return false;
-									}
+									
 								} else if(secondDropdown =='Linear Regression') {
-									if(thirdDropdown == 'mini_batch5'){
 										jQuery.get(urlLinearReg, function(data) 
 										{
 										   $(document).ready(function()
@@ -298,28 +231,7 @@
 						       					});
 										});
 										return false;
-									}else if(thirdDropdown == 'batch5'){
-										jQuery.get(urlLinearReg, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
-									}else if(thirdDropdown == 'stochastic5'){
-										jQuery.get(urlLinearReg, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
-									}else{
-										alert('please choose a option for the third dropdown');
-										return false;
-									}
+									
 								}else{
 									alert('please choose a option for the second dropdown');
 									return false;
