@@ -151,7 +151,8 @@
 								    case "Burgers Equation" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("sub_subcategory").options[1]=new Option("1D","1DBURG");
-									document.getElementById("sub_subcategory").options[2]=new Option("2D","2DBURG");
+									document.getElementById("sub_subcategory").options[2]=new Option("2D","2DBURGexp");
+									document.getElementById("sub_subcategory").options[3]=new Option("2D","2DBURGimp");
 									break;
 						
 								    case "Laplace" :
@@ -193,7 +194,8 @@
 							  var urlNonLinConv = '/models/NonLinearConvection.txt';
 							  var urlBernard = '/models/RayleighBenardConvection.txt';
 							  var url1DBurg = '/models/Burgers_equation_1D.txt';
-							  var url2DBurg = '/models/Burgers_equation_2D.txt';
+							  var url2DBurg_exp = '/models/Burgers_equation_2D_explicit.txt';
+						          var url2DBurg_imp = '/models/Burgers_equation_2D_implicit.txt';
 							  var urlPoisson = '/models/Poisson_equation_2D.txt';
 							  var url2DLaplace = '/models/Laplace_equation_2D.txt';
 							  var urlImplicitLaplace = '/models/LaplaceImplicit.txt';
@@ -483,8 +485,8 @@
 						       					});
 										});
 										return false;
-									}else if(thirdDropdown =='2DBURG'){
-										jQuery.get(url2DBurg, function(data) 
+									}else if(thirdDropdown =='2DBURGexp'){
+										jQuery.get(url2DBurg_exp, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
