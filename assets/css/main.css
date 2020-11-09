@@ -28,22 +28,8 @@ body {
 }
 
 ol, ul {
-   list-style: none;
-    margin: 0;
-    padding:0;
+	list-style: none;
 }
-
-ul li {
-  margin: 15px;
-}
-.navigation {
-    margin-top: 45px;
-    text-align: left;
-    padding: 5px 5px;
-    font-size: 16px;
-    font-family: sans-serif;
-}
-
 
 blockquote, q {
 	quotes: none;
@@ -118,7 +104,7 @@ input, select, textarea {
 	    background-image: linear-gradient(135deg, #003073, #029797);
 	}
 
-	body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
 			-ms-animation: none !important;
@@ -127,7 +113,7 @@ input, select, textarea {
 			-webkit-transition: none !important;
 			-ms-transition: none !important;
 			transition: none !important;
-	}
+		}
 
 /* Type */
 
@@ -143,29 +129,29 @@ input, select, textarea {
 		line-height: 1.65;
 	}
 
-	@media screen and (max-width: 1680px) {
+		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
 				font-size: 14pt;
 			}
 
-	}
+		}
 
-	@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 1280px) {
 
 			body, input, select, textarea {
 				font-size: 12pt;
 			}
 
-	}
+		}
 
-	@media screen and (max-width: 360px) {
+		@media screen and (max-width: 360px) {
 
 			body, input, select, textarea {
 				font-size: 11pt;
 			}
 
-	}
+		}
 
 	a {
 		-moz-transition: color 0.2s ease, border-bottom 0.2s ease;
@@ -177,9 +163,9 @@ input, select, textarea {
 		color: inherit;
 	}
 
-	a:hover {
-		border-bottom-color: transparent;
-	}
+		a:hover {
+			border-bottom-color: transparent;
+		}
 
 	strong, b {
 		font-weight: 400;
@@ -191,17 +177,6 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
-	}
-
-	p.ex1 {
- 		margin-left: 3%;
-		margin-right: 2%;
-		margin-top: 2%;
-		margin-bottom: 2%;
-	}
-
-	div {
-	  margin-top: 5px;
 	}
 
 		p.content {
