@@ -497,15 +497,7 @@
 										return false;
 									}
 								}else if(secondDropdown == 'Cavity Flow'){
-									if(thirdDropdown =='MacCormack'){
-										jQuery.get(urlCavMacCormack, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-									});
-									return false;
+									
 								}else{
 									alert('please choose a option for the second dropdown');
 									return false;
