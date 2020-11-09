@@ -212,6 +212,7 @@
 							  var urlCavRichtmyer = '/models/CavityFlow_Richtmyer.txt';
 							  var urlCavExplicitCentral = '/models/CavityFlow_explicit_centraldifference.txt';
 							  var urlCavExplicitEuler = '/models/CavityFlow_expliciteuler.txt';
+							  var urlCavImplicitCentral = '/models/CavityFlow_implicit_centraldifference.txt';					
 						
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
@@ -543,6 +544,15 @@
 										return false;
 									}else if(thirdDropdown =='Explicit, Euler'){
 										jQuery.get(urlCavExplicitEuler, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										return false;
+									}else if(thirdDropdown =='Implicit, Central Difference'){
+										jQuery.get(urlCavImplicitCentral, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
