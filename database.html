@@ -203,6 +203,7 @@
 							  var urlNN = '/models/ex4NNRaphsonPlaceholder.txt';
 							  var urlSVM = '/models/ex6SVMRaphsonPlaceholder.txt';
 							  var urlKMeans = '/models/ex7KmeansRaphsonPlaceholder.txt';
+							  var urlCavMacCormack = '/models/CavityFlow_MacCormack.txt';
 						
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
@@ -481,6 +482,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else if(thirdDropdown =='2DBURG'){
 										jQuery.get(url2DBurg, function(data) 
 										{
@@ -489,12 +491,21 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										return false;
 									}else{
 										alert('please choose a option for the third dropdown');
 										return false;
 									}
 								}else if(secondDropdown == 'Cavity Flow'){
-									document.getElementById("displayCode").innerHTML = "FUILD+CAVITY";
+									if(thirdDropdown =='MacCormack'){
+										jQuery.get(urlCavMacCormack, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+									});
+									return false;
 								}else{
 									alert('please choose a option for the second dropdown');
 									return false;
