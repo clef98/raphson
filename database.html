@@ -169,7 +169,10 @@
 									document.getElementById("sub_subcategory").options[4]=new Option("Explicit, Euler","Explicit, Euler");
 									document.getElementById("sub_subcategory").options[5]=new Option("Implicit, Central Difference","Implicit, Central Difference");
 									break;
-						
+								    case "Poisson" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("Poisson","Poisson");
+									break;
 								    default:
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
 									break;
@@ -542,6 +545,18 @@
 						 						$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       						});
 											});
+									}else if(secondDropdown == 'Poisson'){
+										jQuery.get(urlPoisson, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										return false;
+									}else{
+										alert('please choose a option for the second dropdown');
+										return false;
 									}
 								}
 							  }
