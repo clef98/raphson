@@ -182,7 +182,6 @@
 						
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
-									if(thirdDropdown == 'mini_batch1'){
 
 										jQuery.get(urlNN, function(data) 
 										{
@@ -192,29 +191,7 @@
 						       					});
 										});
 										return false;     
-								
-									}else if(thirdDropdown == 'batch1'){
-										jQuery.get(urlNN, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
-									}else if(thirdDropdown == 'stochastic1'){
-										jQuery.get(urlNN, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										return false;
-									}else{
-										alert('please choose a option for the third dropdown');
-										return false;
-									}
+							
 								} else if(secondDropdown =='K-Means Clustering') {
 									if(thirdDropdown == 'mini_batch2'){
 										jQuery.get(urlKMeans, function(data) 
