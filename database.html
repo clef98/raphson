@@ -171,7 +171,7 @@
 									break;
 								    case "Poisson" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("sub_subcategory").options[1]=new Option("Poisson","Poisson");
+									document.getElementById("sub_subcategory").options[1]=new Option("No further features available","No further features available");
 									break;
 								    default:
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
@@ -545,7 +545,8 @@
 						 						$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       						});
 											});
-									}else if(secondDropdown == 'Poisson'){
+								}else if(secondDropdown == 'Poisson'){
+									if(thirdDropdown =='No further available features'){
 										jQuery.get(urlPoisson, function(data) 
 										{
 										   $(document).ready(function()
@@ -555,9 +556,12 @@
 										});
 										return false;
 									}else{
-										alert('please choose a option for the second dropdown');
-										return false;
+										alert('please choose a option for third dropdown')
 									}
+								}else{
+									alert('please choose a option for the second dropdown');
+									return false;
+								}
 								}
 							  }
 							  return false;
