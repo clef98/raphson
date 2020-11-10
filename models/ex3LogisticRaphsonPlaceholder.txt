@@ -1,24 +1,13 @@
-clear ; close all; clc
+clear
 
-input_layer_size  = 400;  %Num of input
-num_labels = 10;          %%Num of catogories
-                         
-
-fprintf('Loading and Visualizing Data ...\n')
-
-load('ex3data1.mat'); % training data stored in arrays X, y
+input_layer_size  = 400; 
+num_labels = 10;          
+                        
+load('YourData.mat');
 m = size(X, 1);
 
 rand_indices = randperm(m);
 sel = X(rand_indices(1:100), :);
-
-displayData(sel);
-
-fprintf('Program paused. Press enter to continue.\n');
-pause;
-
-
-fprintf('\nTesting lrCostFunction() with regularization');
 
 theta_t = [-2; -1; 1; 2];
 X_t = [ones(5,1) reshape(1:15,5,3)/10];
@@ -26,21 +15,8 @@ y_t = ([1;0;1;0;1] >= 0.5);
 lambda_t = 3;
 [J grad] = lrCostFunction(theta_t, X_t, y_t, lambda_t);
 
-fprintf('\nCost: %f\n', J);
-fprintf(' %f \n', grad);
-
-fprintf('Program paused. Press enter to continue.\n');
-pause;
-
-fprintf('\nTraining One-vs-All Logistic Regression...\n')
-
 lambda = 0.1;
 [all_theta] = oneVsAll(X, y, num_labels, lambda);
-
-fprintf('Program paused. Press enter to continue.\n');
-pause;
-
-
 
 pred = predictOneVsAll(all_theta, X);
 
