@@ -1,15 +1,9 @@
-clear ; close all; clc
+clear 
 
 data = load('YourData.txt');
 X = data(:, [1, 2]); y = data(:, 3);
-
 plotData(X, y);
-
-
 hold on;
-
-
-
 legend('y = 1', 'y = 0')
 hold off;
 
@@ -17,35 +11,14 @@ hold off;
 
 
 X = mapFeature(X(:,1), X(:,2));
-
 initial_theta = zeros(size(X, 2), 1);
-
-% Set regularization parameter lambda to 1
 lambda = 1;
-
 [cost, grad] = costFunctionReg(initial_theta, X, y, lambda);
-
-fprintf('Cost at initial theta (zeros): %f\n', cost);
-fprintf(' %f \n', grad(1:5));
-
-
-fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
 
 test_theta = ones(size(X,2),1);
 [cost, grad] = costFunctionReg(test_theta, X, y, 10);
 
-fprintf('\nCost at test theta (with lambda = 10): %f\n', cost);
-fprintf(' %f \n', grad(1:5));
-
-fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
-
-
-
 initial_theta = zeros(size(X, 2), 1);
-
-
 lambda = 1;
 
 options = optimset('GradObj', 'on', 'MaxIter', 400);
@@ -57,9 +30,6 @@ options = optimset('GradObj', 'on', 'MaxIter', 400);
 plotDecisionBoundary(theta, X, y);
 hold on;
 title(sprintf('lambda = %g', lambda))
-
-
-
 
 legend('y = 1', 'y = 0', 'Decision boundary')
 hold off;
