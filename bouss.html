@@ -39,22 +39,11 @@
 					</nav>
 					<div id="main">
 					
-	<p class = "ex1">In the most basic form, linear regression is the line of best fit. For example, if there was a table of points
-            plotted on the coordinate plane, the line of best 
-		<br>fit would simply just be the line that seems most like the plotted points. Now, to mathematically find the best line, we would need to devolp a way to 
-		<br>measure how far off the line is from the points. This function is called the cost function. We also
-		<br>need data points which can be labled with a x<sup>(i)</sup> and y<sup>(i)</sup> where x and y are the i<sup>th</sup> data point in
-		<br> the data set. We also need to define the parameter which in this case(2D plane) are &#x3B8<sub>0</sub> and &#x3B8<sub>1</sub>
-		<br> where &#x3B8<sub>0</sub> is equal to 1. This line can then be represented by:
-		<br>$$h_\theta(x) = \theta_0 + \theta_1 x $$
-		<br>The cost function can also be defined as: 
-		<br>$$J(\theta_0, \theta_1) = \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)}-y^{(i)}))^2$$
-		<br>Where m is the number of data points. The goal is to find the &#x3B8<sub>0</sub> and &#x3B8<sub>1</sub> that minimize the cost function. The equation for these &#x3B8's is defined as:
-		<br>$$\theta_0 = \theta_0 - \alpha\frac{1}{m}\sum_{i=1}^m (\frac{\partial}{\partial\theta_0}J(\theta_0, \theta_1) = \theta_0 - \alpha\frac{1}{m}\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})$$ 
-		$$\theta_1 = \theta_1 - \alpha\frac{1}{m}\sum_{i=1}^m (\frac{\partial}{\partial\theta_1}J(\theta_0, \theta_1) = \theta_1 - \alpha\frac{1}{m}\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)}) * x^{(i)}$$ 
-		<br>Repeat untill they converge to a value. If they do not converge but grow, then decrease alpha's value. Once you find out the values of the &#x3B8's,
-		<br>you can directly plug it in to the hypothesis and get your line. You can also scale up by using higher power of x or more parameters or both!
-		<br>This algorithm as well as Logistic Regression are the basic building blocks for all machine learning algorithms.
+	<p class = "ex1">The Boussinesq approximation is used for buoyancy-drive calculations often in natural convection models. This technique
+			<br> accounts for the drive of the fluid as well as the resulting heat transfer. The approximation ignores variations in
+			<br> density for the general continuity equation and draws from the Navier-Stokes equations (governing Newtonian fluids),
+			<br> adjusting the density variations to have one fixed part and a seperate dependent part on temperature. The final equation
+			<br> states that the density variation term only relates to the general buoyancy term. 
  		 </p>
              <img src="images/LineOfBestFitRaphson.jpg" alt="Line of Best Fit" style="position:absolute; left:1200px; top:620px; height:260px; width:410px;">
 					</div>
