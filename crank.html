@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Crank-Nicolson</title>
+		<link rel="icon" href="images/logo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131764077-2"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'UA-131764077-2');
+			</script>
+			
+			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		
+	</head>
+	<body class="is-preload">
+		<!-- 	<div id="wrapper" style="background-image: url('images/NetWork02.png'); background-size: cover; height:400px; width: 3000px; border: 2px; color: pink; ">	 -->
+			<div id="wrapper">			
+				<header id="header" class="alt">
+						<h1>Crank-Nicolson</h1>
+						
+					</header>
+			<!-- </div> -->	
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html"">Home</a></li>
+							<li><a href="database.html">Modeling Database</a></li>
+							<li><a href="algorithms.html">Algorithms</a></li>
+							<li><a href="contributors.html">Contributors</a></li>
+						</ul>
+					</nav>
+					<div id="main">
+					
+	<p class = "ex1">In the most basic form, linear regression is the line of best fit. For example, if there was a table of points
+            plotted on the coordinate plane, the line of best 
+		<br>fit would simply just be the line that seems most like the plotted points. Now, to mathematically find the best line, we would need to devolp a way to 
+		<br>measure how far off the line is from the points. This function is called the cost function. We also
+		<br>need data points which can be labled with a x<sup>(i)</sup> and y<sup>(i)</sup> where x and y are the i<sup>th</sup> data point in
+		<br> the data set. We also need to define the parameter which in this case(2D plane) are &#x3B8<sub>0</sub> and &#x3B8<sub>1</sub>
+		<br> where &#x3B8<sub>0</sub> is equal to 1. This line can then be represented by:
+		<br>$$h_\theta(x) = \theta_0 + \theta_1 x $$
+		<br>The cost function can also be defined as: 
+		<br>$$J(\theta_0, \theta_1) = \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)}-y^{(i)}))^2$$
+		<br>Where m is the number of data points. The goal is to find the &#x3B8<sub>0</sub> and &#x3B8<sub>1</sub> that minimize the cost function. The equation for these &#x3B8's is defined as:
+		<br>$$\theta_0 = \theta_0 - \alpha\frac{1}{m}\sum_{i=1}^m (\frac{\partial}{\partial\theta_0}J(\theta_0, \theta_1) = \theta_0 - \alpha\frac{1}{m}\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})$$ 
+		$$\theta_1 = \theta_1 - \alpha\frac{1}{m}\sum_{i=1}^m (\frac{\partial}{\partial\theta_1}J(\theta_0, \theta_1) = \theta_1 - \alpha\frac{1}{m}\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)}) * x^{(i)}$$ 
+		<br>Repeat untill they converge to a value. If they do not converge but grow, then decrease alpha's value. Once you find out the values of the &#x3B8's,
+		<br>you can directly plug it in to the hypothesis and get your line. You can also scale up by using higher power of x or more parameters or both!
+		<br>This algorithm as well as Logistic Regression are the basic building blocks for all machine learning algorithms.
+ 		 </p>
+             <img src="images/LineOfBestFitRaphson.jpg" alt="Line of Best Fit" style="position:absolute; left:1200px; top:620px; height:260px; width:410px;">
+					</div>
+
+				<footer id="footer">
+						<section>
+							<h2>Independently Created</h2>
+							<p>We are a volunteer-based, crowd-sourced application that depends on the contributions of our community and users to expand and proliferate. 
+							Consider integrating your physical models, contributing tutorial material, or joining our team at large. All are welcome!</p>
+							<ul class="actions special">
+								<li><a href="contributors.html" class="button">Learn More</a></li>
+							</ul>
+						</section>
+						<section>
+							<h2>Contact Us</h2>
+							<dl class="alt">
+								<!-- <dt>Address</dt>
+								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+								<dt>Phone</dt>
+								<dd>(000) 000-0000 x 0000</dd> -->
+								<dt>             Email:</dt>
+								<dd><a href="mailto:raphson.team@gmail.com">raphson.team@gmail.com</a></dd>
+							</dl>
+							<ul class="icons">
+								<!-- <li><a href="raphson.team@gmail.com" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li> -->
+							</ul>
+						</section>
+						
+					</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
