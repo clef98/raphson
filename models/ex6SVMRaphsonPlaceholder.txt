@@ -1,89 +1,20 @@
-clear ; close all; clc
+clear 
 
-fprintf('Loading and Visualizing Data ...\n')
-
-
-load('yourData.mat');
-
-
-plotData(X, y);
-
-fprintf('Program paused. Press enter to continue.\n');
-pause;
-
-
-load('yourdata.mat');
-
-fprintf('\nTraining Linear SVM ...\n')
-
+load('YourData.mat');
 C = 1;
 model = svmTrain(X, y, C, @linearKernel, 1e-3, 20);
 visualizeBoundaryLinear(X, y, model);
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
-
-
-fprintf('\nEvaluating the Gaussian Kernel ...\n')
-
 x1 = [1 2 1]; x2 = [0 4 -1]; sigma = 2;
 sim = gaussianKernel(x1, x2, sigma);
 
-
-fprintf('Program paused. Press enter to continue.\n');
-pause;
-
-
-
-fprintf('Loading and Visualizing Data ...\n')
-
-load('yourData2.mat');
-
-
-plotData(X, y);
-
-fprintf('Program paused. Press enter to continue.\n');
-pause;
-
-
-
-fprintf('\nTraining SVM with RBF Kernel (this may take 1 to 2 minutes) ...\n');
-
-
-load('yourData2.mat');
-
-
+load('YourData2.mat');
 C = 1; sigma = 0.1;
-
-
 model= svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma)); 
 visualizeBoundary(X, y, model);
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
-
-
-
-fprintf('Loading and Visualizing Data ...\n')
-
-
-load('yourData3.mat');
-
-
-plotData(X, y);
-
-fprintf('Program paused. Press enter to continue.\n');
-pause;
-
-
-
-load('yourData3.mat');
+load('YourData3.mat');
 
 [C, sigma] = dataset3Params(X, y, Xval, yval);
-
-
 model= svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma));
 visualizeBoundary(X, y, model);
-
-fprintf('Program paused. Press enter to continue.\n');
-pause;
