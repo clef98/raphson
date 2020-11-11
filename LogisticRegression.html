@@ -49,23 +49,23 @@
 		$$g(z) = \frac{1}{1+e^{-z}} $$
 		$$ h_\theta (x) = g(\theta ^Tx )$$
 		<!-- <br>$$J(\theta_0, \theta_1) = \theta_0 - \alpha\frac{1}{m}\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})$$ -->
-		<br>Where x is the input, theta is the parameters, and y is the output(will be used later).
-		<br>Also like linear regression, we need a way to define how well the our hypothesis matches the output/y.
+		<br>Where x is the input, theta is the parameters, and y is the output(will be used later). Also like linear regression, we need a way to define 
+		<br>how well the our hypothesis matches the output/y.
 		<br>This equation is called the cost function which is defined as:
 		<br>$$J(\theta) = -\frac{1}{m} \bigl(\sum_{i=1}^m y^{(i)}logh_\theta(x^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)}))\bigr)$$
 		Note: y = 0 or 1 always.
-		<br>Now, all we have to do is find thetas so that they minimize the cost in order to get the best result.
-		<br>To do this, we have equations that can solve for these thetas:
+		<br>				
+		<br>Now, all we have to do is find thetas so that they minimize the cost in order to get the best result.  To do this, we have equations that 
+		<br>can solve for these thetas:
 		<br>$$\theta_0 = \theta_0 - \alpha\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})$$
 		$$\theta_j = \theta_j - \alpha\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}$$
-		<br>Where m is the number of inputs and &#x3B1 is the learning rate.
-		<br>You should repeat untill it converges. If it keeps growing exponentially, then lower &#x3B1.
+		<br>Where m is the number of inputs and &#x3B1 is the learning rate. You should repeat untill it converges. If it keeps growing exponentially, then lower &#x3B1.
 		<br>
 		
 		
 				
  		</p>
-             	<img src="images/LogisticRegressionRaphson.png" alt="Logistic Regression" style="position:absolute; left:1180px; top:600px; height:260px; width:480px;">
+             	<img src="images/LogisticRegressionRaphson.png" alt="Logistic Regression" style="position:absolute; left:1180px; top:500px; height:260px; width:480px;">
 		</div>
 
 		<footer id="footer">
