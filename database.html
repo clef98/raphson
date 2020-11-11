@@ -108,10 +108,7 @@
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("sub_subcategory").options[1]=new Option("Linear 1D","Linear 1D");
 									document.getElementById("sub_subcategory").options[2]=new Option("Linear 2D","Linear 2D");
-									document.getElementById("sub_subcategory").options[3]=new Option("1D","1DCONV");
-									document.getElementById("sub_subcategory").options[4]=new Option("2D","2DCONV");
-									document.getElementById("sub_subcategory").options[5]=new Option("Non Linear","Non Linear");
-									document.getElementById("sub_subcategory").options[6]=new Option("Rayleigh Bernard","Rayleigh Bernard");
+									document.getElementById("sub_subcategory").options[3]=new Option("Rayleigh Bernard","Rayleigh Bernard");
 									break;
 						
 								    case "Burgers Equation" :
@@ -158,9 +155,6 @@
 							  var urlAnalytical = '/models/Fickian_analytical_homogenousboundary.txt';
 							  var urlLin1D = '/models/Linear_Convection_1D.txt';
 							  var urlLin2D = '/models/Linear_Convection_2D.txt';
-							  var url1DConv = '/models/Convection_1D.txt';
-							  var url2DConv = '/models/Convection_2D.txt';
-							  var urlNonLinConv = '/models/NonLinearConvection.txt';
 							  var urlBernard = '/models/RayleighBenardConvection.txt';
 							  var url1DBurg = '/models/Burgers_equation_1D.txt';
 							  var url2DBurg_exp = '/models/Burgers_equation_2D_explicit.txt';
@@ -342,45 +336,6 @@
 										var downloadButton = document.getElementById('downloadButtonTag')
 										downloadA.setAttribute("href", "/models/Linear_Convection_2D.txt")
 										downloadButton.setAttribute("src", "/models/Linear_Convection_2D.txt")
-										return false;
-									}else if(thirdDropdown =='1DCONV'){
-										jQuery.get(url1DConv, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										var downloadA = document.getElementById('downloadATag')
-										var downloadButton = document.getElementById('downloadButtonTag')
-										downloadA.setAttribute("href", "/models/Convection_1D.txt")
-										downloadButton.setAttribute("src", "/models/Convection_1D.txt")
-										return false;
-									}else if(thirdDropdown =='2DCONV'){
-										jQuery.get(url2DConv, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										var downloadA = document.getElementById('downloadATag')
-										var downloadButton = document.getElementById('downloadButtonTag')
-										downloadA.setAttribute("href", "/models/Convection_2D.txt")
-										downloadButton.setAttribute("src", "/models/Convection_2D.txt")
-										return false;
-									}else if(thirdDropdown =='Non Linear'){
-										jQuery.get(urlNonLinConv, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										var downloadA = document.getElementById('downloadATag')
-										var downloadButton = document.getElementById('downloadButtonTag')
-										downloadA.setAttribute("href", "/models/ex2LinearRaphson.txt")
-										downloadButton.setAttribute("src", "/models/ex2LinearRaphson.txt")
 										return false;
 									}else if(thirdDropdown =='Rayleigh Bernard'){
 										jQuery.get(urlBernard, function(data) 
