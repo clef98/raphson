@@ -191,10 +191,11 @@
 						       					});
 										});
 										return false; 
-										var downloadA = document.getElementsById('downloadATag')
-										var downloadButton = document.getElementsById('downloadButtonTag')
+										var downloadA = document.getElementById('downloadATag')
+										var downloadButton = document.getElementById('downloadButtonTag')
 										downloadA.setAttribute("href", "/models/ex2LinearRaphsonPlaceholder.txt")
 										downloadButton.setAttribute("src", "/models/ex2LinearRaphsonPlaceholder.txt")
+										
 						
 								} else if(secondDropdown =='K-Means Clustering') {
 										jQuery.get(urlKMeans, function(data) 
@@ -515,7 +516,7 @@
 						</pre>
 						</div>
 				
-						<div>
+						<div id="temp3">
 							<a id="downloadATag" href="/models/Convection_2D.txt" download="Nueral Network">
 								<button id="downloadButtonTag" src="/models/Convection_2D.txt" alt="NN">
 									Download!
