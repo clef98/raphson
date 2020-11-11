@@ -550,7 +550,7 @@
 										downloadA.setAttribute("href", "/models/ex2LinearRaphson.txt")
 										downloadButton.setAttribute("src", "/models/ex2LinearRaphson.txt")
 										return false;
-										
+									}
 								}else if(secondDropdown == 'Poisson'){
 									if(thirdDropdown =='2D'){
 										jQuery.get(urlPoisson, function(data) 
@@ -574,7 +574,7 @@
 								}
 						
 							  }
-						}
+						
 							  return false;
 							  document.getElementById('output').innerHTML = ranvar
 							}	
