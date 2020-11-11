@@ -157,21 +157,31 @@
 							  var urlBTBS = '/models/Fickian_numerical_implicit.txt';
 							  var urlCrank = '/models/Fickian_numerical_CrankNicoslon.txt';
 							  var urlAnalytical = '/models/Fickian_analytical_homogenousboundary.txt';
+						
 							  var urlLin1D = '/models/Linear_Convection_1D.txt';
 							  var urlLin2D = '/models/Linear_Convection_2D.txt';
+							  var urlConvNonLinBeamWarming = '/models/NonLinearConvection_BeamWarming.txt';
+							  var urlConvNonLinLaxFriedrichs = '/models/NonLinearConvection_LaxFriedrichs.txt';
+							  var urlConvNonLinLaxWendroff = '/models/NonLinearConvection_LaxWendroff.txt';
+							  var urlConvNonLinMacCormack = '/models/NonLinearConvection_MacCormack.txt';
 							  var urlBernard = '/models/RayleighBenardConvection.txt';
+						
 							  var url1DBurg = '/models/Burgers_equation_1D.txt';
 							  var url2DBurg_exp = '/models/Burgers_equation_2D_explicit.txt';
 						          var url2DBurg_imp = '/models/Burgers_equation_2D_implicit.txt';
+						
 							  var urlPoisson = '/models/Poisson_equation_2D.txt';
 							  var url2DLaplace = '/models/Laplace_equation_2D.txt';
 							  var urlImplicitLaplace = '/models/LaplaceImplicit.txt';
+						
 							  var urlComingSoon = '/models/FileComingSoonRaphson.txt';
+						
 							  var urlLinearReg = '/models/ex2LinearRaphson.txt';
 							  var urlLogisticReg = '/models/ex3LogisticRaphson.txt';
 							  var urlNN = '/models/ex4NNRaphson.txt';
 							  var urlSVM = '/models/ex6SVMRaphson.txt';
 							  var urlKMeans = '/models/ex7KmeansRaphson.txt';
+						
 							  var urlCavMacCormack = '/models/CavityFlow_MacCormack.txt';
 							  var urlCavRichtmyer = '/models/CavityFlow_Richtmyer.txt';
 							  var urlCavExplicitCentral = '/models/CavityFlow_explicit_centraldifference.txt';
@@ -342,7 +352,7 @@
 										downloadButton.setAttribute("src", "/models/Linear_Convection_2D.txt")
 										return false;
 									}else if(thirdDropdown =='Nonlinear, Beam-Warming'){
-										jQuery.get(urlLin2D, function(data) 
+										jQuery.get(urlConvNonLinBeamWarming, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -355,7 +365,7 @@
 										downloadButton.setAttribute("src", "/models/Linear_Convection_2D.txt")
 										return false;
 									}else if(thirdDropdown =='Nonlinear, Lax-Friedrichs'){
-										jQuery.get(urlLin2D, function(data) 
+										jQuery.get(urlConvNonLinLaxFriedrichs, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -368,7 +378,7 @@
 										downloadButton.setAttribute("src", "/models/Linear_Convection_2D.txt")
 										return false;
 									}else if(thirdDropdown =='Nonlinear, Lax-Wendroff'){
-										jQuery.get(urlLin2D, function(data) 
+										jQuery.get(urlConvNonLinLaxWendroff, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -381,7 +391,7 @@
 										downloadButton.setAttribute("src", "/models/Linear_Convection_2D.txt")
 										return false;
 									}else if(thirdDropdown =='Nonlinear, MacCormack'){
-										jQuery.get(urlLin2D, function(data) 
+										jQuery.get(urlConvNonLinMacCormack, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
