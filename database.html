@@ -191,9 +191,10 @@
 						       					});
 										});
 										return false; 
-										
-										document.getElementsById('downloadATag').setAttribute("href", "/models/ex2LinearRaphsonPlaceholder.txt")
-										document.getElementsById('downloadButtonTag').setAttribute("src", "/models/ex2LinearRaphsonPlaceholder.txt")
+										var downloadA = document.getElementsById('downloadATag')
+										var downloadButton = document.getElementsById('downloadButtonTag')
+										downloadA.setAttribute("href", "/models/ex2LinearRaphsonPlaceholder.txt")
+										downloadButton.setAttribute("src", "/models/ex2LinearRaphsonPlaceholder.txt")
 						
 								} else if(secondDropdown =='K-Means Clustering') {
 										jQuery.get(urlKMeans, function(data) 
