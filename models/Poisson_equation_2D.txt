@@ -33,7 +33,6 @@ end
 h=surf(x,y,p','EdgeColor','none');       
 shading interp
 axis([-0.5 2.5 -0.5 2.5 -100 100])
-title({'2-D Poisson equation';['{\itNumber of iterations} = ',num2str(it)]})
 xlabel('Spatial co-ordinate (x) \rightarrow')
 ylabel('{\leftarrow} Spatial co-ordinate (y)')
 zlabel('Solution profile (P) \rightarrow')
