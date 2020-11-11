@@ -463,7 +463,11 @@
 							  return false;
 							  document.getElementById('output').innerHTML = ranvar
 							}	
-								
+						
+						function download() {
+						    var iframe = document.getElementById('invisible');
+						    iframe.src = "file.doc";
+						}
 						</script>
 			
 						<form onsubmit="event.preventDefault();" name="sample" method="POST">	
@@ -511,10 +515,7 @@
 						</div>
 				
 						<div>
-						$("#fileRequest").click(function() {
-						    // // hope the server sets Content-Disposition: attachment!
-						    window.location = '/models/Ex4';
-						});
+						<iframe id="invisible" style="display:none;"></iframe>
 						</div>
 				
 						</section>
