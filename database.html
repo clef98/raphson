@@ -510,10 +510,13 @@
 						</pre>
 						</div>
 				
-						<div><form method="get" download="/models/Ex4">
-						   <button type="submit">Download!</button>
-						</form></div>
-
+						<div>
+						$("#fileRequest").click(function() {
+						    // // hope the server sets Content-Disposition: attachment!
+						    window.location = '/models/Ex4';
+						});
+						</div>
+				
 						</section>
 				
 					<footer id="footer">
