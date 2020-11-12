@@ -190,7 +190,11 @@
 						
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
-
+									
+										getElementById("displayCode2").style.border = "1px solid black";
+										getElementById("displayCode3").style.border = "1px solid black";
+						
+										
 										jQuery.get(urlNNex4, function(data) 
 										{
 										   $(document).ready(function()
@@ -200,8 +204,7 @@
 										}); 
 						
 						
-						
-						
+
 										var downloadA = document.getElementById('downloadATag')
 										var downloadButton = document.getElementById('downloadButtonTag')
 										downloadA.setAttribute("href", "/mat/ex4NNRaphson.py")
@@ -652,12 +655,12 @@
 						</pre>
 						</div>
 	
-						<div id="displayCode2 style=""></div>
-						<div id="displayCode3 style=""></div>
-						<div id="displayCode4 style=""></div>
-						<div id="displayCode5 style=""></div>
-						<div id="displayCode6 style=""></div>
-						<div id="displayCode7 style=""></div>
+						<div id="displayCode2" style=""></div>
+						<div id="displayCode3" style=""></div>
+						<div id="displayCode4" style=""></div>
+						<div id="displayCode5" style=""></div>
+						<div id="displayCode6" style=""></div>
+						<div id="displayCode7" style=""></div>
 
 				
 						<div id="temp3">
