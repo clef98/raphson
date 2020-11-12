@@ -1,4 +1,4 @@
-%%Please name this file ex4.mat
+%%Please name this file ex4.m
 
 %%This neural network has 2 layers and 2 thetas.
 %%You will have to change some values and inputs/weights
