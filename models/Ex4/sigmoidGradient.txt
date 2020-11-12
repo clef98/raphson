@@ -1,4 +1,4 @@
-%%if you are copy and pasting this code, please name this file sigmoidGradient.mat
+%%Please name this file sigmoidGradient.mat
 function g = sigmoid(z)
 %SIGMOID Compute sigmoid functoon
 %   J = SIGMOID(z) computes the sigmoid of z.
