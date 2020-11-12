@@ -1,0 +1,38 @@
+clear;
+nx=80;                           
+ny=80;                                  
+niter=1000;                      
+dx=2/(nx-1);                     
+dy=2/(ny-1);                     
+x=0:dx:2;                        
+y=0:dy:2;                        
+b=zeros(nx,ny);                  
+pn=zeros(nx,ny);                 
+
+p=zeros(nx,ny);                  
+
+p(:,1)=0;
+p(:,ny)=0;
+p(1,:)=0;                  
+p(nx,:)=0;
+
+b(round(ny/4),round(nx/4))=3000;
+b(round(ny*3/4),round(nx*3/4))=-3000;
+
+i=2:nx-1;
+j=2:ny-1;
+for it=1:niter
+    pn=p;
+    p(i,j)=((dy^2*(pn(i+1,j)+pn(i-1,j)))+(dx^2*(pn(i,j+1)+pn(i,j-1)))-(b(i,j)*dx^2*dy*2))/(2*(dx^2+dy^2));
+    p(:,1)=0;
+    p(:,ny)=0;
+    p(1,:)=0;                  
+    p(nx,:)=0;
+end
+
+h=surf(x,y,p','EdgeColor','none');       
+shading interp
+axis([-0.5 2.5 -0.5 2.5 -100 100])
+xlabel('Spatial co-ordinate (x) \rightarrow')
+ylabel('{\leftarrow} Spatial co-ordinate (y)')
+zlabel('Solution profile (P) \rightarrow')
