@@ -179,7 +179,13 @@
 							  var urlLinearReg = '/models/ex2LinearRaphson.txt';
 							  var urlLogisticReg = '/models/ex3LogisticRaphson.txt';
 							  var urlNNex4 = '/models/Ex4/ex4Raphson.txt';
-							  var urlNNCost = 'models/Ex4/NNCostFuncRaphson.txt'
+							  var urlNNCost = 'models/Ex4/NNCostFuncRaphson.txt';
+							  var urlNNdisplay = 'models/Ex4/displayData.txt';
+							  var urlNNfmincg = 'models/Ex4/fmincg.txt';
+							  var urlNNpredict = 'models/Ex4/predictRaphson.txt';
+							  var urlNNRandWeights = 'models/Ex4/randInitalizeWeightsRaphson.txt';
+							  var urlNNSigmoidGradient = 'models/Ex4/sigmoidGradient.txt';
+							  var urlNNSigmoid = 'models/Ex4/sigmoidRaphson.txt';
 							  var urlSVM = '/models/ex6SVMRaphson.txt';
 							  var urlKMeans = '/models/ex7KmeansRaphson.txt';
 						
@@ -194,6 +200,12 @@
 									
 										document.getElementById("displayCode2").style.border = "1px solid black";
 										document.getElementById("displayCode3").style.border = "1px solid black";
+										document.getElementById("displayCode4").style.border = "1px solid black"
+										document.getElementById("displayCode5").style.border = "1px solid black"
+										document.getElementById("displayCode6").style.border = "1px solid black"
+										document.getElementById("displayCode7").style.border = "1px solid black"
+										document.getElementById("displayCode8").style.border = "1px solid black"
+					
 						
 										
 										jQuery.get(urlNNex4, function(data) 
@@ -211,7 +223,54 @@
 						 					$("#displayCode2 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										
+										jQuery.get(urlNNdisplay, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode3 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+								
+										jQuery.get(urlNNfmincg, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode4 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										
+										jQuery.get(urlNNpredict, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode5 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+											
+										jQuery.get(urlNNRandWeights, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode6 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 						
+										jQuery.get(urlNNSigmoidGradient, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode7 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										
+										jQuery.get(urlNNSigmoid, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode8 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 
 										var downloadA = document.getElementById('downloadATag')
 										var downloadButton = document.getElementById('downloadButtonTag')
@@ -669,6 +728,7 @@
 						<div id="displayCode5" style=""><pre></pre></div>
 						<div id="displayCode6" style=""><pre></pre></div>
 						<div id="displayCode7" style=""><pre></pre></div>
+						<div id="displayCode8" style=""><pre></pre></div>
 
 				
 						<div id="temp3">
