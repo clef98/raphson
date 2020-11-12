@@ -1,4 +1,4 @@
-%%Please name this file fmincg.mat
+%%Please name this file fmincg.m
 
 function [X, fX, i] = fmincg(f, X, options, P1, P2, P3, P4, P5)
 % Copyright (C) 2001 and 2002 by Carl Edward Rasmussen. Date 2002-02-13
