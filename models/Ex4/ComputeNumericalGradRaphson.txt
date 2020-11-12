@@ -1,4 +1,4 @@
-%%if you are copy and pasting this code, please name this file computeNumericalGradient.mat
+%%Please name this file computeNumericalGradient.mat
 function numgrad = computeNumericalGradient(J, theta)
 
 numgrad = zeros(size(theta));
