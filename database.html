@@ -178,7 +178,7 @@
 						
 							  var urlLinearReg = '/models/ex2LinearRaphson.txt';
 							  var urlLogisticReg = '/models/ex3LogisticRaphson.txt';
-							  var urlNN = '/models/ex4NNRaphson.txt';
+							  var urlNNex4 = '/models/Ex4/ex4Raphson.txt';
 							  var urlSVM = '/models/ex6SVMRaphson.txt';
 							  var urlKMeans = '/models/ex7KmeansRaphson.txt';
 						
@@ -191,13 +191,17 @@
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
 
-										jQuery.get(urlNN, function(data) 
+										jQuery.get(urlNNex4, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										}); 
+						
+						
+						
+						
 										var downloadA = document.getElementById('downloadATag')
 										var downloadButton = document.getElementById('downloadButtonTag')
 										downloadA.setAttribute("href", "/mat/ex4NNRaphson.py")
@@ -643,10 +647,18 @@
 						<div><p>Please find the source source code below. You may want to copy and paste into your editor.
 							<br>Low recommended values have been set for common characterstics such as steps, nodes or thresholds.
 							<br>Note: Code is in Matlab/Octave</p></div>
-       						<div id="displayCode" style="border:1px solid black;">					
+       						<div id="displayCode1" style="border:1px solid black;">					
 						<pre>
 						</pre>
 						</div>
+	
+						<div id="displayCode2 style=""></div>
+						<div id="displayCode3 style=""></div>
+						<div id="displayCode4 style=""></div>
+						<div id="displayCode5 style=""></div>
+						<div id="displayCode6 style=""></div>
+						<div id="displayCode7 style=""></div>
+
 				
 						<div id="temp3">
 							<a id="downloadATag" href="/models/Convection_2D.txt" download="Nueral Network">
@@ -654,14 +666,6 @@
 									Download!
 								</button>
 							</a>
-						</div>
-						<div>
-						</div>
-						<div>
-						</div>
-						<div>
-						</div>
-						<div>
 						</div>
 				
 						</section>
