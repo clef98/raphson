@@ -1,4 +1,4 @@
-%%if you are copy and pasting this code, please name this file randInitalizeWeights.mat
+%%Please name this file randInitalizeWeights.mat
 function W = randInitializeWeights(L_in, L_out)
 %RANDINITIALIZEWEIGHTS Randomly initialize the weights of a layer with L_in
 
