@@ -180,7 +180,6 @@
 							  var urlLogisticReg = '/models/ex3LogisticRaphson.txt';
 							  var urlNNex4 = '/models/Ex4/ex4Raphson.txt';
 							  var urlNNCost = 'models/Ex4/NNCostFuncRaphson.txt';
-							  var urlNNdisplay = 'models/Ex4/displayData.txt';
 							  var urlNNfmincg = 'models/Ex4/fmincg.txt';
 							  var urlNNpredict = 'models/Ex4/predictRaphson.txt';
 							  var urlNNRandWeights = 'models/Ex4/randInitalizeWeightsRaphson.txt';
@@ -224,7 +223,7 @@
 						       					});
 										});
 										
-										jQuery.get(urlNNdisplay, function(data) 
+										jQuery.get(urlNNfmincg, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -232,7 +231,7 @@
 						       					});
 										});
 								
-										jQuery.get(urlNNfmincg, function(data) 
+										jQuery.get(urlNNpredict, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -240,7 +239,7 @@
 						       					});
 										});
 										
-										jQuery.get(urlNNpredict, function(data) 
+										jQuery.get(urlNNRandWeights, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -248,7 +247,7 @@
 						       					});
 										});
 											
-										jQuery.get(urlNNRandWeights, function(data) 
+										jQuery.get(urlNNSigmoidGradient, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -256,19 +255,11 @@
 						       					});
 										});
 						
-										jQuery.get(urlNNSigmoidGradient, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode7 pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-										
 										jQuery.get(urlNNSigmoid, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
-						 					$("#displayCode8 pre").html(data.replace(/\r\n/g, "<br>"));
+						 					$("#displayCode7 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
 
@@ -728,7 +719,6 @@
 						<div id="displayCode5" style=""><pre></pre></div>
 						<div id="displayCode6" style=""><pre></pre></div>
 						<div id="displayCode7" style=""><pre></pre></div>
-						<div id="displayCode8" style=""><pre></pre></div>
 
 				
 						<div id="temp3">
