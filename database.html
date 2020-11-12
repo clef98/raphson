@@ -179,6 +179,7 @@
 							  var urlLinearReg = '/models/ex2LinearRaphson.txt';
 							  var urlLogisticReg = '/models/ex3LogisticRaphson.txt';
 							  var urlNNex4 = '/models/Ex4/ex4Raphson.txt';
+							  var urlNNCost = 'models/Ex4/NNCostFuncRaphson.txt'
 							  var urlSVM = '/models/ex6SVMRaphson.txt';
 							  var urlKMeans = '/models/ex7KmeansRaphson.txt';
 						
@@ -202,7 +203,14 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										}); 
-						
+										
+										jQuery.get(urlNNCost, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 						
 
 										var downloadA = document.getElementById('downloadATag')
