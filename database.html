@@ -262,31 +262,7 @@
 						       					});
 										});
 
-										var links = [
-										  '/mat/Ex4/ex4Raphson.m',
-										  '/mat/Ex4/NNCostFuncRaphson.m',
-										  '/mat/Ex4/ComputeNumericalGradRaphson.m',
-										  '/mat/Ex4/randInitalizeWeightRaphson.m',
-										  '/mat/Ex4/sigmoidGradient.m',
-										  '/mat/Ex4/predictRaphson.m',
-										  '/mat/Ex4/sigmoidRaphson.m'
-										];
 
-										function downloadAll(urls) {
-										  var link = document.createElement('a');
-
-										  link.setAttribute('download', null);
-										  link.style.display = 'none';
-
-										  document.body.appendChild(link);
-
-										  for (var i = 0; i < urls.length; i++) {
-										    link.setAttribute('href', urls[i]);
-										    link.click();
-										  }
-
-										  document.body.removeChild(link);
-										}
 						
 								} else if(secondDropdown =='K-Means Clustering') {
 										jQuery.get(urlKMeans, function(data) 
@@ -686,7 +662,31 @@
 						
 						
 							
-							
+										var links = [
+										  '/mat/Ex4/ex4Raphson.m',
+										  '/mat/Ex4/NNCostFuncRaphson.m',
+										  '/mat/Ex4/ComputeNumericalGradRaphson.m',
+										  '/mat/Ex4/randInitalizeWeightRaphson.m',
+										  '/mat/Ex4/sigmoidGradient.m',
+										  '/mat/Ex4/predictRaphson.m',
+										  '/mat/Ex4/sigmoidRaphson.m'
+										];
+
+										function downloadAll(urls) {
+										  var link = document.createElement('a');
+
+										  link.setAttribute('download', null);
+										  link.style.display = 'none';
+
+										  document.body.appendChild(link);
+
+										  for (var i = 0; i < urls.length; i++) {
+										    link.setAttribute('href', urls[i]);
+										    link.click();
+										  }
+
+										  document.body.removeChild(link);
+										}	
 							
 							
 							
