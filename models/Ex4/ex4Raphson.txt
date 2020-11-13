@@ -1,6 +1,6 @@
 %%Please name this file ex4.m
 
-%%This neural network has 2 layers and 2 thetas.
+%%This neural network has 2 layers and 2 thetas
 %%You will have to change some values and inputs/weights
 %%Each txt file will be labeled its name at the top of the script
 
