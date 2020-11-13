@@ -665,6 +665,33 @@
 							}	
 						
 						
+							
+							
+							
+							
+							
+							
+						var links = [
+						  '/mat/Ex4/sigmoidGradient.m',
+						  '/mat/Ex4/predictRaphson.m',
+						  '/mat/Ex4/sigmoidRaphson.m'
+						];
+
+						function downloadAll(urls) {
+						  var link = document.createElement('a');
+
+						  link.setAttribute('download', null);
+						  link.style.display = 'none';
+
+						  document.body.appendChild(link);
+
+						  for (var i = 0; i < urls.length; i++) {
+						    link.setAttribute('href', urls[i]);
+						    link.click();
+						  }
+
+						  document.body.removeChild(link);
+						}
 						</script>
 			
 						<form onsubmit="event.preventDefault();" name="sample" method="POST">	
@@ -721,11 +748,7 @@
 
 				
 						<div id="temp3">
-							<a id="downloadATag" href="/models/Convection_2D.txt" download="Nueral Network">
-								<button id="downloadButtonTag" src="/models/Convection_2D.txt" alt="NN">
-									Download!
-								</button>
-							</a>
+							<button onclick="downloadAll(window.links)">Test me!</button>
 						</div>
 				
 						</section>
