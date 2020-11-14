@@ -1,3 +1,4 @@
+%%Name ex2
 clear ; close all; clc
 
 data = load('yourData.txt');
@@ -12,12 +13,6 @@ initial_theta = zeros(n + 1, 1);
 
 
 [cost, grad] = costFunction(initial_theta, X, y);
-
-
-test_theta = [-24; 0.2; 0.2];
-[cost, grad] = costFunction(test_theta, X, y);
-
-
 
 options = optimset('GradObj', 'on', 'MaxIter', 400);
 
