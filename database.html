@@ -79,11 +79,11 @@
 									break;
 								case "Machine Learning" :
 									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
-									document.getElementById("subcategory").options[5]=new Option("Linear Regression","Linear Regression");
-									document.getElementById("subcategory").options[4]=new Option("Logistic Regression","Logistic Regression");
+									document.getElementById("subcategory").options[3]=new Option("Linear Regression","Linear Regression");
+									document.getElementById("subcategory").options[2]=new Option("Logistic Regression","Logistic Regression");
 									document.getElementById("subcategory").options[1]=new Option("Neural Network","Neural Network");
-									document.getElementById("subcategory").options[2]=new Option("K-Means Clustering","K-Means Clustering");
-								        document.getElementById("subcategory").options[3]=new Option("Support Vector Machine","Support Vector Machine");	
+									document.getElementById("subcategory").options[4]=new Option("K-Means Clustering","K-Means Clustering");
+								        document.getElementById("subcategory").options[5]=new Option("Support Vector Machine","Support Vector Machine");	
 									break;
 								default:
 									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
@@ -95,7 +95,33 @@
 							    function dynamicdropdownone(listindex) {
 								document.getElementById("sub_subcategory").length = 0;
 								switch (listindex){
-
+										
+										
+								    case "Linear Regression" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("fmincg","fmincg1");
+									break;
+										
+								    case "Logistic Regression" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("fmincg","fmincg2");
+									break;
+								
+								    case "Neural Network" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("fmincg","fmincg3");
+									break;
+								
+								    case "K-Means Clustering" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("fmincg","fmincg4");
+									break;		
+										
+								    case "Support Vector Machine" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
+									document.getElementById("sub_subcategory").options[1]=new Option("fmincg","fmincg5");
+									break;	
+										
 								    case "Fickian Diffusion" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
 									document.getElementById("sub_subcategory").options[1]=new Option("Explicit Scheme (FTFS)","Explicit Scheme (FTFS)");
@@ -199,7 +225,7 @@
 						
 							  if (firstDropdown =='Machine Learning'){
 								if(secondDropdown =='Neural Network'){
-									
+									if(thirdDropdown == 'fmincg4'){
 										document.getElementById("displayCode2").style.border = "1px solid black";
 										document.getElementById("displayCode3").style.border = "1px solid black";
 										document.getElementById("displayCode4").style.border = "1px solid black";
@@ -263,14 +289,13 @@
 					       						{
 						 					$("#displayCode7 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
-										});
-
-
-										
+										});	
 
 									return false;
 
-										
+									}else{
+										alert('Please select a option for the third dropdown')
+									}	
 							
 								} else if(secondDropdown =='K-Means Clustering') {
 										jQuery.get(urlKMeans, function(data) 
