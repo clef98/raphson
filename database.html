@@ -298,6 +298,7 @@
 									}	
 							
 								} else if(secondDropdown =='K-Means Clustering') {
+									if(thirdDropdown =='fmincg4'){
 										jQuery.get(urlKMeans, function(data) 
 										{
 										   $(document).ready(function()
@@ -310,7 +311,9 @@
 										downloadA.setAttribute("href", "/mat/ex7KmeansRaphson.mat")
 										downloadButton.setAttribute("src", "/mat/ex7KmeansRaphson.mat")
 										return false;
-									
+									}else{
+										alert('Please select a option for the third dropdown')
+									}
 								} else if(secondDropdown =='Support Vector Machine') {
 										jQuery.get(urlSVM, function(data) 
 										{
