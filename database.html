@@ -294,7 +294,7 @@
 									return false;
 
 									}else{
-										alert('Please select a option for the third dropdown')
+										alert('Please select a option for the third dropdown');
 									}	
 							
 								} else if(secondDropdown =='K-Means Clustering') {
@@ -306,15 +306,16 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										var downloadA = document.getElementById('downloadATag')
-										var downloadButton = document.getElementById('downloadButtonTag')
-										downloadA.setAttribute("href", "/mat/ex7KmeansRaphson.mat")
-										downloadButton.setAttribute("src", "/mat/ex7KmeansRaphson.mat")
+										var downloadA = document.getElementById('downloadATag');
+										var downloadButton = document.getElementById('downloadButtonTag');
+										downloadA.setAttribute("href", "/mat/ex7KmeansRaphson.mat");
+										downloadButton.setAttribute("src", "/mat/ex7KmeansRaphson.mat");
 										return false;
 									}else{
-										alert('Please select a option for the third dropdown')
+										alert('Please select a option for the third dropdown');
 									}
 								} else if(secondDropdown =='Support Vector Machine') {
+									if(thirdDropdown =='fmincg5'){
 										jQuery.get(urlSVM, function(data) 
 										{
 										   $(document).ready(function()
@@ -322,13 +323,16 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										var downloadA = document.getElementById('downloadATag')
-										var downloadButton = document.getElementById('downloadButtonTag')
-										downloadA.setAttribute("href", "/mat/ex6SVMRaphson.mat")
-										downloadButton.setAttribute("src", "/mat/ex6SVMRaphson.mat")
+										var downloadA = document.getElementById('downloadATag');
+										var downloadButton = document.getElementById('downloadButtonTag');
+										downloadA.setAttribute("href", "/mat/ex6SVMRaphson.mat");
+										downloadButton.setAttribute("src", "/mat/ex6SVMRaphson.mat");
 										return false;
-									
+									}else{
+										alert('Please choose a option for the third dropdown');
+									}
 								} else if(secondDropdown =='Logistic Regression') {
+									if(thirdDropdown =='fmincg2'){
 										jQuery.get(urlLogisticReg, function(data) 
 										{
 										   $(document).ready(function()
@@ -336,13 +340,16 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										var downloadA = document.getElementById('downloadATag')
-										var downloadButton = document.getElementById('downloadButtonTag')
-										downloadA.setAttribute("href", "/mat/ex3LogisticRaphson.mat")
-										downloadButton.setAttribute("src", "/mat/ex3LogisticRaphson.mat")
+										var downloadA = document.getElementById('downloadATag');
+										var downloadButton = document.getElementById('downloadButtonTag');
+										downloadA.setAttribute("href", "/mat/ex3LogisticRaphson.mat");
+										downloadButton.setAttribute("src", "/mat/ex3LogisticRaphson.mat");
 										return false;
-									
+									}else{
+										alert('Please choose a option for the third dropdown');
+									}
 								} else if(secondDropdown =='Linear Regression') {
+									if(thirdDropdown =='fmincg1'){
 										jQuery.get(urlLinearReg, function(data) 
 										{
 										   $(document).ready(function()
@@ -350,12 +357,14 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										var downloadA = document.getElementById('downloadATag')
-										var downloadButton = document.getElementById('downloadButtonTag')
-										downloadA.setAttribute("href", "/mat/ex2LinearRaphson.mat")
-										downloadButton.setAttribute("src", "/mat/ex2LinearRaphson.mat")
+										var downloadA = document.getElementById('downloadATag');
+										var downloadButton = document.getElementById('downloadButtonTag');
+										downloadA.setAttribute("href", "/mat/ex2LinearRaphson.mat");
+										downloadButton.setAttribute("src", "/mat/ex2LinearRaphson.mat");
 										return false;
-									
+									}else{
+										alert('Please choose a option for the third dropdown');
+									}
 								}else{
 									alert('please choose a option for the second dropdown');
 									return false;
