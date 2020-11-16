@@ -112,7 +112,8 @@ for it=0:nt
         shading interp
         axis equal
         axis([0 L 0 H])
-        title({['Rayleigh-Benard Convection with Pe = ',num2str(Pe),' and Gr = ',num2str(Gr)];['time(\itt) = ',num2str(dt*it)]})
+        title({['Rayleigh-Benard Convection with Pe = ',num2str(Pe),' and Gr = ',num2str(Gr)];
+        ['time(\itt) = ',num2str(dt*it)]})
         xlabel('Spatial co-ordinate (x) \rightarrow')
         ylabel('Spatial co-ordinate (y) \rightarrow')
         drawnow;
@@ -142,34 +143,46 @@ for it=0:nt
     % Central differencing with explicit Euler time march
     %{
     uconv(i+1,j)=un(i+1,j)-(dt/(4*dx))*((un(i+2,j)+un(i+1,j)).^2-(un(i+1,j)+un(i,j)).^2)...
-        -(dt/(4*dy))*((un(i+1,j)+un(i+1,j+1)).*(vn(i,j+1)+vn(i+1,j+1))-(un(i+1,j)+un(i+1,j-1)).*(vn(i,j)+vn(i+1,j)));
-    vconv(i,j+1)=vn(i,j+1)-(dt/(4*dx))*((un(i+1,j)+un(i+1,j+1)).*(vn(i,j+1)+vn(i+1,j+1))-(un(i,j)+un(i,j-1)).*(vn(i,j+1)+vn(i-1,j+1)))...
+        -(dt/(4*dy))*((un(i+1,j)+un(i+1,j+1)).*(vn(i,j+1)+vn(i+1,j+1))
+        -(un(i+1,j)+un(i+1,j-1)).*(vn(i,j)+vn(i+1,j)));
+    vconv(i,j+1)=vn(i,j+1)-(dt/(4*dx))*((un(i+1,j)+un(i+1,j+1)).*(vn(i,j+1)
+    +vn(i+1,j+1))-(un(i,j)+un(i,j-1)).*(vn(i,j+1)+vn(i-1,j+1)))...
         -(dt/(4*dy))*((vn(i,j+2)+vn(i,j+1)).^2-(vn(i,j+1)+vn(i,j)).^2);
     %}
     % Mac-Cormack method
     %{
     %Predictor step(Forward difference)
     uhalf(i+1,j)=un(i+1,j)-(dt/dx/2)*((un(i+1,j)+un(i+2,j)).^2-4*un(i+1,j).^2)...
-        -(dt/dy/2)*((un(i+1,j)+un(i+1,j+1)).*(vn(i,j+1)+vn(i+1,j+1))-un(i+1,j).*(vn(i,j)+vn(i,j+1)+vn(i+1,j+1)+vn(i+1,j)));
-    vhalf(i,j+1)=vn(i,j+1)-(dt/dx/2)*((un(i+1,j)+un(i+1,j+1)).*(vn(i,j+1)+vn(i+1,j+1))-vn(i,j+1).*(un(i,j+1)+un(i,j)+un(i+1,j)+un(i+1,j+1)))...
+        -(dt/dy/2)*((un(i+1,j)+un(i+1,j+1)).*(vn(i,j+1)+vn(i+1,j+1))-un(i+1,j).*(vn(i,j)
+        +vn(i,j+1)+vn(i+1,j+1)+vn(i+1,j)));
+    vhalf(i,j+1)=vn(i,j+1)-(dt/dx/2)*((un(i+1,j)+un(i+1,j+1)).*(vn(i,j+1)+vn(i+1,j+1))
+    -vn(i,j+1).*(un(i,j+1)+un(i,j)+un(i+1,j)+un(i+1,j+1)))...
         -(dt/dy/2)*((vn(i,j+1)+vn(i,j+2)).^2-4*vn(i,j+1).^2);
     %Corrector step(Backward difference)
-    uconv(i+1,j)=0.5*(un(i+1,j)+uhalf(i+1,j))-(dt/dx/4)*(4*uhalf(i+1,j).^2-(uhalf(i+1,j)+uhalf(i,j)).^2)...
-        -(dt/dy/4)*(uhalf(i+1,j).*(vhalf(i,j)+vhalf(i,j+1)+vhalf(i+1,j+1)+vhalf(i+1,j))-(uhalf(i+1,j)+uhalf(i+1,j-1)).*(vhalf(i,j)+vhalf(i+1,j)));
-    vconv(i,j+1)=0.5*(vn(i,j+1)+vhalf(i,j+1))-(dt/dx/4)*(vhalf(i,j+1).*(uhalf(i,j+1)+uhalf(i,j)+uhalf(i+1,j)+uhalf(i+1,j+1))-(uhalf(i,j)+uhalf(i,j+1)).*(vhalf(i,j+1)+vhalf(i-1,j+1)))...
+    uconv(i+1,j)=0.5*(un(i+1,j)+uhalf(i+1,j))-(dt/dx/4)*(4*uhalf(i+1,j).^2-(uhalf(i+1,j)
+    +uhalf(i,j)).^2)...
+        -(dt/dy/4)*(uhalf(i+1,j).*(vhalf(i,j)+vhalf(i,j+1)+vhalf(i+1,j+1)+vhalf(i+1,j))
+        -(uhalf(i+1,j)+uhalf(i+1,j-1)).*(vhalf(i,j)+vhalf(i+1,j)));
+    vconv(i,j+1)=0.5*(vn(i,j+1)+vhalf(i,j+1))-(dt/dx/4)*(vhalf(i,j+1).*(uhalf(i,j+1)
+    +uhalf(i,j)+uhalf(i+1,j)+uhalf(i+1,j+1))-(uhalf(i,j)+uhalf(i,j+1)).*(vhalf(i,j+1)+vhalf(i-1,j+1)))...
         -(dt/dy/4)*(4*vhalf(i,j+1).^2-(vhalf(i,j)+vhalf(i,j+1)).^2);
     %}
     %(3) Richtmyer method
     
     %Predictor step(Lax-Friedrich)
-    uhalf(i+1,j)=0.5*(un(i+2,j)+un(i,j))-(dt/dx/8)*((un(i+2,j)+un(i+1,j)).^2-(un(i+1,j)+un(i,j)).^2)...
-        -(dt/dy/8)*((un(i+1,j)+un(i+1,j+1)).*(vn(i,j+1)+vn(i+1,j+1))-(un(i+1,j)+un(i+1,j-1)).*(vn(i,j)+vn(i+1,j)));
-    vhalf(i,j+1)=0.5*(vn(i,j+2)+vn(i,j))-(dt/dx/8)*((un(i+1,j)+un(i+1,j+1)).*(vn(i,j+1)+vn(i+1,j+1))-(un(i,j)+un(i,j-1)).*(vn(i,j+1)+vn(i-1,j+1)))...
+    uhalf(i+1,j)=0.5*(un(i+2,j)+un(i,j))-(dt/dx/8)*((un(i+2,j)+un(i+1,j)).^2-(un(i+1,j)
+    +un(i,j)).^2)...
+        -(dt/dy/8)*((un(i+1,j)+un(i+1,j+1)).*(vn(i,j+1)+vn(i+1,j+1))-(un(i+1,j)
+        +un(i+1,j-1)).*(vn(i,j)+vn(i+1,j)));
+    vhalf(i,j+1)=0.5*(vn(i,j+2)+vn(i,j))-(dt/dx/8)*((un(i+1,j)+un(i+1,j+1)).*(vn(i,j+1)
+    +vn(i+1,j+1))-(un(i,j)+un(i,j-1)).*(vn(i,j+1)+vn(i-1,j+1)))...
         -(dt/dy/8)*((vn(i,j+2)+vn(i,j+1)).^2-(vn(i,j+1)+vn(i,j)).^2);
     %Corrector step(Leapfrog)
     uconv(i+1,j)=un(i+1,j)-(dt/(4*dx))*((uhalf(i+2,j)+uhalf(i+1,j)).^2-(uhalf(i+1,j)+uhalf(i,j)).^2)...
-        -(dt/(4*dy))*((uhalf(i+1,j)+uhalf(i+1,j+1)).*(vhalf(i,j+1)+vhalf(i+1,j+1))-(uhalf(i+1,j)+uhalf(i+1,j-1)).*(vhalf(i,j)+vhalf(i+1,j)));
-    vconv(i,j+1)=vn(i,j+1)-(dt/(4*dx))*((uhalf(i+1,j)+uhalf(i+1,j+1)).*(vhalf(i,j+1)+vhalf(i+1,j+1))-(uhalf(i,j)+uhalf(i,j-1)).*(vhalf(i,j+1)+vhalf(i-1,j+1)))...
+        -(dt/(4*dy))*((uhalf(i+1,j)+uhalf(i+1,j+1)).*(vhalf(i,j+1)+vhalf(i+1,j+1))
+        -(uhalf(i+1,j)+uhalf(i+1,j-1)).*(vhalf(i,j)+vhalf(i+1,j)));
+    vconv(i,j+1)=vn(i,j+1)-(dt/(4*dx))*((uhalf(i+1,j)+uhalf(i+1,j+1)).*(vhalf(i,j+1)
+    +vhalf(i+1,j+1))-(uhalf(i,j)+uhalf(i,j-1)).*(vhalf(i,j+1)+vhalf(i-1,j+1)))...
         -(dt/(4*dy))*((vhalf(i,j+2)+vhalf(i,j+1)).^2-(vhalf(i,j+1)+vhalf(i,j)).^2);
     %}
     %Buoyancy term (Boussinesq aproximation):
