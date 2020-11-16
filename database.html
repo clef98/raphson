@@ -454,6 +454,7 @@
 								if(secondDropdown =='Fickian Diffusion'){
 									if(thirdDropdown == 'Explicit Scheme (FTFS)'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlFTFS, function(data) 
 										{
 										   $(document).ready(function()
