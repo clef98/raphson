@@ -205,6 +205,7 @@
 						
 							  var urlLinearReg = '/models/ex2LinearRaphson.txt';
 							  var urlLogisticReg = '/models/ex3LogisticRaphson.txt';
+							
 							  var urlNNex4 = '/models/Ex4/ex4Raphson.txt';
 							  var urlNNCost = '/models/Ex4/NNCostFuncRaphson.txt';
 							  var urlNNfmincg = '/models/Ex4/fmincg.txt';
@@ -212,9 +213,15 @@
 							  var urlNNRandWeights = '/models/Ex4/randInitalizeWeightsRaphson.txt';
 							  var urlNNSigmoidGradient = '/models/Ex4/sigmoidGradient.txt';
 							  var urlNNSigmoid = '/models/Ex4/sigmoidRaphson.txt';
+							
 							  var urlComputeGrad = '/models/Ex4/ComputeNumericalGradRaphson.txt';
 							  var urlSVM = '/models/ex6SVMRaphson.txt';
-							  var urlKMeans = '/models/ex7KmeansRaphson.txt';
+							
+							  var urlex7 = '/models/Ex7/ex7.txt';
+							  var urlRunKmeans = '/models/Ex7/runKmeans.txt';'
+							  var urlFindCentroid = '/models/Ex7/findClosestCentroids.txt';
+							  var urlComputeCentroid = '/models/Ex7/computeCentroids.txt';
+							  var urlInitCentroid = '/models/Ex7/KMeansInitCentroids.txt';
 						
 							  var urlCavMacCormack = '/models/CavityFlow_MacCormack.txt';
 							  var urlCavRichtmyer = '/models/CavityFlow_Richtmyer.txt';
@@ -324,7 +331,7 @@
 						       					});
 										}); 
 							
-     										alert('Please just close this');
+     										alert('Note: this algorithm needs multiple files to run properly');
 										jQuery.get(urlNNCost, function(data) 
 										{
 										   $(document).ready(function()
@@ -393,7 +400,13 @@
 									if(thirdDropdown =='fmincg4')
                                     {
 										clearBoxText()
-										jQuery.get(urlKMeans, function(data) 
+					    					document.getElementById("displayCode").style.border = "1px solid black";
+										document.getElementById("displayCode2").style.border = "1px solid black";
+										document.getElementById("displayCode3").style.border = "1px solid black";
+										document.getElementById("displayCode4").style.border = "1px solid black";
+										document.getElementById("displayCode5").style.border = "1px solid black";;
+					    
+										jQuery.get(urlex7, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -401,6 +414,38 @@
 						       					});
 										});
 										
+					    
+					    					jQuery.get(urlRunKmeans, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode2 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+					    				
+					    					jQuery.get(urlFindCentroid, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode3 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+					    
+					    					jQuery.get(urlComputeCentroid, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode4 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+					    
+					    					jQuery.get(urlInitCentroid, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode5 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 										return false;
 									} else
                                     {
