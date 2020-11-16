@@ -211,6 +211,7 @@
 							  var urlNNRandWeights = '/models/Ex4/randInitalizeWeightsRaphson.txt';
 							  var urlNNSigmoidGradient = '/models/Ex4/sigmoidGradient.txt';
 							  var urlNNSigmoid = '/models/Ex4/sigmoidRaphson.txt';
+							  var urlComputeGrad = '/models/Ex4/ComputeNumericalGradRaphson.txt';
 							  var urlSVM = '/models/ex6SVMRaphson.txt';
 							  var urlKMeans = '/models/ex7KmeansRaphson.txt';
 						
@@ -222,12 +223,14 @@
 								
 							
 							  function clearBoxText(){
+								document.getElementById("displayCode").style = "";
 								document.getElementById("displayCode2").style = "";
 								document.getElementById("displayCode3").style = "";
 								document.getElementById("displayCode4").style = "";
 								document.getElementById("displayCode5").style = "";
 								document.getElementById("displayCode6").style = "";	
 								document.getElementById("displayCode7").style = "";
+								document.getElementById("displayCode8").style = "";
 
 								var urlClear = '/models/clear.txt'
 								jQuery.get(urlClear, function(data) 
@@ -292,12 +295,14 @@
 								if(secondDropdown =='Neural Network'){
 									if(thirdDropdown == 'fmincg3'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										document.getElementById("displayCode2").style.border = "1px solid black";
 										document.getElementById("displayCode3").style.border = "1px solid black";
 										document.getElementById("displayCode4").style.border = "1px solid black";
 										document.getElementById("displayCode5").style.border = "1px solid black";
 										document.getElementById("displayCode6").style.border = "1px solid black";
 										document.getElementById("displayCode7").style.border = "1px solid black";
+										document.getElementById("displayCode8").style.border = "1px solid black";
 					
 						
 										
@@ -317,7 +322,7 @@
 						       					});
 										});
 										
-										jQuery.get(urlNNfmincg, function(data) 
+										jQuery.get(urlComputeGrad, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -325,7 +330,7 @@
 						       					});
 										});
 								
-										jQuery.get(urlNNpredict, function(data) 
+										jQuery.get(urlNNfmincg, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -900,6 +905,7 @@
 						<div id="displayCode5" style=""><pre></pre></div>
 						<div id="displayCode6" style=""><pre></pre></div>
 						<div id="displayCode7" style=""><pre></pre></div>
+						<div id="displayCode8" style=""><pre></pre></div>
 
 						<div id="temp3">
 							<button onclick="downloadAll(window.links)">Download File</button>
