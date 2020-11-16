@@ -124,8 +124,8 @@
 										
 								    case "Fickian Diffusion" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select framework","");
-									document.getElementById("sub_subcategory").options[1]=new Option("Explicit Scheme (FTFS)","Explicit Scheme (FTFS)");
-									document.getElementById("sub_subcategory").options[2]=new Option("Implicit Scheme (BTBS)","Implicit Scheme (BTBS)");
+									document.getElementById("sub_subcategory").options[1]=new Option("Explicit Scheme (FTCS)","Explicit Scheme (FTFS)");
+									document.getElementById("sub_subcategory").options[2]=new Option("Implicit Scheme (BTCS)","Implicit Scheme (BTBS)");
 									document.getElementById("sub_subcategory").options[3]=new Option("Crank-Nicolson (Hybrid)","Crank-Nicolson (Hybrid)");
 									document.getElementById("sub_subcategory").options[4]=new Option("Analytical","Analytical");
 									break;
@@ -786,7 +786,7 @@
 						</script>
 			
 						<form onsubmit="event.preventDefault();" name="sample" method="POST">	
-							<div class="category_div" id="category_div">Please Select:
+							<div class="category_div" id="category_div">Please select:
 							    <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
 								<option value="">Select Subject</option>
 								<option value="Transport Phenomena">Transport Phenomena</option>
