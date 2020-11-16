@@ -5,7 +5,9 @@ function clearBoxText(){
 	document.getElementById("displayCode5").style = "";
 	document.getElementById("displayCode6").style = ""	
 	document.getElementById("displayCode7").style = "";
-  
+  	
+	<p>This is from function clearBoxText</p>
+	
 	urlClear = '/models/clear.txt'
 	jQuery.get(urlClear, function(data) 
 		{
