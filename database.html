@@ -314,7 +314,7 @@
 						       					});
 										}); 
 										
-										jQuery.get(urlComputeGrad, function(data) 
+										jQuery.get(urlNNCost, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -359,6 +359,14 @@
 										   $(document).ready(function()
 					       						{
 						 					$("#displayCode7 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});	
+										
+										jQuery.get(urlNNpredict, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode8 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});	
 
