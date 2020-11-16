@@ -10,17 +10,11 @@ function [X, fX, i] = fmincg(f, X, options, P1, P2, P3, P4, P5)
 % programs and accompanying documents for purposes of research or
 % education, provided this copyright notice is retained, and note is
 % made of any changes that have been made.
-% 
-% These programs and documents are distributed without any warranty,
-% express or implied.  As the programs were written for research
-% purposes only, they have not been tested to the degree that would be
-% advisable in any important application.  All use of these programs is
-% entirely at the user's own risk.
 %
 % [ml-class] Changes Made:
 % 1) Function name and argument specifications
 % 2) Output display
-%
+
 
 % Read options
 if exist('options', 'var') && ~isempty(options) && isfield(options, 'MaxIter')
@@ -56,12 +50,12 @@ d1 = -s'*s;                                                 % this is the slope
 z1 = red/(1-d1);                                  % initial step is red/(|s|+1)
 
 while i < abs(length)                                      % while not finished
-  i = i + (length>0);                                      % count iterations?!
+  i = i + (length>0);                                      % count iterations?
 
   X0 = X; f0 = f1; df0 = df1;                   % make a copy of current values
   X = X + z1*s;                                             % begin line search
   [f2 df2] = eval(argstr);
-  i = i + (length<0);                                          % count epochs?!
+  i = i + (length<0);                                          % count epochs?
   d2 = df2'*s;
   f3 = f1; d3 = d1; z3 = -z1;             % initialize point 3 equal to point 1
   if length>0, M = MAX; else M = min(MAX, -length-i); end
@@ -83,7 +77,7 @@ while i < abs(length)                                      % while not finished
       z1 = z1 + z2;                                           % update the step
       X = X + z2*s;
       [f2 df2] = eval(argstr);
-      M = M - 1; i = i + (length<0);                           % count epochs?!
+      M = M - 1; i = i + (length<0);                           % count epochs?
       d2 = df2'*s;
       z3 = z3-z2;                    % z3 is now relative to the location of z2
     end
