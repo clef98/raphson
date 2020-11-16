@@ -324,7 +324,7 @@
 						       					});
 										}); 
 										alert('Just before NNCost');
-                                        getElementById('displayCode2Pre').innerHTML = urlNNCost;
+     
 										jQuery.get(urlNNCost, function(data) 
 										{
 										   $(document).ready(function()
@@ -332,7 +332,7 @@
 						 					$("#displayCode2 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										alert('after NNCost');
 										jQuery.get(urlComputeGrad, function(data) 
 										{
 										   $(document).ready(function()
