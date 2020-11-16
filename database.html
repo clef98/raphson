@@ -224,6 +224,7 @@
 								
 							
 							  function clearBoxText(){
+
 								document.getElementById("displayCode").style = "";
 								document.getElementById("displayCode2").style = "";
 								document.getElementById("displayCode3").style = "";
@@ -299,9 +300,12 @@
 
 							}
 						
-							  if (firstDropdown =='Machine Learning'){
-								if(secondDropdown =='Neural Network'){
-									if(thirdDropdown == 'fmincg3'){
+							  if (firstDropdown =='Machine Learning')
+                              {
+							     if(secondDropdown =='Neural Network')
+                                 {
+									if(thirdDropdown == 'fmincg3')
+                                    {
 										clearBoxText()
 										document.getElementById("displayCode").style.border = "1px solid black";
 										document.getElementById("displayCode2").style.border = "1px solid black";
@@ -311,8 +315,6 @@
 										document.getElementById("displayCode6").style.border = "1px solid black";
 										document.getElementById("displayCode7").style.border = "1px solid black";
 										document.getElementById("displayCode8").style.border = "1px solid black";
-					
-						
 										
 										jQuery.get(urlNNex4, function(data) 
 										{
@@ -380,12 +382,15 @@
 
 									    return false;	
 
-									}else{
+									} else
+                                    {
 										alert('Please select a option for the third dropdown');
 									}	
 							
-								} else if(secondDropdown =='K-Means Clustering') {
-									if(thirdDropdown =='fmincg4'){
+								 } else if(secondDropdown =='K-Means Clustering') 
+                                 {
+									if(thirdDropdown =='fmincg4')
+                                    {
 										clearBoxText()
 										jQuery.get(urlKMeans, function(data) 
 										{
@@ -396,10 +401,11 @@
 										});
 										
 										return false;
-									}else{
+									} else
+                                    {
 										alert('Please select a option for the third dropdown');
 									}
-								} else if(secondDropdown =='Support Vector Machine') {
+								 } else if(secondDropdown =='Support Vector Machine') {
 									if(thirdDropdown =='fmincg5'){
 										clearBoxText()
 										jQuery.get(urlSVM, function(data) 
@@ -739,7 +745,7 @@
 						
 							  return false;
 							  document.getElementById('output').innerHTML = ranvar
-							}	
+						}	
 						
 						
 						var links = [
