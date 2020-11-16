@@ -93,7 +93,7 @@
 								return true;
 							    }
 
-							    function dynamicdropdownone(listindex) {
+						function dynamicdropdownone(listindex) {
 								document.getElementById("sub_subcategory").length = 0;
 								switch (listindex){
 										
@@ -174,8 +174,8 @@
 								return true;
 							    }
 
-							var links = []
-							function submittedForm(that){
+						var links = []
+						function submittedForm(that){
 							  var firstDropdown = document.getElementById('category').value;
 							  var secondDropdown = document.getElementById('subcategory').value;
 							  var thirdDropdown = document.getElementById('sub_subcategory').value;
@@ -323,7 +323,8 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										}); 
-										
+										alert('Just before NNCost');
+                                        getElementById('displayCode2').innerHTML = urlNNCost;
 										jQuery.get(urlNNCost, function(data) 
 										{
 										   $(document).ready(function()
