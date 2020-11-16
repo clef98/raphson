@@ -387,6 +387,7 @@
 							
 								} else if(secondDropdown =='K-Means Clustering') {
 									if(thirdDropdown =='fmincg4'){
+										clearBoxText()
 										jQuery.get(urlKMeans, function(data) 
 										{
 										   $(document).ready(function()
@@ -394,13 +395,14 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										clearBoxText();
+										
 										return false;
 									}else{
 										alert('Please select a option for the third dropdown');
 									}
 								} else if(secondDropdown =='Support Vector Machine') {
 									if(thirdDropdown =='fmincg5'){
+										clearBoxText()
 										jQuery.get(urlSVM, function(data) 
 										{
 										   $(document).ready(function()
@@ -408,18 +410,14 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+
 										return false;
 									}else{
 										alert('Please choose a option for the third dropdown');
 									}
 								} else if(secondDropdown =='Logistic Regression') {
 									if(thirdDropdown =='fmincg2'){
+										clearBoxText()
 										jQuery.get(urlLogisticReg, function(data) 
 										{
 										   $(document).ready(function()
@@ -427,18 +425,14 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+
 										return false;
 									}else{
 										alert('Please choose a option for the third dropdown');
 									}
 								} else if(secondDropdown =='Linear Regression') {
 									if(thirdDropdown =='fmincg1'){
+										clearBoxText()
 										jQuery.get(urlLinearReg, function(data) 
 										{
 										   $(document).ready(function()
@@ -446,12 +440,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+
 										return false;
 									}else{
 										alert('Please choose a option for the third dropdown');
@@ -464,6 +453,7 @@
 							  }else if (firstDropdown =='Transport Phenomena'){
 								if(secondDropdown =='Fickian Diffusion'){
 									if(thirdDropdown == 'Explicit Scheme (FTFS)'){
+										clearBoxText()
 										jQuery.get(urlFTFS, function(data) 
 										{
 										   $(document).ready(function()
@@ -471,15 +461,11 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+
 										return false;
 						
 									}else if(thirdDropdown =='Implicit Scheme (BTBS)'){
+										clearBoxText()
 										jQuery.get(urlBTBS, function(data) 
 										{
 										   $(document).ready(function()
@@ -487,14 +473,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+
 										return false;
 									}else if(thirdDropdown =='Crank-Nicolson (Hybrid)'){
+										clearBoxText()
 										jQuery.get(urlCrank, function(data) 
 										{
 										   $(document).ready(function()
@@ -502,14 +484,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else if(thirdDropdown =='Analytical'){
+										clearBoxText()
 										jQuery.get(urlAnalytical, function(data) 
 										{
 										   $(document).ready(function()
@@ -517,12 +495,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else{
 										alert('please choose a option for the third dropdown');
@@ -530,6 +503,7 @@
 									}
 								}else if (secondDropdown =='Convection'){
 									if(thirdDropdown =='Linear 1D'){
+										clearBoxText()
 										jQuery.get(urlLin1D, function(data) 
 										{
 										   $(document).ready(function()
@@ -537,14 +511,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+
 										return false;
 									}else if(thirdDropdown =='Linear 2D'){
+										clearBoxText()
 										jQuery.get(urlLin2D, function(data) 
 										{
 										   $(document).ready(function()
@@ -552,14 +522,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+		
 										return false;
 									}else if(thirdDropdown =='Nonlinear, Beam-Warming'){
+										clearBoxText()
 										jQuery.get(urlConvNonLinBeamWarming, function(data) 
 										{
 										   $(document).ready(function()
@@ -567,14 +533,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else if(thirdDropdown =='Nonlinear, Lax-Friedrichs'){
+										clearBoxText()
 										jQuery.get(urlConvNonLinLaxFriedrichs, function(data) 
 										{
 										   $(document).ready(function()
@@ -582,14 +544,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else if(thirdDropdown =='Nonlinear, Lax-Wendroff'){
+										clearBoxText()
 										jQuery.get(urlConvNonLinLaxWendroff, function(data) 
 										{
 										   $(document).ready(function()
@@ -597,14 +555,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else if(thirdDropdown =='Nonlinear, MacCormack'){
+										clearBoxText()
 										jQuery.get(urlConvNonLinMacCormack, function(data) 
 										{
 										   $(document).ready(function()
@@ -612,14 +566,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else if(thirdDropdown =='Rayleigh Bernard'){
+										clearBoxText()
 										jQuery.get(urlBernard, function(data) 
 										{
 										   $(document).ready(function()
@@ -627,12 +577,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else{
 										alert('please choose a option for the third dropdown');
@@ -646,6 +591,7 @@
 							  }else if(firstDropdown =='Fluid Mechanics'){
 								if (secondDropdown =='Burgers Equation'){
 									if(thirdDropdown =='1DBURG'){
+										clearBoxText()
 										jQuery.get(url1DBurg, function(data) 
 										{
 										   $(document).ready(function()
@@ -653,14 +599,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else if(thirdDropdown =='2DBURGexp'){
+										clearBoxText()
 										jQuery.get(url2DBurg_exp, function(data) 
 										{
 										   $(document).ready(function()
@@ -668,14 +610,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else if(thirdDropdown =='2DBURGimp'){
+										clearBoxText()
 										jQuery.get(url2DBurg_imp, function(data) 
 										{
 										   $(document).ready(function()
@@ -683,12 +621,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else{
 										alert('please choose a option for the third dropdown');
@@ -696,6 +629,7 @@
 									}
 								}else if(secondDropdown == 'Cavity Flow'){
 									if(thirdDropdown =='MacCormack'){
+										clearBoxText()
 										jQuery.get(urlCavMacCormack, function(data) 
 										{
 										   $(document).ready(function()
@@ -703,14 +637,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else if(thirdDropdown =='Richtmyer'){
+										clearBoxText()
 										jQuery.get(urlCavRichtmyer, function(data) 
 										{
 										   $(document).ready(function()
@@ -718,14 +648,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else if(thirdDropdown =='Explicit, Central Difference'){
+										clearBoxText()
 										jQuery.get(urlCavExplicitCentral, function(data) 
 										{
 										   $(document).ready(function()
@@ -733,14 +659,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else if(thirdDropdown =='Explicit, Euler'){
+										clearBoxText()
 										jQuery.get(urlCavExplicitEuler, function(data) 
 										{
 										   $(document).ready(function()
@@ -748,14 +670,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else if(thirdDropdown =='Implicit, Central Difference'){
+										clearBoxText()
 										jQuery.get(urlCavImplicitCentral, function(data) 
 										{
 										   $(document).ready(function()
@@ -763,12 +681,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else{
 										alert('please choose a option for third dropdown')
@@ -780,6 +693,7 @@
 							  }else if (firstDropdown =='Mathematics'){
 								if(secondDropdown =='Laplace'){
 									if(thirdDropdown == '2DLAPLACE'){
+										clearBoxText()
 										jQuery.get(url2DLaplace, function(data) 
 										{
 										  $(document).ready(function()
@@ -787,14 +701,10 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else if(thirdDropdown =='Implicit'){
+										clearBoxText()
 										jQuery.get(urlImplicitLaplace, function(data) 
 											{
 										  	 $(document).ready(function()
@@ -802,16 +712,12 @@
 						 						$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       						});
 											});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+									
 										return false;
 									}
 								}else if(secondDropdown == 'Poisson'){
 									if(thirdDropdown =='2D'){
+										clearBoxText()
 										jQuery.get(urlPoisson, function(data) 
 										{
 										   $(document).ready(function()
@@ -819,12 +725,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										document.getElementById("displayCode2").style = "";
-										document.getElementById("displayCode3").style = "";
-										document.getElementById("displayCode4").style = "";
-										document.getElementById("displayCode5").style = "";
-										document.getElementById("displayCode6").style = "";
-										document.getElementById("displayCode7").style = "";
+										
 										return false;
 									}else{
 										alert('please choose a option for third dropdown')
