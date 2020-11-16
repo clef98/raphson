@@ -26,7 +26,8 @@ for i = 1:M+1
         %DIRICHLET
         %Z(i, :) = symsum(erfc((2*n+X)/(2*sqrt(Y(i))))-erfc((2*n+2-X)/(2*sqrt(Y(i)))), n, 0, 20);
         %NEUMANN
-     Z(i, :) = symsum((((-1)^n)*(erfc((2*n+X)/(2*sqrt(Y(i))/D))+erfc((2*n+2-X)/(2*sqrt(Y(i))/D)))), n, 0, 20);
+     Z(i, :) = symsum((((-1)^n)*(erfc((2*n+X)/(2*sqrt(Y(i))/D))
+     +erfc((2*n+2-X)/(2*sqrt(Y(i))/D)))), n, 0, 20);
      %plot(X,Z(i,:))
 end
 for j=2:M
