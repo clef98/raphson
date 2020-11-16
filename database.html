@@ -287,7 +287,14 @@
 									{
 									$("#displayCode7 pre").html(data.replace(/\r\n/g, "<br>"));
 									});
-								});	  
+								});
+								jQuery.get(urlClear, function(data) 
+								{
+								   $(document).ready(function()
+									{
+									$("#displayCode8 pre").html(data.replace(/\r\n/g, "<br>"));
+									});
+								});
 
 							}
 						
