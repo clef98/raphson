@@ -473,6 +473,7 @@
 						
 									}else if(thirdDropdown =='Implicit Scheme (BTBS)'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlBTBS, function(data) 
 										{
 										   $(document).ready(function()
@@ -484,6 +485,7 @@
 										return false;
 									}else if(thirdDropdown =='Crank-Nicolson (Hybrid)'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlCrank, function(data) 
 										{
 										   $(document).ready(function()
@@ -495,6 +497,7 @@
 										return false;
 									}else if(thirdDropdown =='Analytical'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlAnalytical, function(data) 
 										{
 										   $(document).ready(function()
@@ -511,6 +514,7 @@
 								}else if (secondDropdown =='Convection'){
 									if(thirdDropdown =='Linear 1D'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlLin1D, function(data) 
 										{
 										   $(document).ready(function()
@@ -522,6 +526,7 @@
 										return false;
 									}else if(thirdDropdown =='Linear 2D'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlLin2D, function(data) 
 										{
 										   $(document).ready(function()
@@ -533,6 +538,7 @@
 										return false;
 									}else if(thirdDropdown =='Nonlinear, Beam-Warming'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlConvNonLinBeamWarming, function(data) 
 										{
 										   $(document).ready(function()
@@ -544,6 +550,7 @@
 										return false;
 									}else if(thirdDropdown =='Nonlinear, Lax-Friedrichs'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlConvNonLinLaxFriedrichs, function(data) 
 										{
 										   $(document).ready(function()
@@ -555,6 +562,7 @@
 										return false;
 									}else if(thirdDropdown =='Nonlinear, Lax-Wendroff'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlConvNonLinLaxWendroff, function(data) 
 										{
 										   $(document).ready(function()
@@ -566,6 +574,7 @@
 										return false;
 									}else if(thirdDropdown =='Nonlinear, MacCormack'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlConvNonLinMacCormack, function(data) 
 										{
 										   $(document).ready(function()
@@ -577,6 +586,7 @@
 										return false;
 									}else if(thirdDropdown =='Rayleigh Bernard'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlBernard, function(data) 
 										{
 										   $(document).ready(function()
@@ -599,6 +609,7 @@
 								if (secondDropdown =='Burgers Equation'){
 									if(thirdDropdown =='1DBURG'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(url1DBurg, function(data) 
 										{
 										   $(document).ready(function()
@@ -610,6 +621,7 @@
 										return false;
 									}else if(thirdDropdown =='2DBURGexp'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(url2DBurg_exp, function(data) 
 										{
 										   $(document).ready(function()
@@ -621,6 +633,7 @@
 										return false;
 									}else if(thirdDropdown =='2DBURGimp'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(url2DBurg_imp, function(data) 
 										{
 										   $(document).ready(function()
@@ -637,6 +650,7 @@
 								}else if(secondDropdown == 'Cavity Flow'){
 									if(thirdDropdown =='MacCormack'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlCavMacCormack, function(data) 
 										{
 										   $(document).ready(function()
@@ -648,6 +662,7 @@
 										return false;
 									}else if(thirdDropdown =='Richtmyer'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlCavRichtmyer, function(data) 
 										{
 										   $(document).ready(function()
@@ -659,6 +674,7 @@
 										return false;
 									}else if(thirdDropdown =='Explicit, Central Difference'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlCavExplicitCentral, function(data) 
 										{
 										   $(document).ready(function()
@@ -670,6 +686,7 @@
 										return false;
 									}else if(thirdDropdown =='Explicit, Euler'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlCavExplicitEuler, function(data) 
 										{
 										   $(document).ready(function()
@@ -681,6 +698,7 @@
 										return false;
 									}else if(thirdDropdown =='Implicit, Central Difference'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlCavImplicitCentral, function(data) 
 										{
 										   $(document).ready(function()
@@ -701,6 +719,7 @@
 								if(secondDropdown =='Laplace'){
 									if(thirdDropdown == '2DLAPLACE'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(url2DLaplace, function(data) 
 										{
 										  $(document).ready(function()
@@ -725,6 +744,7 @@
 								}else if(secondDropdown == 'Poisson'){
 									if(thirdDropdown =='2D'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlPoisson, function(data) 
 										{
 										   $(document).ready(function()
@@ -822,13 +842,13 @@
 						</pre>
 						</div>
 	
-						<div id="displayCode2" style=""><pre id="displayCode2Pre"></pre></div>
+						<div id="displayCode2" style=""><pre></pre></div>
 						<div id="displayCode3" style=""><pre></pre></div>
 						<div id="displayCode4" style=""><pre></pre></div>
 						<div id="displayCode5" style=""><pre></pre></div>
 						<div id="displayCode6" style=""><pre></pre></div>
 						<div id="displayCode7" style=""><pre></pre></div>
-						<div id="displayCode8" style=""><pre>Box8TextTest</pre></div>
+						<div id="displayCode8" style=""><pre></pre></div>
 
 						<div id="temp3">
 							<button onclick="downloadAll(window.links)">Download File</button>
