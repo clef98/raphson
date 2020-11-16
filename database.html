@@ -415,37 +415,7 @@
 										});
 										
 					    
-					    					jQuery.get(urlRunKmeans, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode2 pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-					    				
-					    					jQuery.get(urlFindCentroid, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode3 pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-					    
-					    					jQuery.get(urlComputeCentroid, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode4 pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
-					    
-					    					jQuery.get(urlInitCentroid, function(data) 
-										{
-										   $(document).ready(function()
-					       						{
-						 					$("#displayCode5 pre").html(data.replace(/\r\n/g, "<br>"));
-						       					});
-										});
+					    					
 										return false;
 									} else
                                     {
