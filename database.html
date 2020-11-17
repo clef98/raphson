@@ -475,6 +475,20 @@
 						 					$("#displayCode2 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										jQuery.get(urlSvmTrain, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode3 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										jQuery.get(urlGaussianKernel, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode4 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 										
 										return false;
 									}else{
