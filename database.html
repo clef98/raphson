@@ -215,7 +215,7 @@
 							  var urlNNSigmoid = '/models/Ex4/sigmoidRaphson.txt';
 							  var urlComputeGrad = '/models/Ex4/ComputeNumericalGradRaphson.txt';
 							
-							  var urlex6 = '/models/Ex6/ex6.txt';
+							  var urlex6 = '/models/Ex6/ex6';
 							  var urlDatasetParams = '/models/Ex6/dataset3Params.txt';
 							  var urlSvmTrain = '/models/Ex6/svmTrain.txt';
 							  var urlGaussianKernel = '/models/Ex6/gaussianKernel.txt';
@@ -459,7 +459,7 @@
 										document.getElementById("displayCode2").style.border = "1px solid black";
 										document.getElementById("displayCode3").style.border = "1px solid black";
 										document.getElementById("displayCode4").style.border = "1px solid black";
-										alert('Note: this algorithm needs multiple files to run properly');
+										
 										jQuery.get(urlex6, function(data) 
 										{
 										   $(document).ready(function()
@@ -467,6 +467,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										alert('Note: this algorithm needs multiple files to run properly');
 										jQuery.get(urlDatasetParams, function(data) 
 										{
 										   $(document).ready(function()
