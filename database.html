@@ -411,7 +411,15 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+						 				alert('This algorthim needs multiple files to run')
 						 				jQuery.get(urlKMeansInit, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode2 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+						   				jQuery.get(urlcomputeCentroid, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
