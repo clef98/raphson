@@ -501,11 +501,36 @@
 								} else if(secondDropdown =='Logistic Regression') {
 									if(thirdDropdown =='fmincg2'){
 										clearBoxText()
-										jQuery.get(urlLogisticReg, function(data) 
+										document.getElementById("displayCode").style.border = "1px solid black";
+										document.getElementById("displayCode2").style.border = "1px solid black";
+										document.getElementById("displayCode3").style.border = "1px solid black";
+										document.getElementById("displayCode4").style.border = "1px solid black";
+										jQuery.get(urlex2, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										jQuery.get(urlcostFunction, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode2 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										jQuery.get(urlSigmoid, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode3 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										jQuery.get(urlPredict, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode4 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
 
