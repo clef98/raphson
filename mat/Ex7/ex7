@@ -1,0 +1,23 @@
+clear ; close all; clc
+
+load('yourData.mat');
+
+K = 3;
+max_iters = 10;
+
+size = size(A);
+
+X = reshape(A, size(1) * size(2), 3);
+
+initial_centroids = kMeansInitCentroids(X, K);
+
+[centroids, idx] = runkMeans(X, initial_centroids, max_iters, true);
+
+idx = findClosestCentroids(X, centroids);
+
+X_recovered = centroids(idx,:);
+
+X_recovered = reshape(X_recovered, size(1), size(2), 3);
+
+fprintf('Program paused. Press enter to continue.\n');
+pause;
