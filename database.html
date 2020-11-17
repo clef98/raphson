@@ -221,6 +221,7 @@
 							  var urlKMeansInit = '/models/Ex7/KMeansInitCentroids.txt';
 							  var urlcomputeCentroid = '/models/Ex7/computeCentroids.txt';
 							  var urlFindClosest = '/models/Ex7/findClosestCentroids.txt';
+							  var urlRunKmeans = '/models/Ex7/runKmeans.txt';
 							 
 							  
 							  var urlCavMacCormack = '/models/CavityFlow_MacCormack.txt';
@@ -435,7 +436,13 @@
 						 					$("#displayCode4 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-					    
+					    					jQuery.get(urlRunKmeans, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode5 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 					    					
 										return false;
 									} else
