@@ -203,7 +203,9 @@
 						
 							  var urlComingSoon = '/models/FileComingSoonRaphson.txt';
 						
-							  var urlLinearReg = '/models/ex2LinearRaphson.txt';
+							  var urlex1 = '/models/Ex1/ex1.txt';
+							  var urlComputeCost = '/models/Ex1/computeCost.txt';
+							  var urlGradDescent = '/models/Ex1/gradientDescent.txt';
 							
 							  var urlex2 = '/models/Ex2/ex2.txt';
 							  var urlcostFunction = '/models/Ex2/costFunction.txt';
@@ -407,7 +409,7 @@
                                  {
 									if(thirdDropdown =='fmincg4')
                                    	 {
-										clearBoxText()
+										clearBoxText();
 					    					document.getElementById("displayCode").style.border = "1px solid black";
 										document.getElementById("displayCode2").style.border = "1px solid black";
 										document.getElementById("displayCode3").style.border = "1px solid black";
@@ -421,7 +423,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-						 				alert('This algorthim needs multiple files to run')
+						 				alert('This algorthim needs multiple files to run');
 						 				jQuery.get(urlKMeansInit, function(data) 
 										{
 										   $(document).ready(function()
@@ -458,7 +460,7 @@
 									}
 								 } else if(secondDropdown =='Support Vector Machine') {
 									if(thirdDropdown =='fmincg5'){
-										clearBoxText()
+										clearBoxText();
 										document.getElementById("displayCode").style.border = "1px solid black";
 										document.getElementById("displayCode2").style.border = "1px solid black";
 										document.getElementById("displayCode3").style.border = "1px solid black";
@@ -500,7 +502,7 @@
 									}
 								} else if(secondDropdown =='Logistic Regression') {
 									if(thirdDropdown =='fmincg2'){
-										clearBoxText()
+										clearBoxText();
 										document.getElementById("displayCode").style.border = "1px solid black";
 										document.getElementById("displayCode2").style.border = "1px solid black";
 										document.getElementById("displayCode3").style.border = "1px solid black";
@@ -542,11 +544,29 @@
 								} else if(secondDropdown =='Linear Regression') {
 									if(thirdDropdown =='fmincg1'){
 										clearBoxText()
-										jQuery.get(urlLinearReg, function(data) 
+										document.getElementById("displayCode").style.border = "1px solid black";
+										document.getElementById("displayCode2").style.border = "1px solid black";
+										document.getElementById("displayCode3").style.border = "1px solid black";
+										jQuery.get(urlex1, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										alert('This algorthim needs multiple files to run properly');
+										jQuery.get(urlComputeCost, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode2 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										jQuery.get(urlGradDescent, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode3 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
 
