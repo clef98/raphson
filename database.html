@@ -341,7 +341,7 @@
 						       					});
 										}); 
 							
-     										alert('Note: this algorithm needs multiple files to run properly');
+     										alert('Note: this model needs multiple files to run properly.');
 										jQuery.get(urlNNCost, function(data) 
 										{
 										   $(document).ready(function()
@@ -402,7 +402,7 @@
 
 									} else
                                     {
-										alert('Please select a option for the third dropdown');
+										alert('Please select an option for the third dropdown.');
 									}	
 							
 								 } else if(secondDropdown =='K-Means Clustering') 
@@ -423,7 +423,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-						 				alert('This algorthim needs multiple files to run');
+						 				alert('This model needs multiple files to run'.);
 						 				jQuery.get(urlKMeansInit, function(data) 
 										{
 										   $(document).ready(function()
@@ -456,7 +456,7 @@
 										return false;
 									} else
                                     {
-										alert('Please select a option for the third dropdown');
+										alert('Please select an option for the third dropdown.');
 									}
 								 } else if(secondDropdown =='Support Vector Machine') {
 									if(thirdDropdown =='fmincg5'){
@@ -473,7 +473,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										alert('Note: this algorithm needs multiple files to run properly');
+										alert('Note: this model needs multiple files to run properly.');
 										jQuery.get(urlDatasetParams, function(data) 
 										{
 										   $(document).ready(function()
@@ -498,7 +498,7 @@
 										
 										return false;
 									}else{
-										alert('Please choose a option for the third dropdown');
+										alert('Please choose an option for the third dropdown.');
 									}
 								} else if(secondDropdown =='Logistic Regression') {
 									if(thirdDropdown =='fmincg2'){
@@ -514,7 +514,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										alert('This algorthim needs multiple files to run properly');
+										alert('This model needs multiple files to run properly.');
 										jQuery.get(urlcostFunction, function(data) 
 										{
 										   $(document).ready(function()
@@ -539,7 +539,7 @@
 
 										return false;
 									}else{
-										alert('Please choose a option for the third dropdown');
+										alert('Please choose an option for the third dropdown.');
 									}
 								} else if(secondDropdown =='Linear Regression') {
 									if(thirdDropdown =='fmincg1'){
@@ -554,7 +554,7 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										alert('This algorthim needs multiple files to run properly');
+										alert('This model needs multiple files to run properly.');
 										jQuery.get(urlComputeCost, function(data) 
 										{
 										   $(document).ready(function()
@@ -572,10 +572,10 @@
 
 										return false;
 									}else{
-										alert('Please choose a option for the third dropdown');
+										alert('Please choose an option for the third dropdown.');
 									}
 								}else{
-									alert('please choose a option for the second dropdown');
+									alert('Please choose an option for the second dropdown.');
 									return false;
 								}
 																		
@@ -631,7 +631,7 @@
 										
 										return false;
 									}else{
-										alert('please choose a option for the third dropdown');
+										alert('Please choose an option for the third dropdown.');
 										return false;
 									}
 								}else if (secondDropdown =='Convection'){
@@ -720,11 +720,11 @@
 										
 										return false;
 									}else{
-										alert('please choose a option for the third dropdown');
+										alert('Please choose an option for the third dropdown.');
 										return false;
 									}
 								}else{
-									alert('please choose a option for the second dropdown');
+									alert('Please choose an option for the second dropdown.');
 									return false;
 								}
 						
@@ -773,7 +773,7 @@
 										
 										return false;
 									}else{
-										alert('please choose a option for the third dropdown');
+										alert('Please choose an option for the third dropdown.');
 										return false;
 									}
 								}else if(secondDropdown == 'Cavity Flow'){
@@ -838,10 +838,10 @@
 										
 										return false;
 									}else{
-										alert('please choose a option for third dropdown')
+										alert('Please choose an option for third dropdown.')
 									}
 								}else{
-									alert('please choose a option for the second dropdown');
+									alert('Please choose an option for the second dropdown.');
 									return false;
 								}
 							  }else if (firstDropdown =='Mathematics'){
@@ -884,10 +884,10 @@
 										
 										return false;
 									}else{
-										alert('please choose a option for third dropdown')
+										alert('Please choose an option for third dropdown.')
 									}
 								}else{
-									alert('please choose a option for the second dropdown');
+									alert('Please choose an option for the second dropdown.');
 									return false;
 								}
 						
@@ -927,7 +927,7 @@
 						<form onsubmit="event.preventDefault();" name="sample" method="POST">	
 							<div class="category_div" id="category_div">Please select:
 							    <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
-								<option value="">Select Subject</option>
+								<option value="">Select subject</option>
 								<option value="Transport Phenomena">Transport Phenomena</option>
 								<option value="Fluid Mechanics">Fluid Mechanics</option>
 								<option value="Mathematics">Mathematics</option>
@@ -941,7 +941,7 @@
 							    </script>
 							    <noscript>
 								<select name="subcategory" id="subcategory" >
-								    <option value="">Please select Algorithm </option>
+								    <option value="">Please select model </option>
 								</select>
 							    </noscript>
 							</div>
@@ -964,7 +964,7 @@
 						<br> 
 						<div><p><br>Please find the model code below. You may want to copy and paste into your editor.
 							<br>Base recommended values have been set for common characterstics such as steps, nodes or thresholds.
-							<br>Note:All code is in Matlab/Octave</p></div>
+							<br></div>
 					
 						<div id="temp3">
 							<button onclick="downloadAll(window.links)">Download File</button>
