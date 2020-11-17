@@ -399,8 +399,13 @@
 										
 										
 										links = [
-										  '/mat/Burgers_equation_1D.m',
-										  '/mat/Convection_1D.m'
+										  '/mat/Ex4/ComputeNumericalGradRaphson.m',
+										  '/mat/Ex4/NNCostFuncRaphson.m',
+										  '/mat/Ex4/ex4Raphson.m',
+										  '/mat/Ex4/randInitalizeWeightsRaphson.m',
+									     	  '/mat/Ex4/sigmoidGradient.m',
+										  '/mat/Ex4/ex4Raphson.m',
+										  '/mat/Ex4/sigmoidRaphson.m'
 										];
 										
 									
@@ -459,6 +464,13 @@
 						       					});
 										});
 					    					
+										links = [
+										  '/mat/Ex7/ex7.m',
+										  '/mat/Ex7/computeCentroids.m',
+										  '/mat/Ex7/findClosestCentroids.m',
+										  '/mat/Ex7/runKmeans.m',
+										  '/mat/Ex7/KMeansInitCentroids.m'
+										];
 										return false;
 									} else
                                     {
@@ -501,7 +513,12 @@
 						 					$("#displayCode4 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/Ex6/ex6.m',
+										  '/mat/Ex6/dataset3Params.m',
+										  '/mat/Ex6/gaussianKernel.m',
+										  '/mat/Ex6/svmTrain.m'
+										];
 										return false;
 									}else{
 										alert('Please choose an option for the third dropdown.');
@@ -542,7 +559,14 @@
 						 					$("#displayCode4 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-
+										
+										links = [
+										  '/mat/Ex2/ex2.m',
+										  '/mat/Ex2/costFunction.m',
+										  '/mat/Ex2/predict.m',
+										  '/mat/Ex2/sigmoid.m'
+										];
+										
 										return false;
 									}else{
 										alert('Please choose an option for the third dropdown.');
@@ -557,7 +581,13 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-
+										
+										links = [
+										  '/mat/Ex1/ex1.m',
+										  '/mat/Ex1/computeCost.m',
+										  '/mat/Ex1/gradientDescent.m'
+										];
+										
 										return false;
 									}else{
 										alert('Please choose an option for the third dropdown.');
@@ -579,7 +609,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-
+										links = [
+										  '/mat/Fickain_numerical_explicit_slopemethod_nofluxboundary.m'
+										];
 										return false;
 						
 									}else if(thirdDropdown =='Implicit Scheme (BTBS)'){
@@ -592,7 +624,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-
+										links = [
+										  '/mat/Fickian_numerical_implicit.m'
+										];
 										return false;
 									}else if(thirdDropdown =='Crank-Nicolson (Hybrid)'){
 										clearBoxText()
@@ -604,7 +638,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/Fickian_numerical_CrankNicoslon.m'
+										];
 										return false;
 									}else if(thirdDropdown =='Analytical'){
 										clearBoxText()
@@ -616,7 +652,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/Fickian_analytical_homogenousboundary.m'
+										];
 										return false;
 									}else{
 										alert('Please choose an option for the third dropdown.');
@@ -633,7 +671,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-
+										links = [
+										  '/mat/Linear_Convection_1D.m'
+										];
 										return false;
 									}else if(thirdDropdown =='Linear 2D'){
 										clearBoxText()
@@ -645,7 +685,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-		
+										links = [
+										  '/mat/Linear_Convection_2D.m'
+										];
 										return false;
 									}else if(thirdDropdown =='Nonlinear, Beam-Warming'){
 										clearBoxText()
@@ -657,7 +699,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/NonLinearConvection_BeamWarming.m'
+										];
 										return false;
 									}else if(thirdDropdown =='Nonlinear, Lax-Friedrichs'){
 										clearBoxText()
@@ -669,7 +713,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/NonLinearConvection_LaxFriedrichs.m'
+										];
 										return false;
 									}else if(thirdDropdown =='Nonlinear, Lax-Wendroff'){
 										clearBoxText()
@@ -681,7 +727,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/NonLinearConvection_LaxWendroff.m'
+										];
 										return false;
 									}else if(thirdDropdown =='Nonlinear, MacCormack'){
 										clearBoxText()
@@ -693,7 +741,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/NonLinearConvection_MacCormack.m'
+										];
 										return false;
 									}else if(thirdDropdown =='Rayleigh Bernard'){
 										clearBoxText()
@@ -705,7 +755,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/RayleighBenardConvection.m'
+										];
 										return false;
 									}else{
 										alert('Please choose an option for the third dropdown.');
@@ -728,13 +780,11 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										alert("links are:" + links);
+
 										links = [
-										  '/mat/Burgers_equation_1D.m',
-										  '/mat/Convection_2D.m',
-										  '/mat/Convection_1D.m'
+										  '/mat/Burgers_equation_1D.m'
 										];
-										alert("links are:" + links);
+
 										return false;
 									}else if(thirdDropdown =='2DBURGexp'){
 										clearBoxText()
@@ -746,7 +796,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/Burgers_equation_2D_explicit.m'
+										];
 										return false;
 									}else if(thirdDropdown =='2DBURGimp'){
 										clearBoxText()
@@ -758,7 +810,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/Burgers_equation_2D_implicit.m'
+										];
 										return false;
 									}else{
 										alert('Please choose an option for the third dropdown.');
@@ -775,7 +829,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/CavityFlow_MacCormack.m'
+										];
 										return false;
 									}else if(thirdDropdown =='Richtmyer'){
 										clearBoxText()
@@ -787,7 +843,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/CavityFlow_Richtmyer.m'
+										];
 										return false;
 									}else if(thirdDropdown =='Explicit, Central Difference'){
 										clearBoxText()
@@ -799,7 +857,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/CavityFlow_explicit_centraldifference.m'
+										];
 										return false;
 									}else if(thirdDropdown =='Explicit, Euler'){
 										clearBoxText()
@@ -811,7 +871,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/CavityFlow_expliciteuler.m'
+										];
 										return false;
 									}else if(thirdDropdown =='Implicit, Central Difference'){
 										clearBoxText()
@@ -823,7 +885,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/CavityFlow_implicit_centraldifference.m'
+										];
 										return false;
 									}else{
 										alert('please choose a option for third dropdown')
@@ -844,7 +908,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/Laplace_equation_2D.m'
+										];
 										return false;
 									}else if(thirdDropdown =='Implicit'){
 										clearBoxText()
@@ -855,7 +921,9 @@
 						 						$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       						});
 											});
-									
+										links = [
+										  '/mat/LaplaceImplicit.m'
+										];
 										return false;
 									}
 								}else if(secondDropdown == 'Poisson'){
@@ -869,7 +937,9 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										links = [
+										  '/mat/Poisson_equation_2D.m'
+										];
 										return false;
 									}else{
 										alert('Please choose an option for third dropdown.')
