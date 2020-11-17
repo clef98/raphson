@@ -1,4 +1,4 @@
-%%Name ex2
+%%Name ex2.m
 clear ; close all; clc
 
 data = load('yourData.txt');
