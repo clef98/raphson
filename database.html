@@ -459,6 +459,7 @@
 										document.getElementById("displayCode2").style.border = "1px solid black";
 										document.getElementById("displayCode3").style.border = "1px solid black";
 										document.getElementById("displayCode4").style.border = "1px solid black";
+										alert('Note: this algorithm needs multiple files to run properly');
 										jQuery.get(urlex6, function(data) 
 										{
 										   $(document).ready(function()
@@ -466,7 +467,14 @@
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-
+										jQuery.get(urlDatasetParams, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										
 										return false;
 									}else{
 										alert('Please choose a option for the third dropdown');
