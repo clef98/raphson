@@ -220,6 +220,8 @@
 							  var urlex7 = '/models/Ex7/ex7.txt';
 							  var urlKMeansInit = '/models/Ex7/KMeansInitCentroids.txt';
 							  var urlcomputeCentroid = '/models/Ex7/computeCentroids.txt';
+							  var urlFindClosest = '/models/Ex7/findClosestCentroids.txt';
+							 
 							  
 							  var urlCavMacCormack = '/models/CavityFlow_MacCormack.txt';
 							  var urlCavRichtmyer = '/models/CavityFlow_Richtmyer.txt';
@@ -426,7 +428,13 @@
 						 					$("#displayCode3 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
-										
+										jQuery.get(urlFindClosest, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode4 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 					    
 					    					
 										return false;
