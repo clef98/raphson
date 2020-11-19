@@ -60,26 +60,26 @@
 						<script language="javascript" type="text/javascript">
 						function dynamicdropdown(listindex) {
 							document.getElementById("sub_subcategory").length = 0;
-							document.getElementById("sub_subcategory").options[0]=new Option("Please select framework version","");
+							document.getElementById("sub_subcategory").options[0]=new Option("Please select function","");
 							document.getElementById("subcategory").length = 0;
 							switch (listindex){					
 								case "Transport Phenomena" :
-									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
+									document.getElementById("subcategory").options[0]=new Option("Please select algorithm","");
 									document.getElementById("subcategory").options[1]=new Option("Fickian Diffusion","Fickian Diffusion");
 									document.getElementById("subcategory").options[2]=new Option("Convection","Convection");
 									break;
 								case "Fluid Mechanics" :
-									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
+									document.getElementById("subcategory").options[0]=new Option("Please select algorithm","");
 									document.getElementById("subcategory").options[1]=new Option("Cavity Flow","Cavity Flow");
 									document.getElementById("subcategory").options[2]=new Option("Burgers Equation","Burgers Equation")
 									break;
 								case "Mathematics" :
-									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
-									document.getElementById("subcategory").options[1]=new Option("Laplace","Laplace");
+									document.getElementById("subcategory").options[0]=new Option("Please select algorithm","");
+									document.getElementById("subcategory").options[1]=new Option("Laplace","L faplace");
 									document.getElementById("subcategory").options[2]=new Option("Poisson","Poisson");
 									break;
 								case "Machine Learning" :
-									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
+									document.getElementById("subcategory").options[0]=new Option("Please select algorithm","");
 									document.getElementById("subcategory").options[3]=new Option("Linear Regression","Linear Regression");
 									document.getElementById("subcategory").options[2]=new Option("Logistic Regression","Logistic Regression");
 									document.getElementById("subcategory").options[1]=new Option("Neural Network","Neural Network");
@@ -87,7 +87,7 @@
 								        document.getElementById("subcategory").options[5]=new Option("Support Vector Machine","Support Vector Machine");	
 									break;
 								default:
-									document.getElementById("subcategory").options[0]=new Option("Please select Algorithm","");
+									document.getElementById("subcategory").options[0]=new Option("Please select algorithm","");
 									break;
 								}
 								return true;
@@ -995,11 +995,11 @@
 							</div>
 							<div class="sub_category_div" id="sub_category_div">Please select:
 							    <script type="text/javascript" language="JavaScript">
-								document.write('<select name="subcategory" id="subcategory" onchange="javascript: dynamicdropdownone(this.options[this.selectedIndex].value);"><option value="">Please select Algorithm</option></select>')
+								document.write('<select name="subcategory" id="subcategory" onchange="javascript: dynamicdropdownone(this.options[this.selectedIndex].value);"><option value="">Please select algorithm</option></select>')
 							    </script>
 							    <noscript>
 								<select name="subcategory" id="subcategory" >
-								    <option value="">Please select Algorithm </option>
+								    <option value="">Please select algorithm </option>
 								</select>
 							    </noscript>
 							</div>
