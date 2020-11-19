@@ -1,1 +1,110 @@
 
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Linear Regression</title>
+		<link rel="icon" href="images/logo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131764077-2"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'UA-131764077-2');
+			</script>
+			
+			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		
+	</head>
+	<body class="is-preload">
+	<!-- <div id="wrapper" style="background-image: url('images/NetWork02.png'); background-size: cover; height:400px; width: 3000px; border: 2px; color: pink; ">	 -->
+		<div id="wrapper">			
+			<header id="header" class="alt">
+					<h1>Logistic Regression</h1>
+					
+			</header>
+				
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html"">Home</a></li>
+					<li><a href="database.html">Model Repository</a></li>
+					<li><a href="algorithms.html">Algorithms</a></li>
+					<li><a href="about.html">About Us</a></li>
+				</ul>
+			</nav>
+			<div id="main">
+		<p class = "ex1">Logistic regression is a classification algorithm meaning that the function is to be able to
+		<br>classify a input such as a schoolbus, truck, etc. This model in the basic form will output a number 0-1 
+		<br>depending on its certainty(if it outputs 0.7, it is 70% sure and vice versa). Similiar to linear regression,
+		<br>we need to start out with a hypothesis to be able to seperate the input(shown to the right).
+		<br>This hypothesis is defined as:
+		<br>
+		$$ z = \theta ^Tx $$
+		$$g(z) = \frac{1}{1+e^{-z}} $$
+		$$ h_\theta (x) = g(\theta ^Tx )$$
+		<!-- <br>$$J(\theta_0, \theta_1) = \theta_0 - \alpha\frac{1}{m}\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})$$ -->
+		<br>Where x is the input, theta is the parameters, and y is the output(will be used later). Also like linear regression, we need a way to define how well
+		<br>our hypothesis matches the output/y. This equation is called the cost function which is defined as:
+		<br>$$J(\theta) = -\frac{1}{m} \bigl(\sum_{i=1}^m y^{(i)}logh_\theta(x^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)}))\bigr)$$
+		Note: y = 0 or 1 always.
+		<br>				
+		<br>Now, all we have to do is find thetas so that they minimize the cost in order to get the best result.  To do this, we have equations that can solve for
+		<br>these thetas:
+		<br>$$\theta_0 = \theta_0 - \alpha\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})$$
+		$$\theta_j = \theta_j - \alpha\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}$$
+		<br>Where m is the number of inputs and &#x3B1 is the learning rate. You should repeat untill it converges. If it keeps growing exponentially, then lower &#x3B1.
+		<br>
+		
+		
+				
+ 		</p>
+         	<img src="images/LogisticRegressionRaphson.png" alt="Logistic Regression" style="position:absolute; left:62%; top:65%; height:30%; width:25%;">
+		</div>
+
+		<footer id="footer">
+			<section>
+				<h2>Independently Created</h2>
+				<p>We are a volunteer-based, crowd-sourced application that depends on the contributions of our community and users to expand and proliferate. 
+				Consider integrating your physical models, contributing tutorial material, or joining our team at large. All are welcome!</p>
+				<ul class="actions special">
+					<li><a href="contributors.html" class="button">Learn More</a></li>
+				</ul>
+			</section>
+			<section>
+				<h2>Contact Us</h2>
+				<dl class="alt">
+					<!-- <dt>Address</dt>
+					<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+					<dt>Phone</dt>
+					<dd>(000) 000-0000 x 0000</dd> -->
+					<dt>             Email:</dt>
+					<dd><a href="mailto:raphson.team@gmail.com">raphson.team@gmail.com</a></dd>
+				</dl>
+				<ul class="icons">
+					<!-- <li><a href="raphson.team@gmail.com" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li> -->
+				</ul>
+			</section>
+						
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
