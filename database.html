@@ -573,6 +573,7 @@
 									}
 								} else if(secondDropdown =='Linear Regression') {
 									if(thirdDropdown =='fmincg1'){
+										
 										clearBoxText()
 										jQuery.get(urlLinearReg, function(data) 
 										{
@@ -602,6 +603,10 @@
 									if(thirdDropdown == 'Explicit Scheme (FTFS)'){
 										clearBoxText()
 										document.getElementById("displayCode").style.border = "1px solid black";
+										document.getElementById("displayCode2").style.border = "1px solid black";
+										document.getElementById("displayCode3").style.border = "1px solid black";
+										document.getElementById("displayCode4").style.border = "1px solid black";
+										
 										jQuery.get(urlFTFS, function(data) 
 										{
 										   $(document).ready(function()
