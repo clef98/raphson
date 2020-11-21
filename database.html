@@ -914,6 +914,7 @@
 										return false;
 									}else if(thirdDropdown =='Implicit'){
 										clearBoxText()
+										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlImplicitLaplace, function(data) 
 											{
 										  	 $(document).ready(function()
@@ -925,6 +926,8 @@
 										  '/mat/LaplaceImplicit.m'
 										];
 										return false;
+									}else{
+										alert('Please choose an option for third dropdown.')
 									}
 								}else if(secondDropdown == 'Poisson'){
 									if(thirdDropdown =='2D'){
@@ -949,10 +952,11 @@
 									return false;
 								}
 						
-							  }
-						
+							  }else{
+							  alert('Please choose a option for the first dropdown');
 							  return false;
-							  document.getElementById('output').innerHTML = ranvar
+							  }
+							  
 						}	
 						
 						
