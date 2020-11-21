@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Linear Regression</title>
+		<title>Logistic Regression</title>
 		<link rel="icon" href="images/logo.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -39,32 +39,33 @@
 				</ul>
 			</nav>
 			<div id="main">
-		<p class = "ex1">Logistic regression is a classification algorithm meaning that the function is to be able to
-		<br>classify an input such as a school bus, truck, etc. This model in the basic form will output a number 0-1 
-		<br>depending on its certainty(if it outputs 0.7, it is 70% sure and vice versa). Similar to linear regression,
-		<br>starts with a hypothesis to be able to separate the input(shown to the right).
+		<p class = "ex1">Logistic regression is a classification algorithm, or a function capable of 
+		<br>classifying an input image. This model in its fundamental form will output a number between 0 and 1
+		<br>depending on its certainty (if it outputs 0.7, it is 70% sure and so on). Similar to linear regression,
+		<br>the logistic regression function starts with a hypothesis to separate the input (shown to the right).
 		<br>This hypothesis is defined as:
 		<br>
 		$$ z = \theta ^Tx $$
 		$$g(z) = \frac{1}{1+e^{-z}} $$
 		$$ h_\theta (x) = g(\theta ^Tx )$$
 		<!-- <br>$$J(\theta_0, \theta_1) = \theta_0 - \alpha\frac{1}{m}\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})$$ -->
-		<br>Where x is the input, theta is the parameters, and y is the output(will be used later). Also like linear regression, we need a way to define how well
-		<br>our hypothesis matches the output/y. This equation is called the cost function which is defined as:
+		<br>where x is the input, theta is the parameters, and y is the output. We require a method to define
+		<br>our hypothesis similarity to the output/y. This equation is called the cost function and defined as:
 		<br>$$J(\theta) = -\frac{1}{m} \bigl(\sum_{i=1}^m y^{(i)}logh_\theta(x^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)}))\bigr)$$
-		Note: y = 0 or 1 always.
+		Note: y = 0, 1.
 		<br>				
-		<br>Now, all we have to do is find thetas so that they minimize the cost in order to get the best result.  To do this, we have equations that can solve for
+		<br>We must find the thetas that minimize the cost. The following equations that can solve for
 		<br>these thetas:
 		<br>$$\theta_0 = \theta_0 - \alpha\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})$$
 		$$\theta_j = \theta_j - \alpha\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}$$
-		<br>Where m is the number of inputs and &#x3B1 is the learning rate. You should repeat until it converges. If it keeps growing exponentially, then lower &#x3B1.
+		<br>where m is the number of inputs and &#x3B1 is the learning rate. This process should be repeated until it converges. <br>
+						If it keeps growing exponentially, then lower &#x3B1.
 		<br>
 		
 		
 				
  		</p>
-         	<img src="images/LogisticRegressionRaphson.png" alt="Logistic Regression" style="position:absolute; left:62%; top:70%; height:30%; width:25%;">
+         	<img src="images/LogisticRegressionRaphson.png" alt="Logistic Regression" style="position:absolute; left:62%; top:50%; height:30%; width:25%;">
 		</div>
 
 		<footer id="footer">
