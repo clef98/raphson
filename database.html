@@ -1,4 +1,4 @@
- 
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -203,7 +203,9 @@
 						
 							  var urlComingSoon = '/models/FileComingSoonRaphson.txt';
 						
-							  var urlLinearReg = '/models/ex2LinearRaphson.txt';
+							  var urlex1 = '/models/Ex1/ex1.txt';
+							  var urlComputeCost = '/models/Ex1/computeCost.txt';
+							  var urlGradDescent = '/models/Ex1/gradientDescent.txt'
 							
 							  var urlex2 = '/models/Ex2/ex2.txt';
 							  var urlcostFunction = '/models/Ex2/costFunction.txt';
@@ -579,11 +581,25 @@
 										document.getElementById("displayCode2").style.border = "1px solid black";
 										document.getElementById("displayCode3").style.border = "1px solid black";
 										
-										jQuery.get(urlLinearReg, function(data) 
+										jQuery.get(urlex1, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
 						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										jQuery.get(urlComputeCost, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode2 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										jQuery.get(urlGradDescent, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode3 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
 										
