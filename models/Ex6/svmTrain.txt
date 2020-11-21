@@ -1,12 +1,6 @@
 function [model] = svmTrain(X, Y, C, kernelFunction, ...
                             tol, max_passes)
 
-% Note: This is a simplified version of the SMO algorithm for training
-%       SVMs. In practice, if you want to train an SVM classifier, we
-%       recommend using an optimized package such as:  
-%           LIBSVM   (http://www.csie.ntu.edu.tw/~cjlin/libsvm/)
-%           SVMLight (http://svmlight.joachims.org/)
-
 if ~exist('tol', 'var') || isempty(tol)
     tol = 1e-3;
 end
