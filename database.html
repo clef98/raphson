@@ -77,6 +77,8 @@
 									document.getElementById("subcategory").options[0]=new Option("Please select algorithm","");
 									document.getElementById("subcategory").options[1]=new Option("Laplace","Laplace");
 									document.getElementById("subcategory").options[2]=new Option("Poisson","Poisson");
+									document.getElementById("subcategory").options[3]=new Option("Newton","Newton");
+									document.getElementById("subcategory").options[4]=new Option("Runge","Runge");
 									break;
 								case "Machine Learning" :
 									document.getElementById("subcategory").options[0]=new Option("Please select algorithm","");
@@ -163,10 +165,20 @@
 									document.getElementById("sub_subcategory").options[4]=new Option("Explicit, Euler","Explicit, Euler");
 									document.getElementById("sub_subcategory").options[5]=new Option("Implicit, Central Difference","Implicit, Central Difference");
 									break;
+
 								    case "Poisson" :
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select function","");
 									document.getElementById("sub_subcategory").options[1]=new Option("2D","2D");
 									break;
+
+								    case "Newton" :
+									document.getElementById("sub_subcategory").options[0]=new Option("No more options","");
+									break;
+
+									case "Runge" :
+									document.getElementById("sub_subcategory").options[0]=new Option("No more options","");
+									break;
+
 								    default:
 									document.getElementById("sub_subcategory").options[0]=new Option("Please select function","");
 									break;
@@ -195,11 +207,13 @@
 						
 							  var url1DBurg = '/models/Burgers_equation_1D.txt';
 							  var url2DBurg_exp = '/models/Burgers_equation_2D_explicit.txt';
-						          var url2DBurg_imp = '/models/Burgers_equation_2D_implicit.txt';
+						      var url2DBurg_imp = '/models/Burgers_equation_2D_implicit.txt';
 						
 							  var urlPoisson = '/models/Poisson_equation_2D.txt';
 							  var url2DLaplace = '/models/Laplace_equation_2D.txt';
 							  var urlImplicitLaplace = '/models/LaplaceImplicit.txt';
+							  var urlNewton = '/models/newton.txt';
+							  var urlRunge = '/models/runge.txt';
 						
 							  var urlComingSoon = '/models/FileComingSoonRaphson.txt';
 						
@@ -959,6 +973,23 @@
 										clearBoxText()
 										document.getElementById("displayCode").style.border = "1px solid black";
 										jQuery.get(urlPoisson, function(data) 
+											{
+											   $(document).ready(function()
+					       							{
+						 						$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       						});
+											});
+											links = [
+											  '/mat/Poisson_equation_2D.m'
+											];
+										return false;
+									}else{
+										alert('Please choose an option for third dropdown.')
+									}
+								}else if(secondDropdown == 'Newton'){
+									clearBoxText()
+									document.getElementById("displayCode").style.border = "1px solid black";
+									Query.get(urlNewton, function(data) 
 										{
 										   $(document).ready(function()
 					       						{
@@ -966,12 +997,23 @@
 						       					});
 										});
 										links = [
-										  '/mat/Poisson_equation_2D.m'
+										  '/mat/newton.m'
 										];
-										return false;
-									}else{
-										alert('Please choose an option for third dropdown.')
-									}
+									return false;
+								}else if(secondDropdown == 'Runge'){
+									clearBoxText()
+									document.getElementById("displayCode").style.border = "1px solid black";
+									Query.get(urlRunge, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
+										links = [
+										  '/mat/runge.m'
+										];
+									return false;
 								}else{
 									alert('Please choose an option for the second dropdown.');
 									return false;
