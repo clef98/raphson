@@ -172,11 +172,13 @@
 									break;
 
 								    case "Newton" :
-									document.getElementById("sub_subcategory").options[0]=new Option("No more options","");
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select function","");
+									document.getElementById("sub_subcategory").options[1]=new Option("No more options","NoMoreOptionsNewton");
 									break;
 
-									case "Runge" :
-									document.getElementById("sub_subcategory").options[0]=new Option("No more options","");
+								    case "Runge" :
+									document.getElementById("sub_subcategory").options[0]=new Option("Please select function","");
+									document.getElementById("sub_subcategory").options[1]=new Option("No more options","NoMoreOptionsRunge");
 									break;
 
 								    default:
@@ -637,9 +639,6 @@
 									if(thirdDropdown == 'Explicit Scheme (FTFS)'){
 										clearBoxText()
 										document.getElementById("displayCode").style.border = "1px solid black";
-										document.getElementById("displayCode2").style.border = "1px solid black";
-										document.getElementById("displayCode3").style.border = "1px solid black";
-										document.getElementById("displayCode4").style.border = "1px solid black";
 										
 										jQuery.get(urlFTFS, function(data) 
 										{
@@ -987,6 +986,7 @@
 										alert('Please choose an option for third dropdown.')
 									}
 								}else if(secondDropdown == 'Newton'){
+									if(thirdDropdown == 'NoMoreOptionsNewton'){
 									clearBoxText()
 									document.getElementById("displayCode").style.border = "1px solid black";
 									Query.get(urlNewton, function(data) 
@@ -1000,7 +1000,11 @@
 										  '/mat/newton.m'
 										];
 									return false;
+									}else{
+										alert('Please choose an option for the third dropdown');
+									}
 								}else if(secondDropdown == 'Runge'){
+									if(thirdDropdown == 'NoMoreOptionsRunge'){
 									clearBoxText()
 									document.getElementById("displayCode").style.border = "1px solid black";
 									Query.get(urlRunge, function(data) 
@@ -1014,6 +1018,9 @@
 										  '/mat/runge.m'
 										];
 									return false;
+									}else{
+										alert('Please choose an option for the third dropdown');
+									}
 								}else{
 									alert('Please choose an option for the second dropdown.');
 									return false;
