@@ -1,4 +1,5 @@
-clear;
+clear; clc; clf;
+
 nx=90;                         
 ny=90;                          
 nt=50;                          
@@ -31,14 +32,9 @@ j=2:ny-1;
 for it=1:nt
     un=u;
     h=surf(x,y,u','EdgeColor','none');      
-    shading interp
     axis([0 2 0 2 0 2.5])
-    xlabel('Spatial co-ordinate (x) \rightarrow')
-    ylabel('{\leftarrow} Spatial co-ordinate (y)')
-    zlabel('Transport property profile (u) \rightarrow')
     drawnow;
     refreshdata(h)
-    
     u(i,j)=un(i,j)-(c*dt*(un(i,j)-un(i-1,j))/dx)-(c*dt*(un(i,j)-un(i,j-1))/dy);
     u(1,:)=0;
     u(nx,:)=0;
