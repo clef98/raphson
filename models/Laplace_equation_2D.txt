@@ -1,4 +1,5 @@
-clear
+clear; clc; clf;
+
 nx=60;                           
 ny=60;                                
 niter=10000;                     
@@ -27,8 +28,5 @@ for it=1:niter
 end
 
 surf(x,y,p,'EdgeColor','none');       
-shading interp
 title({'2-D Laplace''s equation';['{\itNumber of iterations} = ',num2str(it)]})
-xlabel('Spatial co-ordinate (x) \rightarrow')
-ylabel('{\leftarrow} Spatial co-ordinate (y)')
-zlabel('Solution profile (P) \rightarrow')
+
