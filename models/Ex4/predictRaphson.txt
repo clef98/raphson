@@ -1,11 +1,8 @@
 %%Please name this file predict.m
 function p = predict(Theta1, Theta2, X)
-%PREDICT Predict the label of an input given a trained neural network
 
 m = size(X, 1);
 num_labels = size(Theta2, 1);
-
-% You need to return the following variables correctly 
 p = zeros(size(X, 1), 1);
 
 h1 = sigmoid([ones(m, 1) X] * Theta1');
