@@ -15,5 +15,5 @@ options = optimset('GradObj', 'on', 'MaxIter', 400);
 [theta, cost] = ...
 	fminunc(@(t)(costFunction(t, X, y)), initial_theta, options);
 
-p = predict(theta, X);
-Accuray = mean(double(p == y)) * 100
+pred = predict(theta, X);
+Accuray = mean(double(pred == y)) * 100
