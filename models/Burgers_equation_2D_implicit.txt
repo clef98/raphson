@@ -69,7 +69,6 @@ for it=0:nt
     by(1:nx:nx*(ny-1)+1)=0;by(nx:nx:nx*ny)=0;  
     soly=D\by;
     v=reshape(soly,nx,ny);
- 
     u(1,:)=0;
     u(nx,:)=0;
     u(:,1)=0;
