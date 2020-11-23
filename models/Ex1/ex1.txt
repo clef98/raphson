@@ -13,4 +13,4 @@ alpha = 0.01;
 
 J = Cost(X, y, theta);
 
-theta = gradientDescent(X, y, theta, alpha, iters);
+theta = Gradient(X, y, theta, alpha, iters);
