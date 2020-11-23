@@ -31,6 +31,7 @@ i=2:nx-1;
 j=2:ny-1;
 for it=1:nt
     un=u;
+    figure(1);
     h=surf(x,y,u','EdgeColor','none');      
     axis([0 2 0 2 0 2.5])
     drawnow;
