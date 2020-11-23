@@ -1,4 +1,5 @@
-clear;
+clear; clc; clf;
+
 nx=100;             
 nt=50;              
 dt=0.01;            
@@ -20,12 +21,11 @@ for it=0:nt
     un=u;
     h=plot(x,u,'k');     
     axis([0 2 -1 3])
-    xlabel('Spatial co-ordinate (x) \rightarrow')
-    ylabel('Transport property profile (u) \rightarrow')
     drawnow; 
     refreshdata(h)
     %Beam-Warming
-    u(i)=un(i)-(dt*u(i).*(3*un(i)-4*un(i-1)+un(i-2))/(2*dx))+(dt^2*(un(i).^2).*(un(i)-2*un(i-1)+un(i-2))/(2*dx*dx));
+    u(i)=un(i)-(dt*u(i).*(3*un(i)-4*un(i-1)+un(i-2))/(2*dx))+(dt^2
+    *(un(i).^2).*(un(i)-2*un(i-1)+un(i-2))/(2*dx*dx));
     %FD time, BD space (Explicit):
     u(i)=un(i)-(dt*(un(i).*(un(i)-un(i-1)))/dx);
 end
