@@ -20,6 +20,7 @@ end
 
 i=2:nx-1;
 for it=0:nt
+    figure(1);
     un=u;
     h=plot(x,u);       
     axis([0 2 0 3])
