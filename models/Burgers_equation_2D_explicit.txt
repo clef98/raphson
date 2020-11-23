@@ -1,4 +1,5 @@
-clear;
+clear; clc; clf;
+
 nx=30;                          
 ny=30;                                
 nt=60;                           
@@ -53,8 +54,6 @@ for it=0:nt
     h=quiver(x,y,u',v','k');
     axis([0 2 0 2])
     axis square
-    xlabel('Spatial co-ordinate (x) \rightarrow')
-    ylabel('Spatial co-ordinate (y) \rightarrow')
     drawnow;
     refreshdata(h)
 
@@ -64,7 +63,6 @@ for it=0:nt
     v(i,j)=vn(i,j)-(dt*(vn(i,j)-vn(i-1,j)).*un(i,j)/dx)-(dt*(vn(i,j)-vn(i,j-1))
     .*vn(i,j)/dy)+(vis*dt*(vn(i+1,j)-2*vn(i,j)+vn(i-1,j))/(dx*dx))
     +(vis*dt*(vn(i,j-1)-2*vn(i,j)+vn(i,j+1))/(dy*dy));
-
     u(1,:)=0;
     u(nx,:)=0;
     u(:,1)=0;
