@@ -1,4 +1,5 @@
-clear;
+clear; clc; clf;
+
 nx=100;                          
 ny=100;                              
 dx=2/(nx-1);                     
@@ -48,8 +49,4 @@ u(:,1)=u(:,2)-UnS*dy;
 u(:,ny)=u(:,ny-1)+UnN*dy;
 
 surf(x,y,u','EdgeColor','none');
-shading interp
 title('2-D Laplace''s equation')
-xlabel('Spatial co-ordinate (x) \rightarrow')
-ylabel('{\leftarrow} Spatial co-ordinate (y)')
-zlabel('Solution profile (P) \rightarrow')
