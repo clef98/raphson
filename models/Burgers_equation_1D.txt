@@ -1,4 +1,5 @@
-clear;
+clear; clc; clf;
+
 nx=20;             
 nt=50;            
 dt=0.01;            
@@ -30,8 +31,6 @@ for it=0:nt
     un=u;
     h=plot(x,u);       
     axis([0 2 4 6])
-    xlabel('Spatial co-ordinate (x) \rightarrow')
-    ylabel('Transport property profile (u) \rightarrow')
     drawnow;
     refreshdata(h)
     
