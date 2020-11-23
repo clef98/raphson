@@ -1,4 +1,5 @@
-clear;
+clear; clc; clf;
+
 nx=80;                           
 ny=80;                                  
 niter=1000;                      
@@ -8,7 +9,6 @@ x=0:dx:2;
 y=0:dy:2;                        
 b=zeros(nx,ny);                  
 pn=zeros(nx,ny);                 
-
 p=zeros(nx,ny);                  
 
 p(:,1)=0;
@@ -32,8 +32,4 @@ for it=1:niter
 end
 
 h=surf(x,y,p','EdgeColor','none');       
-shading interp
 axis([-0.5 2.5 -0.5 2.5 -100 100])
-xlabel('Spatial co-ordinate (x) \rightarrow')
-ylabel('{\leftarrow} Spatial co-ordinate (y)')
-zlabel('Solution profile (P) \rightarrow')
