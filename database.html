@@ -241,6 +241,7 @@
 							  var urlDatasetParams = '/models/Ex6/dataset3Params.txt';
 							  var urlSvmTrain = '/models/Ex6/svmTrain.txt';
 							  var urlGaussianKernel = '/models/Ex6/gaussianKernel.txt';
+							  var urlLinearKernel = '/models/Ex6/linearKernel.txt';
 							
 							  var urlex7 = '/models/Ex7/ex7.txt';
 							  var urlKMeansInit = '/models/Ex7/KMeansInitCentroids.txt';
@@ -501,6 +502,7 @@
 										document.getElementById("displayCode2").style.border = "1px solid black";
 										document.getElementById("displayCode3").style.border = "1px solid black";
 										document.getElementById("displayCode4").style.border = "1px solid black";
+										document.getElementById("displayCode5").style.border = "1px solid black";
 										
 										jQuery.get(urlex6, function(data) 
 										{
@@ -531,11 +533,20 @@
 						 					$("#displayCode4 pre").html(data.replace(/\r\n/g, "<br>"));
 						       					});
 										});
+										
+										jQuery.get(urlLinearKernel, function(data) 
+										{
+										   $(document).ready(function()
+					       						{
+						 					$("#displayCode5 pre").html(data.replace(/\r\n/g, "<br>"));
+						       					});
+										});
 										links = [
 										  '/mat/Ex6/ex6.m',
 										  '/mat/Ex6/dataset3Params.m',
 										  '/mat/Ex6/gaussianKernel.m',
-										  '/mat/Ex6/svmTrain.m'
+										  '/mat/Ex6/svmTrain.m',
+										  '/mat/Ex6/linearKernel.m'
 										];
 										return false;
 									}else{
