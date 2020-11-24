@@ -1,12 +1,6 @@
 function [model] = svmTrain(X, Y, C, kernelFunction, ...
                             tol, max_passes)
 
-% Note: This is a simplified version of the SMO algorithm for training
-%       SVMs. In practice, if you want to train an SVM classifier, we
-%       recommend using an optimized package such as:  
-%           LIBSVM   (http://www.csie.ntu.edu.tw/~cjlin/libsvm/)
-%           SVMLight (http://svmlight.joachims.org/)
-
 if ~exist('tol', 'var') || isempty(tol)
     tol = 1e-3;
 end
@@ -27,7 +21,6 @@ passes = 0;
 eta = 0;
 L = 0;
 H = 0;
-
 
 if strcmp(func2str(kernelFunction), 'linearKernel')
 
@@ -53,8 +46,7 @@ dots = 12;
 while passes < max_passes,
             
     num_changed_alphas = 0;
-    for i = 1:m,
-        
+    for i = 1:m,   
 
         E(i) = b + sum (alphas.*Y.*K(:,i)) - Y(i);
         
