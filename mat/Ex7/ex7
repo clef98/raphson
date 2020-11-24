@@ -18,6 +18,3 @@ idx = findClosestCentroids(X, centroids);
 X_recovered = centroids(idx,:);
 
 X_recovered = reshape(X_recovered, size(1), size(2), 3);
-
-fprintf('Program paused. Press enter to continue.\n');
-pause;
