@@ -19,7 +19,7 @@ for i = 1:length(C_temp);
   endfor
 endfor
 
-[M,I]=min(pred_error(:));
+[M,I] = min(pred_error(:));
 [I_row, J_col] = ind2sub(size(pred_error), I);
 
 C = C_temp(I_row);
