@@ -1,3 +1,4 @@
+%%Name linearKernel.m
 function sim = linearKernel(x1, x2)
 
 x1 = x1(:); x2 = x2(:);
